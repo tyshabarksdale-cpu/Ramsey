@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -29,8 +28,10 @@ export default function Services() {
   return (
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
-          <Badge variant="outline" className="text-primary border-primary/20 mb-4 px-4 py-1 rounded-full">Our Offerings</Badge>
+        <div className="max-w-3xl mx-auto text-center mb-20 space-y-4 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest mb-4">
+            Our Offerings
+          </div>
           <h1 className="text-5xl lg:text-7xl font-headline text-primary pb-1">Tailored Strategies</h1>
           <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
