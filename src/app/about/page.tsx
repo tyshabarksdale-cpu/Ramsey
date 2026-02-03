@@ -51,7 +51,7 @@ export default function About() {
             
             <div className="prose prose-sm text-primary space-y-4 max-w-2xl mx-auto text-center">
               <p className="text-lg font-headline italic tracking-wide">
-                I am not a traditional executive coach. I am an Empowerment Strategist.
+                I am not a traditional executive coach. <br /> I am an Empowerment Strategist.
               </p>
               <p className="leading-relaxed opacity-90">
                 With decades of professional experience and a deep commitment to the growth of others, 
