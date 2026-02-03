@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="border-t bg-secondary/30">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          <div className="md:col-span-2 space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+          <div className="md:col-span-2 space-y-6 flex flex-col items-center md:items-start">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Collective</span>
             </Link>
