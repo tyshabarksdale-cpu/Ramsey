@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "sybil-hero",
+      "description": "Professional black and white portrait of Sybil Ramsey",
+      "imageUrl": "https://picsum.photos/seed/sybil-1/800/1000",
+      "imageHint": "professional portrait black-white"
+    },
+    {
+      "id": "about-sybil",
+      "description": "Sybil Ramsey smiling warmly in a professional setting",
+      "imageUrl": "https://picsum.photos/seed/sybil-2/600/800",
+      "imageHint": "smiling woman professional"
+    },
+    {
+      "id": "collective-1",
+      "description": "Empowerment group workshop",
+      "imageUrl": "https://picsum.photos/seed/coll-1/400/300",
+      "imageHint": "group workshop women"
+    },
+    {
+      "id": "collective-2",
+      "description": "Professional women of color networking",
+      "imageUrl": "https://picsum.photos/seed/coll-2/400/300",
+      "imageHint": "women networking"
+    }
+  ]
+}
