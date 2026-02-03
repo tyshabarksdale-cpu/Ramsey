@@ -102,16 +102,16 @@ export default function Home() {
       {/* Mission Section - Minimal Large Typography */}
       <motion.section 
         {...fadeInUp}
-        className="py-16 bg-background"
+        className="py-12 bg-background"
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="text-accent font-bold tracking-widest uppercase text-sm mb-8 block">Our Mission</span>
-          <h2 className="text-3xl lg:text-5xl font-headline italic leading-relaxed text-foreground/90">
+          <span className="text-accent font-bold tracking-widest uppercase text-sm mb-6 block">Our Mission</span>
+          <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."
           </h2>
-          <div className="mt-12 flex items-center justify-center gap-4">
+          <div className="mt-8 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-accent/30"></div>
             <span className="font-headline text-xl text-accent">— Sybil Ramsey</span>
             <div className="h-px w-12 bg-accent/30"></div>
@@ -120,18 +120,18 @@ export default function Home() {
       </motion.section>
 
       {/* Benefits Grid Section - Subtle & Clean */}
-      <section className="pt-16 pb-32 bg-ombre-light">
+      <section className="pt-8 pb-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
-            className="text-center mb-24 space-y-6"
+            className="text-center mb-20 space-y-6"
           >
             <h2 className="text-4xl lg:text-6xl font-headline">How We Transform Together</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -141,7 +141,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/40 backdrop-blur-md">
-                  <CardContent className="p-10 space-y-6 text-center">
+                  <CardContent className="p-10 space-y-6">
                     <h3 className="text-2xl font-headline">{benefit.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {benefit.description}
