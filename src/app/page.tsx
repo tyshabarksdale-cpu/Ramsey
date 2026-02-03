@@ -105,7 +105,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <span className="text-primary font-bold tracking-widest uppercase text-base mb-4 block">Our Mission</span>
-          <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed text-primary font-normal">
+          <h2 className="text-2xl lg:text-4xl font-headline leading-relaxed text-primary font-normal">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."
@@ -119,14 +119,14 @@ export default function Home() {
       </motion.section>
 
       {/* Benefits Grid Section */}
-      <section className="pt-8 pb-32 bg-ombre-light">
+      <section className="pt-2 pb-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
             className="text-center mb-16 space-y-6"
           >
             <h2 className="text-4xl lg:text-6xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">How We Transform Together</h2>
-            <p className="text-xl text-primary max-w-2xl mx-auto font-medium">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-headline italic leading-relaxed">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
