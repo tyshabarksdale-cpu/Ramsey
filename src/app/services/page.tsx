@@ -1,3 +1,4 @@
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -113,7 +114,7 @@ export default function Services() {
 
         <div className="mt-32 text-center space-y-8 flex flex-col items-center justify-center">
           <h2 className="text-4xl font-headline text-primary pb-1 text-center w-full">Ready to start pedaling?</h2>
-          <Button asChild size="lg" className="rounded-full px-16 h-20 text-xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white">
+          <Button asChild size="lg" className="rounded-full px-16 h-20 text-xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline italic tracking-wide">
             <Link href="/connect">Book Your Strategy Session</Link>
           </Button>
         </div>
