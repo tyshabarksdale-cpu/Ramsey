@@ -3,15 +3,15 @@
   "placeholderImages": [
     {
       "id": "sybil-hero",
-      "description": "Professional executive portrait of a sophisticated African American woman",
-      "imageUrl": "https://images.unsplash.com/photo-1567532939604-b6c5b0ad3864?q=80&w=1080&auto=format&fit=crop",
-      "imageHint": "black woman"
+      "description": "Professional portrait of Sybil Ramsey",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1770132866545~2.png?alt=media&token=3cd597f0-2fda-4da4-afaa-56a79688bee8",
+      "imageHint": "professional woman"
     },
     {
       "id": "about-sybil",
-      "description": "Warm and approachable African American professional woman in a bright setting",
-      "imageUrl": "https://images.unsplash.com/photo-1531123897727-8f129e16fd3c?q=80&w=1080&auto=format&fit=crop",
-      "imageHint": "black woman"
+      "description": "Sybil Ramsey, Empowerment Strategist",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1770132866545~2.png?alt=media&token=3cd597f0-2fda-4da4-afaa-56a79688bee8",
+      "imageHint": "professional woman"
     },
     {
       "id": "collective-1",
