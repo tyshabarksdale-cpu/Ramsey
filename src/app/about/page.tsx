@@ -41,7 +41,7 @@ export default function About() {
             )}
           </div>
           <div className="space-y-6">
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest mb-4">Meet Sybil Ramsey</div>
               <h1 className="text-3xl lg:text-5xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1 tracking-tight">Empowerment Strategist</h1>
             </div>
