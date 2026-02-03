@@ -7,29 +7,36 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { Compass, ShieldCheck, Megaphone, Scale, ArrowRightCircle, Heart } from "lucide-react"
 
 const benefits = [
   {
+    icon: Compass,
     title: "Gain Clarity",
     description: "Define what success looks like for you and create a roadmap to achieve it. Cut through the noise and focus on what truly matters.",
   },
   {
+    icon: ShieldCheck,
     title: "Recognize Your Strength",
     description: "Identify and overcome beliefs and patterns holding you back. See yourself clearly and acknowledge the resilience you already possess.",
   },
   {
+    icon: Megaphone,
     title: "Embrace Your Voice",
     description: "Discover and trust your authentic voice. Learn to communicate with confidence and clarity, knowing your perspective matters.",
   },
   {
+    icon: Scale,
     title: "Create Balance",
     description: "Design a life that honors your priorities across work, relationships, health, and purpose.",
   },
   {
+    icon: ArrowRightCircle,
     title: "Take Meaningful Action",
     description: "Transform insight into progress with accountability and support. Move from intention to implementation with confidence.",
   },
   {
+    icon: Heart,
     title: "Foster Connection",
     description: "Build meaningful relationships and create positive change that ripples beyond yourself.",
   },
@@ -136,8 +143,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/40 backdrop-blur-md">
+                <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/40 backdrop-blur-md h-full">
                   <CardContent className="p-8 space-y-4 flex flex-col items-center">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                      <benefit.icon className="w-6 h-6" />
+                    </div>
                     <h3 className="text-xl font-headline text-primary">{benefit.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {benefit.description}
