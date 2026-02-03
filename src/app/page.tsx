@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -105,7 +106,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <span className="text-primary font-bold tracking-widest uppercase text-base mb-4 block">Our Mission</span>
-          <h2 className="text-2xl lg:text-4xl font-headline leading-relaxed text-primary font-normal">
+          <h2 className="text-2xl lg:text-4xl font-headline leading-relaxed text-primary font-normal italic">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."

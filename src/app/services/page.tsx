@@ -32,7 +32,7 @@ export default function Services() {
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
           <Badge variant="outline" className="text-primary border-primary/20 mb-4 px-4 py-1 rounded-full">Our Offerings</Badge>
           <h1 className="text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Tailored Strategies</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-headline italic leading-relaxed">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
           </p>
         </div>
