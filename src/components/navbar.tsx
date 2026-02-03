@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
+import { useState } from "react"
 import {
   Sheet,
   SheetContent,
@@ -24,6 +25,7 @@ const navLinks = [
 
 export function Navbar() {
   const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <motion.header 
@@ -74,7 +76,7 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         <div className="flex lg:hidden items-center">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" className="hover:bg-transparent -mr-2 text-xs font-bold uppercase tracking-widest">
                 Menu
@@ -90,6 +92,7 @@ export function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
+                    onClick={() => setIsOpen(false)}
                     className={cn(
                       "text-xl font-headline transition-colors hover:text-primary",
                       pathname === link.href ? "text-primary font-bold" : "text-muted-foreground"
@@ -100,6 +103,7 @@ export function Navbar() {
                 ))}
                 <Link
                   href="/connect"
+                  onClick={() => setIsOpen(false)}
                   className="rounded-full bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-4"
                 >
                   Start Your Journey
