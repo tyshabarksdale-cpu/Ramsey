@@ -2,7 +2,6 @@
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 
 const testimonials = [
   {
@@ -43,7 +42,7 @@ export default function About() {
           </div>
           <div className="space-y-6">
             <div className="space-y-3">
-              <Badge variant="outline" className="text-primary border-primary rounded-full px-4 py-1">Meet Sybil Ramsey</Badge>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest mb-4">Meet Sybil Ramsey</div>
               <h1 className="text-3xl lg:text-5xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1 tracking-tight">Empowerment Strategist</h1>
             </div>
             <div className="prose prose-sm text-primary space-y-4 max-w-none">
