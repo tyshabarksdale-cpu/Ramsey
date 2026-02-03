@@ -3,26 +3,26 @@
   "placeholderImages": [
     {
       "id": "sybil-hero",
-      "description": "Professional black and white portrait of Sybil Ramsey",
-      "imageUrl": "https://picsum.photos/seed/sybil-1/800/1000",
-      "imageHint": "professional portrait black-white"
+      "description": "Professional executive portrait of a sophisticated woman of color",
+      "imageUrl": "https://picsum.photos/seed/sybil-exec-hero/800/1000",
+      "imageHint": "professional portrait"
     },
     {
       "id": "about-sybil",
-      "description": "Sybil Ramsey smiling warmly in a professional setting",
-      "imageUrl": "https://picsum.photos/seed/sybil-2/600/800",
-      "imageHint": "smiling woman professional"
+      "description": "Warm and approachable professional woman in a bright office setting",
+      "imageUrl": "https://picsum.photos/seed/sybil-warm-smile/600/800",
+      "imageHint": "smiling professional"
     },
     {
       "id": "collective-1",
-      "description": "Empowerment group workshop",
-      "imageUrl": "https://picsum.photos/seed/coll-1/400/300",
-      "imageHint": "group workshop women"
+      "description": "Collaborative business workshop with professional women",
+      "imageUrl": "https://picsum.photos/seed/empowerment-workshop/400/300",
+      "imageHint": "women workshop"
     },
     {
       "id": "collective-2",
-      "description": "Professional women of color networking",
-      "imageUrl": "https://picsum.photos/seed/coll-2/400/300",
+      "description": "Diverse professional women networking and sharing ideas",
+      "imageUrl": "https://picsum.photos/seed/diverse-networking/400/300",
       "imageHint": "women networking"
     }
   ]
