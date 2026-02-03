@@ -31,7 +31,7 @@ export default function Services() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
           <Badge variant="outline" className="text-accent border-accent/20 mb-4 px-4 py-1 rounded-full">Our Offerings</Badge>
-          <h1 className="text-5xl lg:text-7xl font-headline">Tailored Strategies</h1>
+          <h1 className="text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Tailored Strategies</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
           </p>
@@ -71,7 +71,7 @@ export default function Services() {
             <div className="space-y-12">
               <div className="space-y-4 text-center lg:text-left">
                 <Badge variant="outline" className="border-accent/30 text-accent">The Methodology</Badge>
-                <h2 className="text-4xl lg:text-5xl font-headline">The Empowerment Process</h2>
+                <h2 className="text-4xl lg:text-5xl font-headline bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1">The Empowerment Process</h2>
               </div>
               <div className="space-y-10">
                 <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
@@ -113,10 +113,10 @@ export default function Services() {
         </div>
 
         <div className="mt-32 text-center space-y-8">
-          <h2 className="text-4xl font-headline">Ready to start pedaling?</h2>
-          <Button asChild size="lg" className="rounded-full px-16 h-20 text-xl font-bold bg-accent hover:bg-accent/90 shadow-xl">
+          <h2 className="text-4xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Ready to start pedaling?</h2>
+          <button className="rounded-full px-16 h-20 text-xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white transition-all">
             <Link href="/connect">Book Your Strategy Session</Link>
-          </Button>
+          </button>
         </div>
       </div>
     </div>

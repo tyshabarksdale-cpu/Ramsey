@@ -74,7 +74,7 @@ export default function Home() {
             className="bg-ombre-dark p-12 lg:p-24 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-center lg:text-left"
           >
             <div className="space-y-8 max-w-xl mx-auto lg:mx-0">
-              <h1 className="text-5xl lg:text-7xl font-headline leading-[1.1]">
+              <h1 className="text-5xl lg:text-7xl font-headline leading-[1.1] bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1">
                 You Steer, <br />
                 <span className="text-accent italic">We Pedal.</span>
               </h1>
@@ -106,7 +106,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <span className="text-accent font-bold tracking-widest uppercase text-sm mb-6 block">Our Mission</span>
-          <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">
+          <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed text-primary">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."
@@ -126,7 +126,7 @@ export default function Home() {
             {...fadeInUp}
             className="text-center mb-20 space-y-6"
           >
-            <h2 className="text-4xl lg:text-6xl font-headline">How We Transform Together</h2>
+            <h2 className="text-4xl lg:text-6xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">How We Transform Together</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>

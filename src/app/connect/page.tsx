@@ -28,7 +28,7 @@ export default function Connect() {
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
-          <h1 className="text-5xl lg:text-7xl font-headline font-bold">Connect</h1>
+          <h1 className="text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Connect</h1>
           <p className="text-xl text-muted-foreground">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide.
@@ -37,7 +37,7 @@ export default function Connect() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Info & Calendly */}
-          <div className="space-y-12">
+          <div className="space-y-12 text-center lg:text-left">
             <div className="space-y-8">
               <h2 className="text-3xl font-headline font-bold">Direct Access</h2>
               <div className="space-y-8">
@@ -80,7 +80,7 @@ export default function Connect() {
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-secondary">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <h3 className="text-3xl font-headline font-bold mb-8">Send a Message</h3>
+                <h3 className="text-3xl font-headline font-bold mb-8 text-center">Send a Message</h3>
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">

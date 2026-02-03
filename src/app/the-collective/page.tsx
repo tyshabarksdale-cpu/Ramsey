@@ -35,7 +35,7 @@ export default function TheCollective() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest">
             Community & Growth
           </div>
-          <h1 className="text-5xl lg:text-7xl font-headline font-bold">The Collective</h1>
+          <h1 className="text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">The Collective</h1>
           <p className="text-2xl text-muted-foreground font-headline italic leading-relaxed">
             "Empowerment grows in community. The Collective features women and organizations who share 
             our commitment to creating safe, supportive spaces where people feel heard, valued, and 
@@ -76,7 +76,7 @@ export default function TheCollective() {
         </div>
 
         <div className="mt-24 p-12 bg-secondary/30 rounded-3xl text-center space-y-6">
-          <h2 className="text-3xl font-headline font-bold">Want to join The Collective?</h2>
+          <h2 className="text-3xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Want to join The Collective?</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.

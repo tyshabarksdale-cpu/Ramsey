@@ -44,7 +44,7 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="outline" className="text-primary border-primary rounded-full px-4 py-1">Meet Sybil Ramsey</Badge>
-              <h1 className="text-4xl lg:text-6xl font-headline font-bold">Empowerment Strategist</h1>
+              <h1 className="text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Empowerment Strategist</h1>
             </div>
             <div className="prose prose-lg text-muted-foreground space-y-6 max-w-none">
               <p className="text-xl font-medium text-foreground">
@@ -67,19 +67,19 @@ export default function About() {
             </div>
             
             <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="space-y-1">
+              <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Certification</span>
                 <span className="font-bold text-lg">Certified Empowerment Coach</span>
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Expertise</span>
                 <span className="font-bold text-lg">30+ Years Leadership Experience</span>
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Advocacy</span>
                 <span className="font-bold text-lg">DEI Advocacy Specialist</span>
               </div>
-              <div className="space-y-1">
+              <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Strategy</span>
                 <span className="font-bold text-lg">Strategic Planning Graduate</span>
               </div>
@@ -90,9 +90,9 @@ export default function About() {
         {/* Testimonials */}
         <div className="bg-secondary/20 rounded-3xl p-8 lg:p-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-headline font-bold">Voices of Transformation</h2>
+            <h2 className="text-3xl lg:text-4xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Voices of Transformation</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-background/50 border-none shadow-sm">
                 <CardContent className="p-8 space-y-6">
