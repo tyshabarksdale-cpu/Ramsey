@@ -85,11 +85,11 @@ export default function Home() {
                 navigate the complex terrains of life, career, and personal growth with 
                 unwavering support and strategic advocacy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10 bg-transparent">
+              <div className="flex flex-col gap-4 pt-4 items-center">
+                <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10 bg-transparent w-full sm:w-64">
                   <Link href="/services">Our Services</Link>
                 </Button>
-                <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold">
+                <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold w-full sm:w-64">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
               </div>
@@ -105,7 +105,7 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <span className="text-primary font-bold tracking-widest uppercase text-base mb-4 block">Our Mission</span>
-          <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed text-primary">
+          <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed text-primary font-normal">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."
