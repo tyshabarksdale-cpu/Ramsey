@@ -29,7 +29,7 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
           <h1 className="text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Connect</h1>
-          <p className="text-xl text-muted-foreground font-headline italic leading-relaxed">
+          <p className="text-xl text-muted-foreground font-headline italic leading-relaxed tracking-wide">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide.
           </p>
@@ -51,7 +51,7 @@ export default function Connect() {
                 </div>
                 <div>
                   <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">Location</p>
-                  <p className="text-xl font-bold">Philadelphia Metro Area & Global Remote</p>
+                  <p className="text-xl font-bold text-primary">Philadelphia Metro Area & Global Remote</p>
                 </div>
               </div>
             </div>
