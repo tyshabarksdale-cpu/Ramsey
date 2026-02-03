@@ -112,7 +112,7 @@ export default function Home() {
           </h2>
           <div className="mt-6 flex items-center justify-center gap-4">
             <div className="h-px w-12 bg-primary/20"></div>
-            <span className="font-headline text-xl text-primary">— Sybil Ramsey</span>
+            <span className="font-headline text-xl text-primary">Sybil Ramsey</span>
             <div className="h-px w-12 bg-primary/20"></div>
           </div>
         </div>
