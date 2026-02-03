@@ -27,7 +27,7 @@ export default function Connect() {
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
-          <h1 className="text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Connect</h1>
+          <h1 className="text-5xl lg:text-7xl font-headline font-bold text-primary pb-1">Connect</h1>
           <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide.
@@ -57,7 +57,7 @@ export default function Connect() {
 
             <Card className="bg-primary text-primary-foreground p-8 lg:p-12 rounded-3xl overflow-hidden relative">
               <div className="relative z-10 space-y-6">
-                <h3 className="text-3xl font-headline font-bold">Book Instantly</h3>
+                <h3 className="text-3xl font-headline font-bold text-white">Book Instantly</h3>
                 <p className="text-lg text-primary-foreground/90 leading-relaxed">
                   Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
@@ -114,7 +114,7 @@ export default function Connect() {
                     <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] rounded-xl border-primary/20 text-primary" />
                   </div>
                 </div>
-                <Button type="submit" className="w-full rounded-full py-6 text-lg font-bold">
+                <Button type="submit" className="w-full rounded-full py-6 text-lg font-bold bg-primary text-white hover:bg-primary/90">
                   Send Message
                 </Button>
                 <p className="text-xs text-primary/60 text-center">
@@ -138,3 +138,4 @@ export default function Connect() {
       </div>
     </div>
   )
+}
