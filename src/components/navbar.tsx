@@ -1,8 +1,10 @@
+
 "use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -16,13 +18,17 @@ export function Navbar() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <motion.header 
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+    >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex flex-col">
-            <span className="text-xl font-headline font-bold leading-none">Ramsey Empowerment</span>
-            <span className="text-xs uppercase tracking-widest text-muted-foreground">Collective, LLC</span>
-          </div>
+        <Link href="/" className="flex items-center gap-2 group">
+          <span className="text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary">
+            Ramsey Empowerment Collective
+          </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
@@ -31,7 +37,7 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                pathname === link.href ? "text-primary" : "text-muted-foreground"
+                pathname === link.href ? "text-primary border-b-2 border-primary" : "text-muted-foreground"
               )}
             >
               {link.name}
@@ -45,6 +51,6 @@ export function Navbar() {
           </Link>
         </nav>
       </div>
-    </header>
+    </motion.header>
   )
 }

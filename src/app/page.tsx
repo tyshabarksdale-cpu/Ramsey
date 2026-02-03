@@ -1,10 +1,13 @@
 
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
 import { Compass, ShieldCheck, Megaphone, Waves, ArrowRightCircle, HeartHandshake } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 const benefits = [
   {
@@ -39,40 +42,57 @@ const benefits = [
   },
 ]
 
+const fadeInUp = {
+  initial: { y: 40, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  viewport: { once: true },
+  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+}
+
 export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 lg:pt-20">
+      <section className="relative overflow-hidden pt-12 lg:pt-32 pb-24">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-in fade-in slide-in-from-left duration-1000">
-              <div className="space-y-4">
-                <h1 className="text-5xl lg:text-7xl font-headline font-bold leading-tight">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div 
+              initial={{ x: -40, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="space-y-10"
+            >
+              <div className="space-y-6">
+                <h1 className="text-6xl lg:text-8xl font-headline font-bold leading-[1.1]">
                   You Steer, <br />
-                  <span className="text-primary">We Pedal.</span>
+                  <span className="text-primary italic">We Pedal.</span>
                 </h1>
-                <p className="text-2xl text-muted-foreground font-headline italic">
+                <p className="text-2xl text-muted-foreground font-headline italic tracking-wide">
                   Empowering you to step into your power.
                 </p>
               </div>
-              <p className="text-lg leading-relaxed text-muted-foreground max-w-xl">
+              <p className="text-xl leading-relaxed text-muted-foreground max-w-xl">
                 As an Empowerment Strategist, Sybil Ramsey helps women and professionals 
                 navigate the complex terrains of life, career, and personal growth with 
                 unwavering support and strategic advocacy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="rounded-full px-8 text-lg font-bold">
+              <div className="flex flex-col sm:flex-row gap-6 pt-4">
+                <Button asChild size="lg" className="rounded-full px-10 h-16 text-xl font-bold shadow-xl hover:scale-105 transition-transform">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-lg font-bold">
-                  <Link href="/services">Learn More About Services</Link>
+                <Button asChild variant="outline" size="lg" className="rounded-full px-10 h-16 text-xl font-bold border-2 hover:bg-primary/5">
+                  <Link href="/services">Our Services</Link>
                 </Button>
               </div>
-            </div>
-            <div className="relative aspect-[4/5] w-full max-w-lg mx-auto grayscale hover:grayscale-0 transition-all duration-700 rounded-2xl overflow-hidden shadow-2xl animate-in fade-in slide-in-from-right duration-1000">
+            </motion.div>
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="relative aspect-[4/5] w-full max-w-lg mx-auto grayscale hover:grayscale-0 transition-all duration-1000 rounded-3xl overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)]"
+            >
               {heroImage && (
                 <Image
                   src={heroImage.imageUrl}
@@ -83,52 +103,69 @@ export default function Home() {
                   priority
                 />
               )}
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 bg-primary text-primary-foreground mt-20">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl lg:text-5xl font-headline mb-12 italic leading-relaxed">
+      <motion.section 
+        {...fadeInUp}
+        className="py-32 bg-primary text-primary-foreground"
+      >
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <h2 className="text-4xl lg:text-6xl font-headline mb-16 italic leading-snug">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
-            and step into their power—fostering a cycle of empowerment, connection, and positive change."
+            and step into their power."
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto"></div>
+          <div className="w-32 h-1 bg-accent mx-auto"></div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Benefits Grid Section */}
-      <section className="py-24 bg-background">
+      <section className="py-32 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl lg:text-5xl font-headline font-bold">How We Transform Together</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <motion.div 
+            {...fadeInUp}
+            className="text-center mb-24 space-y-6"
+          >
+            <h2 className="text-5xl lg:text-7xl font-headline font-bold">How We Transform Together</h2>
+            <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Our six core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-none shadow-md hover:shadow-xl transition-all hover:-translate-y-2 duration-300">
-                <CardContent className="p-8 space-y-4">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                    <benefit.icon className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-2xl font-headline font-bold">{benefit.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={index}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all hover:-translate-y-2 duration-500 bg-white/50 backdrop-blur-sm">
+                  <CardContent className="p-10 space-y-6">
+                    <div className="w-20 h-20 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
+                      <benefit.icon className="w-10 h-10" />
+                    </div>
+                    <h3 className="text-3xl font-headline font-bold">{benefit.title}</h3>
+                    <p className="text-muted-foreground text-lg leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
-          <div className="mt-16 text-center">
-            <Button asChild size="lg" className="rounded-full px-12 py-8 text-xl font-bold bg-accent hover:bg-accent/90">
+          <motion.div 
+            {...fadeInUp}
+            className="mt-24 text-center"
+          >
+            <Button asChild size="lg" className="rounded-full px-16 h-20 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl">
               <Link href="/connect">Schedule Your Discovery Call</Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
