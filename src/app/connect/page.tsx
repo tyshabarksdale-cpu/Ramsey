@@ -26,7 +26,7 @@ export default function Connect() {
   return (
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
+        <div className="max-w-3xl mx-auto text-center mb-10 space-y-4">
           <h1 className="text-5xl lg:text-7xl font-headline font-bold text-primary pb-1">Connect</h1>
           <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide">
             Whether you're ready to start your journey or just have a few questions, 
@@ -55,14 +55,14 @@ export default function Connect() {
               </div>
             </div>
 
-            <Card className="bg-primary text-primary-foreground p-8 lg:p-12 rounded-3xl overflow-hidden relative">
+            <Card className="bg-primary text-primary-foreground p-8 lg:p-12 rounded-3xl overflow-hidden relative border-none shadow-xl">
               <div className="relative z-10 space-y-6">
                 <h3 className="text-3xl font-headline font-bold text-white">Book Instantly</h3>
                 <p className="text-lg text-primary-foreground/90 leading-relaxed">
                   Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
                 </p>
-                <Button size="lg" className="w-full rounded-full py-8 text-xl font-bold bg-accent hover:bg-accent/90" asChild>
+                <Button size="lg" className="w-full rounded-full py-8 text-xl font-bold bg-accent hover:bg-accent/90 border-none" asChild>
                   <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                     Open Calendly
                   </a>
