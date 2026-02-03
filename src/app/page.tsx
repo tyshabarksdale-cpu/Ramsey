@@ -86,11 +86,11 @@ export default function Home() {
                 unwavering support and strategic advocacy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-                <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold">
-                  <Link href="/connect">Start Your Journey</Link>
-                </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10 bg-transparent">
                   <Link href="/services">Our Services</Link>
+                </Button>
+                <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold">
+                  <Link href="/connect">Start Your Journey</Link>
                 </Button>
               </div>
             </div>
