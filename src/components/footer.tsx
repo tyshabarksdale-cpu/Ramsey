@@ -2,9 +2,17 @@
 "use client"
 
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 export function Footer() {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const currentYear = mounted ? new Date().getFullYear() : "2025"
+
   return (
     <footer className="border-t bg-secondary/30">
       <div className="container mx-auto px-4 py-16">
@@ -41,7 +49,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground pt-4">
-              © {new Date().getFullYear()} Ramsey Empowerment Collective, LLC. All rights reserved.
+              © {currentYear} Ramsey Empowerment Collective, LLC. All rights reserved.
             </p>
           </div>
         </div>
