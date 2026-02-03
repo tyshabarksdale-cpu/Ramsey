@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -28,7 +27,6 @@ export default function Connect() {
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-10 space-y-4">
-          <h1 className="text-5xl lg:text-7xl font-headline font-bold text-primary pb-1">Connect</h1>
           <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide.
