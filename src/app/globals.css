@@ -10,19 +10,19 @@
     --card-foreground: 266 40% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 266 40% 12%;
-    --primary: 266 45% 35%;
+    --primary: 266 35% 25%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 260 20% 94%;
+    --secondary: 260 20% 96%;
     --secondary-foreground: 266 40% 20%;
     --muted: 260 10% 95%;
     --muted-foreground: 260 15% 45%;
-    --accent: 330 25% 55%;
+    --accent: 330 15% 60%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 260 15% 90%;
-    --input: 260 15% 90%;
-    --ring: 266 45% 35%;
+    --border: 260 15% 92%;
+    --input: 260 15% 92%;
+    --ring: 266 35% 25%;
     --radius: 1rem;
   }
 }
@@ -44,9 +44,9 @@
     background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary)) 100%);
   }
   .bg-ombre-dark {
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, #2d1b4d 100%);
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, #1a102e 100%);
   }
   .bg-ombre-accent {
-    background: linear-gradient(135deg, hsl(var(--accent)) 0%, #8b4d6e 100%);
+    background: linear-gradient(135deg, hsl(var(--accent)) 0%, #6d4a5d 100%);
   }
 }
