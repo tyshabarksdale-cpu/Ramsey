@@ -11,7 +11,8 @@ export function Footer() {
     setMounted(true)
   }, [])
 
-  const currentYear = mounted ? new Date().getFullYear() : "2025"
+  // Use a stable fallback value for SSR and initial hydration to prevent mismatches
+  const currentYear = mounted ? new Date().getFullYear().toString() : "2025"
 
   return (
     <footer className="border-t bg-secondary/30">
