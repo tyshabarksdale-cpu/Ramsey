@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2 space-y-6">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-headline font-bold">Ramsey Empowerment Collective</span>
+              <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Collective</span>
             </Link>
             <p className="text-xl font-headline italic text-primary/80">
               "You steer as we pedal"
@@ -22,7 +22,7 @@ export function Footer() {
             </p>
           </div>
           <div className="space-y-4">
-            <h4 className="font-headline font-bold text-lg">Quick Links</h4>
+            <h4 className="font-headline font-bold text-lg text-primary">Quick Links</h4>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Sybil</Link></li>
               <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link></li>
@@ -31,7 +31,7 @@ export function Footer() {
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="font-headline font-bold text-lg">Connect</h4>
+            <h4 className="font-headline font-bold text-lg text-primary">Connect</h4>
             <div className="flex flex-col gap-2">
               <a href="#" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
                 LinkedIn

@@ -99,32 +99,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section - Minimal Large Typography */}
+      {/* Mission Section - Tightened spacing */}
       <motion.section 
         {...fadeInUp}
         className="py-12 bg-background"
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="text-accent font-bold tracking-widest uppercase text-sm mb-6 block">Our Mission</span>
+          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Our Mission</span>
           <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed text-primary">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."
           </h2>
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <div className="h-px w-12 bg-accent/30"></div>
-            <span className="font-headline text-xl text-accent">— Sybil Ramsey</span>
-            <div className="h-px w-12 bg-accent/30"></div>
+          <div className="mt-6 flex items-center justify-center gap-4">
+            <div className="h-px w-12 bg-primary/20"></div>
+            <span className="font-headline text-xl text-primary">— Sybil Ramsey</span>
+            <div className="h-px w-12 bg-primary/20"></div>
           </div>
         </div>
       </motion.section>
 
-      {/* Benefits Grid Section - Subtle & Clean */}
+      {/* Benefits Grid Section - Centered & Purple Subtitles */}
       <section className="pt-8 pb-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
-            className="text-center mb-20 space-y-6"
+            className="text-center mb-16 space-y-6"
           >
             <h2 className="text-4xl lg:text-6xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">How We Transform Together</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -141,8 +141,8 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/40 backdrop-blur-md">
-                  <CardContent className="p-10 space-y-6">
-                    <h3 className="text-2xl font-headline">{benefit.title}</h3>
+                  <CardContent className="p-10 space-y-6 flex flex-col items-center">
+                    <h3 className="text-2xl font-headline text-primary">{benefit.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {benefit.description}
                     </p>
@@ -153,7 +153,7 @@ export default function Home() {
           </div>
           <motion.div 
             {...fadeInUp}
-            className="mt-24 text-center"
+            className="mt-20 text-center"
           >
             <Button asChild size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg">
               <Link href="/connect">Schedule Your Discovery Call</Link>

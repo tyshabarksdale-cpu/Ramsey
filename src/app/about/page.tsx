@@ -47,7 +47,7 @@ export default function About() {
               <h1 className="text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Empowerment Strategist</h1>
             </div>
             <div className="prose prose-lg text-muted-foreground space-y-6 max-w-none">
-              <p className="text-xl font-medium text-foreground">
+              <p className="text-xl font-medium text-primary">
                 I am not a traditional executive coach. I am an Empowerment Strategist.
               </p>
               <p>
@@ -87,7 +87,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Testimonials */}
+        {/* Testimonials - Centered Content */}
         <div className="bg-secondary/20 rounded-3xl p-8 lg:p-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Voices of Transformation</h2>
@@ -95,11 +95,11 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-background/50 border-none shadow-sm">
-                <CardContent className="p-8 space-y-6">
+                <CardContent className="p-8 space-y-6 flex flex-col items-center">
                   <p className="text-lg italic text-muted-foreground">"{t.text}"</p>
                   <div>
                     <p className="font-bold text-foreground">{t.name}</p>
-                    <p className="text-sm text-primary">{t.title}</p>
+                    <p className="text-sm text-primary font-bold uppercase tracking-widest">{t.title}</p>
                   </div>
                 </CardContent>
               </Card>
