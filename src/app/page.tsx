@@ -71,9 +71,9 @@ export default function Home() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="bg-ombre-dark p-12 lg:p-24 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-center lg:text-left"
+            className="bg-ombre-dark p-12 lg:p-24 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-left"
           >
-            <div className="space-y-8 max-w-xl mx-auto lg:mx-0">
+            <div className="space-y-8 max-w-xl lg:mx-0">
               <h1 className="text-5xl lg:text-7xl font-headline leading-[1.1] bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1">
                 You Steer, <br />
                 <span className="text-accent italic">We Pedal.</span>
@@ -86,7 +86,7 @@ export default function Home() {
                 navigate the complex terrains of life, career, and personal growth with 
                 unwavering support and strategic advocacy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                 <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
