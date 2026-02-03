@@ -64,7 +64,10 @@ export default function Home() {
               />
             )}
           </div>
-          <div 
+          <motion.div 
+            initial={{ x: 40, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="bg-ombre-dark p-8 lg:p-12 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-left"
           >
             <div className="space-y-4 max-w-sm">
@@ -108,7 +111,7 @@ export default function Home() {
                 </Button>
               </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
