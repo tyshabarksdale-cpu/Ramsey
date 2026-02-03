@@ -19,7 +19,6 @@ export default function Connect() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Simulated form submission
     setIsSubmitted(true)
     toast({
       title: "Message Sent",
@@ -49,7 +48,6 @@ export default function Connect() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Info & Calendly */}
           <div className="space-y-12 text-center lg:text-left">
             <div className="space-y-8">
               <h2 className="text-3xl font-headline font-bold text-primary">Direct Access</h2>
@@ -89,7 +87,6 @@ export default function Connect() {
             </Card>
           </div>
 
-          {/* Contact Form */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-secondary">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">

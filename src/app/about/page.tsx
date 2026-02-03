@@ -1,3 +1,4 @@
+
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
@@ -26,7 +27,6 @@ export default function About() {
   return (
     <div className="py-12 lg:py-20">
       <div className="container mx-auto px-4">
-        {/* Profile Section */}
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center mb-16 max-w-5xl mx-auto">
           <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl max-w-sm mx-auto w-full">
             {aboutImage && (
@@ -90,7 +90,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Testimonials - Centered Content */}
         <div className="bg-secondary/20 rounded-3xl p-8 lg:p-12 max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Voices of Transformation</h2>

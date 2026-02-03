@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import { Bike } from "lucide-react"
 import {
   Sheet,
   SheetContent,
@@ -33,7 +34,6 @@ export function Navbar() {
     setMounted(true)
   }, [])
 
-  // Use a stable year for SSR and initial hydration to prevent mismatches
   const currentYear = mounted ? new Date().getFullYear().toString() : "2025"
 
   return (
@@ -44,7 +44,10 @@ export function Navbar() {
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
+            <Bike className="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-300" />
+          </div>
           <div className="flex flex-col">
             <span className="text-xl md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight text-primary">
               Ramsey Empowerment
@@ -55,7 +58,6 @@ export function Navbar() {
           </div>
         </Link>
         
-        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive = mounted && pathname === link.href;
@@ -86,7 +88,6 @@ export function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile Navigation */}
         <div className="flex lg:hidden items-center">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
