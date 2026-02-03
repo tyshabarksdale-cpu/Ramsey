@@ -45,7 +45,7 @@ export default function TheCollective() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {collectiveMembers.map((member, i) => (
-            <Card key={i} className="overflow-hidden border-none shadow-lg group">
+            <Card key={i} className="overflow-hidden border-none shadow-lg group text-center">
               <div className="relative aspect-video overflow-hidden">
                 {member.image && (
                   <Image
@@ -56,7 +56,7 @@ export default function TheCollective() {
                     data-ai-hint={member.image.imageHint}
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
                   <a href={member.link} className="text-primary-foreground font-bold hover:underline tracking-widest uppercase text-xs">
                     Visit Website
                   </a>

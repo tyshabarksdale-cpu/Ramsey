@@ -39,7 +39,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
           {services.map((service, i) => (
-            <Card key={i} className="relative overflow-hidden group border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white">
+            <Card key={i} className="relative overflow-hidden group border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white text-center">
               <CardHeader className="p-10 space-y-4">
                 <div>
                   <CardTitle className="text-2xl font-headline mb-3">{service.title}</CardTitle>
@@ -47,7 +47,7 @@ export default function Services() {
                 </div>
               </CardHeader>
               <CardContent className="p-10 pt-0 space-y-8">
-                <ul className="space-y-4">
+                <ul className="space-y-4 inline-block text-left">
                   {service.features.map((f, j) => (
                     <li key={j} className="flex items-center gap-3 text-sm font-medium text-foreground/80">
                       <div className="w-1.5 h-1.5 rounded-full bg-accent/40" />
@@ -69,26 +69,26 @@ export default function Services() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-[100px] rounded-full"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
             <div className="space-y-12">
-              <div className="space-y-4">
+              <div className="space-y-4 text-center lg:text-left">
                 <Badge variant="outline" className="border-accent/30 text-accent">The Methodology</Badge>
                 <h2 className="text-4xl lg:text-5xl font-headline">The Empowerment Process</h2>
               </div>
               <div className="space-y-10">
-                <div className="flex gap-6">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center font-headline font-bold text-xl text-accent">1</div>
                   <div>
                     <h4 className="text-xl font-bold mb-2">Discovery Call</h4>
                     <p className="text-primary-foreground/70 leading-relaxed">A 30-minute deep dive to understand your current landscape and see if our tandem is a match.</p>
                   </div>
                 </div>
-                <div className="flex gap-6">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center font-headline font-bold text-xl text-accent">2</div>
                   <div>
                     <h4 className="text-xl font-bold mb-2">Strategic Roadmap</h4>
                     <p className="text-primary-foreground/70 leading-relaxed">We map out your destinations and define the metrics of success for our journey together.</p>
                   </div>
                 </div>
-                <div className="flex gap-6">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full border border-accent/30 flex items-center justify-center font-headline font-bold text-xl text-accent">3</div>
                   <div>
                     <h4 className="text-xl font-bold mb-2">The Pedal Sessions</h4>
