@@ -89,11 +89,6 @@ export default function Services() {
                 "In our sessions, you aren't just a client; you are the driver. 
                 I am here to provide the momentum and the map."
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Before we dive into the process, I want you to know that this is a safe space for your 
-                authentic self. We work together to uncover the strategies that resonate specifically 
-                with your life and goals.
-              </p>
             </div>
           </div>
         </section>
