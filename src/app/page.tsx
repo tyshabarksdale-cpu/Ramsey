@@ -48,11 +48,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+      <section className="relative min-h-[70vh] lg:min-h-[80vh] flex items-center py-12 lg:py-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-0 items-stretch max-w-6xl">
           <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2 }}
             className="relative aspect-[4/5] lg:aspect-auto rounded-l-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
           >
@@ -68,29 +68,29 @@ export default function Home() {
             )}
           </motion.div>
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="bg-ombre-dark p-12 lg:p-24 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-left"
+            transition={{ duration: 1 }}
+            className="bg-ombre-dark p-10 lg:p-16 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-left"
           >
-            <div className="space-y-8 max-w-xl lg:mx-0">
-              <h1 className="text-5xl lg:text-7xl font-headline leading-[1.1] bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1">
+            <div className="space-y-6 max-w-md">
+              <h1 className="text-4xl lg:text-5xl font-headline leading-[1.2] bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1">
                 You Steer, <br />
                 <span className="text-accent italic">We Pedal.</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-primary-foreground/80 font-headline italic tracking-wide">
+              <p className="text-lg lg:text-xl text-primary-foreground/80 font-headline italic tracking-wide">
                 Empowering you to step into your power.
               </p>
-              <p className="text-lg leading-relaxed text-primary-foreground/70">
+              <p className="text-base leading-relaxed text-primary-foreground/70">
                 As an Empowerment Strategist, Sybil Ramsey helps women and professionals 
                 navigate the complex terrains of life, career, and personal growth with 
                 unwavering support and strategic advocacy.
               </p>
-              <div className="flex flex-col gap-4 pt-4 items-center">
-                <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10 bg-transparent w-full sm:w-64">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button asChild variant="outline" size="lg" className="rounded-full border-white/20 text-white hover:bg-white/10 bg-transparent">
                   <Link href="/services">Our Services</Link>
                 </Button>
-                <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold w-full sm:w-64">
+                <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
               </div>
@@ -102,7 +102,7 @@ export default function Home() {
       {/* Mission Section */}
       <motion.section 
         {...fadeInUp}
-        className="py-12 bg-background"
+        className="py-16 bg-background"
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <span className="text-primary font-bold tracking-widest uppercase text-base mb-4 block">Our Mission</span>
