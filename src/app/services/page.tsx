@@ -57,7 +57,7 @@ export default function Services() {
                 </ul>
                 <div className="pt-6 border-t border-secondary">
                   <p className="text-xs font-bold text-primary/60 uppercase tracking-widest mb-1">Investment</p>
-                  <p className="text-2xl font-bold text-primary">{service.price}</p>
+                  <p className="text-2xl font-bold text-primary font-headline">{service.price}</p>
                 </div>
               </CardContent>
             </Card>
