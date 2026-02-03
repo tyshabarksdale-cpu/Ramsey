@@ -8,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Mail, Phone, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 export default function Connect() {
@@ -41,43 +40,25 @@ export default function Connect() {
           <div className="space-y-12">
             <div className="space-y-8">
               <h2 className="text-3xl font-headline font-bold">Direct Access</h2>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="text-lg font-bold">sybil@ramseyempowerment.com</p>
-                  </div>
+              <div className="space-y-8">
+                <div>
+                  <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">Email</p>
+                  <p className="text-xl font-bold">sybil@ramseyempowerment.com</p>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <Linkedin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <p className="text-lg font-bold">Sybil Ramsey, Empowerment Strategist</p>
-                  </div>
+                <div>
+                  <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">LinkedIn</p>
+                  <p className="text-xl font-bold">Sybil Ramsey, Empowerment Strategist</p>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-lg font-bold">Philadelphia Metro Area & Global Remote</p>
-                  </div>
+                <div>
+                  <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">Location</p>
+                  <p className="text-xl font-bold">Philadelphia Metro Area & Global Remote</p>
                 </div>
               </div>
             </div>
 
-            <Card className="bg-primary text-primary-foreground p-8 rounded-3xl overflow-hidden relative">
+            <Card className="bg-primary text-primary-foreground p-8 lg:p-12 rounded-3xl overflow-hidden relative">
               <div className="relative z-10 space-y-6">
-                <div className="flex items-center gap-3">
-                  <Calendar className="w-8 h-8 text-accent" />
-                  <h3 className="text-2xl font-headline font-bold">Book Instantly</h3>
-                </div>
+                <h3 className="text-3xl font-headline font-bold">Book Instantly</h3>
                 <p className="text-lg text-primary-foreground/90 leading-relaxed">
                   Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
@@ -143,9 +124,6 @@ export default function Connect() {
               </form>
             ) : (
               <div className="text-center py-20 space-y-6">
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckCircle className="w-12 h-12" />
-                </div>
                 <h3 className="text-3xl font-headline font-bold">Thank You!</h3>
                 <p className="text-lg text-muted-foreground">
                   Your message has been received. Sybil will review your inquiry and 

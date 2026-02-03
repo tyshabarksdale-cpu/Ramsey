@@ -2,7 +2,6 @@
 "use client"
 
 import Link from "next/link"
-import { Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Footer() {
@@ -33,12 +32,12 @@ export function Footer() {
           </div>
           <div className="space-y-4">
             <h4 className="font-headline font-bold text-lg">Connect</h4>
-            <div className="flex gap-4">
-              <a href="#" className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all shadow-sm">
-                <Linkedin className="h-5 w-5" />
+            <div className="flex flex-col gap-2">
+              <a href="#" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
+                LinkedIn
               </a>
-              <a href="mailto:sybil@ramseyempowerment.com" className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all shadow-sm">
-                <Mail className="h-5 w-5" />
+              <a href="mailto:sybil@ramseyempowerment.com" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
+                Email
               </a>
             </div>
             <p className="text-sm text-muted-foreground pt-4">

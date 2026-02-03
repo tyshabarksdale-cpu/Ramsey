@@ -1,8 +1,8 @@
+
 "use client"
 
 import Image from "next/image"
 import Link from "next/link"
-import { Compass, ShieldCheck, Megaphone, Waves, ArrowRightCircle, HeartHandshake } from "lucide-react"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -12,32 +12,26 @@ const benefits = [
   {
     title: "Gain Clarity",
     description: "Define what success looks like for you and create a roadmap to achieve it. Cut through the noise and focus on what truly matters.",
-    icon: Compass,
   },
   {
     title: "Recognize Your Strength",
     description: "Identify and overcome beliefs and patterns holding you back. See yourself clearly and acknowledge the resilience you already possess.",
-    icon: ShieldCheck,
   },
   {
     title: "Embrace Your Voice",
     description: "Discover and trust your authentic voice. Learn to communicate with confidence and clarity, knowing your perspective matters.",
-    icon: Megaphone,
   },
   {
     title: "Create Balance",
     description: "Design a life that honors your priorities across work, relationships, health, and purpose.",
-    icon: Waves,
   },
   {
     title: "Take Meaningful Action",
     description: "Transform insight into progress with accountability and support. Move from intention to implementation with confidence.",
-    icon: ArrowRightCircle,
   },
   {
     title: "Foster Connection",
     description: "Build meaningful relationships and create positive change that ripples beyond yourself.",
-    icon: HeartHandshake,
   },
 ]
 
@@ -148,9 +142,6 @@ export default function Home() {
               >
                 <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/40 backdrop-blur-md">
                   <CardContent className="p-10 space-y-6">
-                    <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center text-primary">
-                      <benefit.icon className="w-8 h-8" />
-                    </div>
                     <h3 className="text-2xl font-headline">{benefit.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {benefit.description}

@@ -3,7 +3,6 @@ import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2 } from "lucide-react"
 
 const testimonials = [
   {
@@ -67,22 +66,22 @@ export default function About() {
               </p>
             </div>
             
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="text-primary h-6 w-6" />
-                <span className="font-bold">Certified Empowerment Coach</span>
+            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="space-y-1">
+                <span className="block text-primary text-xs font-bold uppercase tracking-widest">Certification</span>
+                <span className="font-bold text-lg">Certified Empowerment Coach</span>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="text-primary h-6 w-6" />
-                <span className="font-bold">30+ Years Leadership Experience</span>
+              <div className="space-y-1">
+                <span className="block text-primary text-xs font-bold uppercase tracking-widest">Expertise</span>
+                <span className="font-bold text-lg">30+ Years Leadership Experience</span>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="text-primary h-6 w-6" />
-                <span className="font-bold">DEI Advocacy Specialist</span>
+              <div className="space-y-1">
+                <span className="block text-primary text-xs font-bold uppercase tracking-widest">Advocacy</span>
+                <span className="font-bold text-lg">DEI Advocacy Specialist</span>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="text-primary h-6 w-6" />
-                <span className="font-bold">Strategic Planning Graduate</span>
+              <div className="space-y-1">
+                <span className="block text-primary text-xs font-bold uppercase tracking-widest">Strategy</span>
+                <span className="font-bold text-lg">Strategic Planning Graduate</span>
               </div>
             </div>
           </div>

@@ -1,10 +1,10 @@
+
 "use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { Menu } from "lucide-react"
 import {
   Sheet,
   SheetContent,
@@ -76,8 +76,8 @@ export function Navbar() {
         <div className="flex lg:hidden items-center">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="hover:bg-transparent -mr-2">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" className="hover:bg-transparent -mr-2 text-xs font-bold uppercase tracking-widest">
+                Menu
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>

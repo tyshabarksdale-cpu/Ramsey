@@ -1,28 +1,25 @@
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Briefcase, Heart, User, Sparkles, Target, Zap } from "lucide-react"
 
 const services = [
   {
     title: "Executive Empowerment",
     description: "For high-level leaders seeking to lead with authenticity and advocate for change.",
-    icon: Briefcase,
     features: ["Strategic Leadership", "Organizational Advocacy", "Conflict Resolution", "Phased Retirement Planning"],
     price: "Custom Packages Available"
   },
   {
     title: "Career Strategy",
     description: "Navigate transitions, promotions, or mid-to-late career shifts with confidence.",
-    icon: User,
     features: ["Personal Branding", "Interview Advocacy", "Negotiation Skills", "Career Pivoting"],
     price: "Starting at $250 / Session"
   },
   {
     title: "Life Empowerment",
     description: "Reclaim your personal power, improve relationships, and find holistic balance.",
-    icon: Heart,
     features: ["Personal Boundaries", "Voice Discovery", "Wellness Integration", "Purpose Finding"],
     price: "Flexible Tiered Pricing"
   }
@@ -44,9 +41,6 @@ export default function Services() {
           {services.map((service, i) => (
             <Card key={i} className="relative overflow-hidden group border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white">
               <CardHeader className="p-10 space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-7 h-7" />
-                </div>
                 <div>
                   <CardTitle className="text-2xl font-headline mb-3">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed text-muted-foreground">{service.description}</CardDescription>
@@ -105,14 +99,13 @@ export default function Services() {
             </div>
             <div className="grid grid-cols-2 gap-6">
               {[
-                { icon: Sparkles, label: "Clarity" },
-                { icon: Target, label: "Results" },
-                { icon: Zap, label: "Action" },
-                { icon: Heart, label: "Empowerment" }
+                { label: "Clarity" },
+                { label: "Results" },
+                { label: "Action" },
+                { label: "Empowerment" }
               ].map((item, idx) => (
-                <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-8 text-center flex flex-col items-center gap-4 group hover:bg-white/10 transition-all">
-                  <item.icon className="w-10 h-10 text-accent group-hover:scale-110 transition-transform" />
-                  <p className="font-bold tracking-widest uppercase text-xs">{item.label}</p>
+                <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-8 text-center flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-all aspect-square">
+                  <p className="font-bold tracking-[0.2em] uppercase text-sm">{item.label}</p>
                 </Card>
               ))}
             </div>
