@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
@@ -75,7 +74,7 @@ export default function TheCollective() {
           ))}
         </div>
 
-        <div className="mt-24 p-12 bg-secondary/30 rounded-3xl text-center space-y-6">
+        <div className="mt-12 p-12 bg-secondary/30 rounded-3xl text-center space-y-6">
           <h2 className="text-3xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Want to join The Collective?</h2>
           <p className="text-lg text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 
