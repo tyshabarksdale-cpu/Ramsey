@@ -1,6 +1,9 @@
+
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -12,6 +15,7 @@ import { useToast } from "@/hooks/use-toast"
 export default function Connect() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const { toast } = useToast()
+  const connectImage = PlaceHolderImages.find(img => img.id === "connect-sybil")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -26,7 +30,18 @@ export default function Connect() {
   return (
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-10 space-y-4">
+        <div className="max-w-3xl mx-auto text-center mb-10 space-y-8 flex flex-col items-center">
+          {connectImage && (
+            <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+              <Image
+                src={connectImage.imageUrl}
+                alt={connectImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={connectImage.imageHint}
+              />
+            </div>
+          )}
           <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide.
