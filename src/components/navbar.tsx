@@ -9,8 +9,6 @@ import { useState } from "react"
 import {
   Sheet,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
@@ -37,7 +35,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight">
+            <span className="text-xl md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight text-primary">
               Ramsey Empowerment
             </span>
             <span className="text-sm font-headline italic text-accent font-medium leading-none">
@@ -54,7 +52,7 @@ export function Navbar() {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary relative py-1",
-                pathname === link.href ? "text-primary font-bold" : "text-muted-foreground"
+                pathname === link.href ? "text-primary font-bold" : "text-primary/70"
               )}
             >
               {link.name}
@@ -78,16 +76,13 @@ export function Navbar() {
         <div className="flex lg:hidden items-center">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="hover:bg-transparent -mr-2 text-xs font-bold uppercase tracking-widest">
+              <Button variant="ghost" className="hover:bg-transparent -mr-2 text-xs font-bold uppercase tracking-widest text-primary">
                 Menu
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l">
-              <SheetHeader className="text-left mb-12">
-                <SheetTitle className="font-headline text-2xl font-bold">Navigation</SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-8 pt-12">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -95,7 +90,7 @@ export function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={cn(
                       "text-xl font-headline transition-colors hover:text-primary",
-                      pathname === link.href ? "text-primary font-bold" : "text-muted-foreground"
+                      pathname === link.href ? "text-primary font-bold" : "text-primary/70"
                     )}
                   >
                     {link.name}
@@ -109,7 +104,7 @@ export function Navbar() {
                   Start Your Journey
                 </Link>
               </div>
-              <div className="mt-auto pt-12 text-center text-xs text-muted-foreground">
+              <div className="mt-auto pt-12 text-center text-xs text-primary/60">
                 <p>© {new Date().getFullYear()} Ramsey Empowerment Collective</p>
               </div>
             </SheetContent>
