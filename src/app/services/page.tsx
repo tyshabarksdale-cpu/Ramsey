@@ -1,4 +1,6 @@
 import Link from "next/link"
+import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -25,6 +27,8 @@ const services = [
 ]
 
 export default function Services() {
+  const sybilImage = PlaceHolderImages.find(img => img.id === "connect-sybil")
+
   return (
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
@@ -64,6 +68,35 @@ export default function Services() {
             </Card>
           ))}
         </div>
+
+        {/* New Personal Section */}
+        <section className="mb-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <div className="relative aspect-[4/5] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl">
+              {sybilImage && (
+                <Image
+                  src={sybilImage.imageUrl}
+                  alt="Sybil Ramsey"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="professional woman"
+                />
+              )}
+            </div>
+            <div className="space-y-6 text-center lg:text-left">
+              <h2 className="text-3xl lg:text-5xl font-headline text-primary">A Partnership Built on Trust</h2>
+              <p className="text-lg text-primary/80 italic font-headline leading-relaxed">
+                "In our sessions, you aren't just a client; you are the driver. 
+                I am here to provide the momentum and the map."
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Before we dive into the process, I want you to know that this is a safe space for your 
+                authentic self. We work together to uncover the strategies that resonate specifically 
+                with your life and goals.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Process Section - Centered & Purple Badges */}
         <div className="bg-ombre-dark text-primary-foreground rounded-[2.5rem] p-8 lg:p-24 shadow-2xl relative overflow-hidden">
