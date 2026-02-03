@@ -30,9 +30,9 @@ export default function Services() {
   const sybilImage = PlaceHolderImages.find(img => img.id === "connect-sybil")
 
   return (
-    <div className="py-12 lg:py-24">
+    <div className="py-12 lg:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-20 space-y-4 flex flex-col items-center">
+        <div className="max-w-3xl mx-auto text-center mb-12 space-y-4 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest mb-4">
             Our Offerings
           </div>
@@ -42,16 +42,16 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {services.map((service, i) => (
             <Card key={i} className="relative overflow-hidden group border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white text-center">
-              <CardHeader className="p-10 space-y-4">
+              <CardHeader className="p-8 space-y-4">
                 <div>
                   <CardTitle className="text-2xl font-headline mb-3 text-primary">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed text-primary/70">{service.description}</CardDescription>
                 </div>
               </CardHeader>
-              <CardContent className="p-10 pt-0 space-y-8">
+              <CardContent className="p-8 pt-0 space-y-8">
                 <ul className="space-y-4 inline-block text-left">
                   {service.features.map((f, j) => (
                     <li key={j} className="flex items-center gap-3 text-sm font-medium text-primary/80">
@@ -69,8 +69,7 @@ export default function Services() {
           ))}
         </div>
 
-        {/* New Personal Section */}
-        <section className="mb-32">
+        <section className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div className="relative aspect-[4/5] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl">
               {sybilImage && (
@@ -93,8 +92,7 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Process Section - Centered & Purple Badges */}
-        <div className="bg-ombre-dark text-primary-foreground rounded-[2.5rem] p-8 lg:p-24 shadow-2xl relative overflow-hidden">
+        <div className="bg-ombre-dark text-primary-foreground rounded-[2.5rem] p-8 lg:p-16 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 blur-[100px] rounded-full"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
             <div className="space-y-12">
@@ -141,7 +139,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className="mt-16 text-center space-y-8 flex flex-col items-center justify-center">
+        <div className="mt-12 text-center space-y-8 flex flex-col items-center justify-center">
           <h2 className="text-4xl font-headline text-primary pb-1 text-center w-full">Ready to start pedaling?</h2>
           <Button asChild size="lg" className="rounded-full px-16 h-20 text-xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
             <Link href="/connect">Book Your Strategy Session</Link>
