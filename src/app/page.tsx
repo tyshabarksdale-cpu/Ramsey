@@ -120,7 +120,7 @@ export default function Home() {
       </motion.section>
 
       {/* Benefits Grid Section - Subtle & Clean */}
-      <section className="py-32 bg-ombre-light">
+      <section className="pt-16 pb-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
