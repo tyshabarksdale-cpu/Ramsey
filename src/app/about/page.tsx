@@ -47,7 +47,7 @@ export default function About() {
               <h1 className="text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Empowerment Strategist</h1>
             </div>
             <div className="prose prose-lg text-muted-foreground space-y-6 max-w-none">
-              <p className="text-xl font-headline italic text-primary">
+              <p className="text-xl font-headline italic text-primary tracking-wide">
                 I am not a traditional executive coach. I am an Empowerment Strategist.
               </p>
               <p>

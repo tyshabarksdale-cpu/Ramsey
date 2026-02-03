@@ -32,7 +32,7 @@ export default function Services() {
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
           <Badge variant="outline" className="text-primary border-primary/20 mb-4 px-4 py-1 rounded-full">Our Offerings</Badge>
           <h1 className="text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Tailored Strategies</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-headline italic leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-headline italic leading-relaxed tracking-wide">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
           </p>
         </div>
@@ -105,7 +105,7 @@ export default function Services() {
                 { label: "Empowerment" }
               ].map((item, idx) => (
                 <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-8 text-center flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-all aspect-square">
-                  <p className="font-bold tracking-[0.2em] uppercase text-sm text-accent">{item.label}</p>
+                  <p className="font-bold tracking-[0.2em] uppercase text-sm text-accent tracking-wide">{item.label}</p>
                 </Card>
               ))}
             </div>
