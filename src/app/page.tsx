@@ -48,9 +48,12 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[40vh] lg:min-h-[50vh] flex items-center py-6 lg:py-10">
+      <section className="relative min-h-[40vh] lg:min-h-[50vh] flex items-center py-6 lg:py-10 overflow-hidden">
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-0 items-stretch max-w-4xl">
-          <div 
+          <motion.div 
+            initial={{ x: -60, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="relative aspect-[4/5] lg:aspect-auto rounded-l-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
           >
             {heroImage && (
@@ -63,53 +66,33 @@ export default function Home() {
                 priority
               />
             )}
-          </div>
+          </motion.div>
           <motion.div 
-            initial={{ x: 40, opacity: 0 }}
+            initial={{ x: 60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="bg-ombre-dark p-8 lg:p-12 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-left"
           >
             <div className="space-y-4 max-w-sm">
-              <motion.h1 
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="text-3xl lg:text-4xl font-headline leading-[1.2] bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1"
-              >
+              <h1 className="text-3xl lg:text-4xl font-headline leading-[1.2] bg-gradient-to-r from-white via-white/80 to-white bg-clip-text text-transparent pb-1">
                 You Steer, <br />
                 <span className="text-accent italic">We Pedal.</span>
-              </motion.h1>
-              <motion.p 
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg text-primary-foreground/80 font-headline tracking-wide"
-              >
+              </h1>
+              <p className="text-lg text-primary-foreground/80 font-headline tracking-wide">
                 Empowering you to step into your power.
-              </motion.p>
-              <motion.p 
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-sm leading-relaxed text-primary-foreground/70"
-              >
+              </p>
+              <p className="text-sm leading-relaxed text-primary-foreground/70">
                 As an Empowerment Strategist, Sybil Ramsey helps women and professionals 
                 navigate the complex terrains of life, career, and personal growth.
-              </motion.p>
-              <motion.div 
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4 pt-4"
-              >
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button asChild variant="outline" size="sm" className="rounded-full border-white/20 text-white hover:bg-white/10 bg-transparent font-headline text-base tracking-wide px-6 py-5">
                   <Link href="/services">Our Services</Link>
                 </Button>
                 <Button asChild size="sm" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-base tracking-wide px-6 py-5">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

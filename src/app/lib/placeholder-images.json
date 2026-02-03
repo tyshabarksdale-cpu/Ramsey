@@ -4,25 +4,25 @@
     {
       "id": "sybil-hero",
       "description": "Professional executive portrait of a sophisticated woman of color",
-      "imageUrl": "https://picsum.photos/seed/sybil-exec-hero/800/1000",
-      "imageHint": "professional portrait"
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTAxMDgyMTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional woman"
     },
     {
       "id": "about-sybil",
       "description": "Warm and approachable professional woman in a bright office setting",
-      "imageUrl": "https://picsum.photos/seed/sybil-warm-smile/600/800",
-      "imageHint": "smiling professional"
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbWlsaW5nJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc1MDEyMDAxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiling woman"
     },
     {
       "id": "collective-1",
       "description": "Collaborative business workshop with professional women",
-      "imageUrl": "https://picsum.photos/seed/empowerment-workshop/400/300",
+      "imageUrl": "https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMHdvcmtzaG9wfGVufDB8fHx8MTc1MDEyOTYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women workshop"
     },
     {
       "id": "collective-2",
       "description": "Diverse professional women networking and sharing ideas",
-      "imageUrl": "https://picsum.photos/seed/diverse-networking/400/300",
+      "imageUrl": "https://images.unsplash.com/photo-1573164713988-8665fc963095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzUwMTI5NjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women networking"
     }
   ]
