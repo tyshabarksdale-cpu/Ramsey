@@ -84,10 +84,10 @@ export default function Home() {
                 unwavering support and strategic advocacy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button asChild variant="outline" size="lg" className="rounded-full border-white/20 text-white hover:bg-white/10 bg-transparent font-headline italic text-lg tracking-wide">
+                <Button asChild variant="outline" size="lg" className="rounded-full border-white/20 text-white hover:bg-white/10 bg-transparent font-headline text-lg tracking-wide">
                   <Link href="/services">Our Services</Link>
                 </Button>
-                <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline italic text-lg tracking-wide">
+                <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-lg tracking-wide">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
               </div>
@@ -152,7 +152,7 @@ export default function Home() {
             {...fadeInUp}
             className="mt-20 text-center"
           >
-            <Button asChild size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg text-white font-headline italic tracking-wide">
+            <Button asChild size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg text-white font-headline tracking-wide">
               <Link href="/connect">Schedule Your Discovery Call</Link>
             </Button>
           </motion.div>

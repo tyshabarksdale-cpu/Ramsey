@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -62,7 +63,7 @@ export default function Connect() {
                   Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
                 </p>
-                <Button size="lg" className="w-full rounded-full py-8 text-xl font-bold bg-accent hover:bg-accent/90 border-none" asChild>
+                <Button size="lg" className="w-full rounded-full py-8 text-xl font-bold bg-accent hover:bg-accent/90 border-none font-headline" asChild>
                   <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
                     Open Calendly
                   </a>
@@ -114,7 +115,7 @@ export default function Connect() {
                     <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] rounded-xl border-primary/20 text-primary" />
                   </div>
                 </div>
-                <Button type="submit" className="w-full rounded-full py-6 text-lg font-bold bg-primary text-white hover:bg-primary/90">
+                <Button type="submit" className="w-full rounded-full py-6 text-lg font-bold bg-primary text-white hover:bg-primary/90 font-headline">
                   Send Message
                 </Button>
                 <p className="text-xs text-primary/60 text-center">
@@ -128,7 +129,7 @@ export default function Connect() {
                   Your message has been received. Sybil will review your inquiry and 
                   respond within the next 24-48 business hours.
                 </p>
-                <Button variant="outline" onClick={() => setIsSubmitted(false)} className="rounded-full border-primary text-primary hover:bg-primary/10">
+                <Button variant="outline" onClick={() => setIsSubmitted(false)} className="rounded-full border-primary text-primary hover:bg-primary/10 font-headline">
                   Send Another Message
                 </Button>
               </div>

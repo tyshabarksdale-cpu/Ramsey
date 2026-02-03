@@ -81,7 +81,7 @@ export default function TheCollective() {
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.
           </p>
-          <a href="/connect" className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full transition-all hover:bg-primary/90 uppercase tracking-[0.2em] text-xs font-headline italic">
+          <a href="/connect" className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full transition-all hover:bg-primary/90 uppercase tracking-[0.2em] text-xs font-headline">
             Inquire About Membership
           </a>
         </div>
