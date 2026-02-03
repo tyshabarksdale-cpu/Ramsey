@@ -1,6 +1,5 @@
-
 import Link from "next/link"
-import { Bike, Linkedin, Mail } from "lucide-react"
+import { Linkedin, Mail } from "lucide-react"
 
 export function Footer() {
   return (
@@ -9,7 +8,6 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Bike className="h-8 w-8 text-primary" />
               <span className="text-2xl font-headline font-bold">Ramsey Empowerment Collective</span>
             </Link>
             <p className="text-xl font-headline italic text-primary/80">

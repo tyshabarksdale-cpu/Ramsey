@@ -1,10 +1,8 @@
-
 "use client"
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Bike } from "lucide-react"
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -21,7 +19,6 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Bike className="h-8 w-8 text-primary" />
           <div className="flex flex-col">
             <span className="text-xl font-headline font-bold leading-none">Ramsey Empowerment</span>
             <span className="text-xs uppercase tracking-widest text-muted-foreground">Collective, LLC</span>
