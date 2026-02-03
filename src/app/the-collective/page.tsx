@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
@@ -36,7 +35,7 @@ export default function TheCollective() {
             Community & Growth
           </div>
           <h1 className="text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">The Collective</h1>
-          <p className="text-2xl text-muted-foreground font-headline italic leading-relaxed">
+          <p className="text-2xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
             "Empowerment grows in community. The Collective features women and organizations who share 
             our commitment to creating safe, supportive spaces where people feel heard, valued, and 
             empowered to step into their power."
@@ -64,10 +63,10 @@ export default function TheCollective() {
               </div>
               <CardContent className="p-8 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-headline font-bold mb-1">{member.name}</h3>
-                  <p className="text-sm font-bold text-primary uppercase tracking-widest">{member.tagline}</p>
+                  <h3 className="text-2xl font-headline font-bold mb-1 text-primary">{member.name}</h3>
+                  <p className="text-sm font-bold text-primary/70 uppercase tracking-widest">{member.tagline}</p>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-primary/80 leading-relaxed">
                   {member.description}
                 </p>
               </CardContent>
@@ -77,7 +76,7 @@ export default function TheCollective() {
 
         <div className="mt-24 p-12 bg-secondary/30 rounded-3xl text-center space-y-6">
           <h2 className="text-3xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Want to join The Collective?</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.
           </p>

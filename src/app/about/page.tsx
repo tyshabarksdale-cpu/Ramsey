@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
@@ -44,23 +43,23 @@ export default function About() {
           <div className="space-y-8">
             <div className="space-y-4">
               <Badge variant="outline" className="text-primary border-primary rounded-full px-4 py-1">Meet Sybil Ramsey</Badge>
-              <h1 className="text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Empowerment Strategist</h1>
+              <h1 className="text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1 tracking-tight">Empowerment Strategist</h1>
             </div>
-            <div className="prose prose-lg text-muted-foreground space-y-6 max-w-none">
-              <p className="text-xl font-headline italic text-primary tracking-wide">
+            <div className="prose prose-lg text-primary space-y-6 max-w-none">
+              <p className="text-xl font-headline italic tracking-wide">
                 I am not a traditional executive coach. I am an Empowerment Strategist.
               </p>
-              <p>
+              <p className="leading-relaxed opacity-90">
                 With decades of professional experience and a deep commitment to the growth of others, 
                 I established Ramsey Empowerment Collective, LLC in 2025. My mission is simple but profound: 
                 to create a safe haven for those seeking to reclaim their agency.
               </p>
-              <p>
+              <p className="leading-relaxed opacity-90">
                 At 62, as I navigate my own phased retirement, I bring a unique perspective to my clients—especially 
                 women 55+ and women of color. I understand the nuances of career transitions, the weight of 
                 unspoken expectations, and the incredible power of a voice rediscovered.
               </p>
-              <p>
+              <p className="leading-relaxed opacity-90">
                 My philosophy, "You steer as we pedal," reflects our partnership. You decide the direction; 
                 we provide the combined effort and strategy to get you there.
               </p>
@@ -69,19 +68,19 @@ export default function About() {
             <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Certification</span>
-                <span className="font-bold text-lg">Certified Empowerment Coach</span>
+                <span className="font-bold text-lg text-primary">Certified Empowerment Coach</span>
               </div>
               <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Expertise</span>
-                <span className="font-bold text-lg">30+ Years Leadership Experience</span>
+                <span className="font-bold text-lg text-primary">30+ Years Leadership Experience</span>
               </div>
               <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Advocacy</span>
-                <span className="font-bold text-lg">DEI Advocacy Specialist</span>
+                <span className="font-bold text-lg text-primary">DEI Advocacy Specialist</span>
               </div>
               <div className="space-y-1 text-center sm:text-left">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Strategy</span>
-                <span className="font-bold text-lg">Strategic Planning Graduate</span>
+                <span className="font-bold text-lg text-primary">Strategic Planning Graduate</span>
               </div>
             </div>
           </div>
@@ -96,9 +95,9 @@ export default function About() {
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-background/50 border-none shadow-sm">
                 <CardContent className="p-8 space-y-6 flex flex-col items-center">
-                  <p className="text-lg italic text-muted-foreground">"{t.text}"</p>
+                  <p className="text-lg italic text-primary/80">"{t.text}"</p>
                   <div>
-                    <p className="font-bold text-foreground">{t.name}</p>
+                    <p className="font-bold text-primary">{t.name}</p>
                     <p className="text-sm text-primary font-bold uppercase tracking-widest">{t.title}</p>
                   </div>
                 </CardContent>

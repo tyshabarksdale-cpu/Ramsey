@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
@@ -32,7 +31,7 @@ export default function Services() {
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
           <Badge variant="outline" className="text-primary border-primary/20 mb-4 px-4 py-1 rounded-full">Our Offerings</Badge>
           <h1 className="text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Tailored Strategies</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-headline italic leading-relaxed tracking-wide">
+          <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
           </p>
         </div>
@@ -43,20 +42,20 @@ export default function Services() {
               <CardHeader className="p-10 space-y-4">
                 <div>
                   <CardTitle className="text-2xl font-headline mb-3 text-primary">{service.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed text-muted-foreground">{service.description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed text-primary/70">{service.description}</CardDescription>
                 </div>
               </CardHeader>
               <CardContent className="p-10 pt-0 space-y-8">
                 <ul className="space-y-4 inline-block text-left">
                   {service.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-3 text-sm font-medium text-foreground/80">
+                    <li key={j} className="flex items-center gap-3 text-sm font-medium text-primary/80">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
                       {f}
                     </li>
                   ))}
                 </ul>
                 <div className="pt-6 border-t border-secondary">
-                  <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-1">Investment</p>
+                  <p className="text-xs font-bold text-primary/60 uppercase tracking-widest mb-1">Investment</p>
                   <p className="text-2xl font-bold text-primary">{service.price}</p>
                 </div>
               </CardContent>
