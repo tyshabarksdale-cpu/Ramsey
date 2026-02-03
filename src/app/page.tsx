@@ -50,10 +50,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] lg:min-h-[80vh] flex items-center py-12 lg:py-20">
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-0 items-stretch max-w-6xl">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2 }}
+          <div 
             className="relative aspect-[4/5] lg:aspect-auto rounded-l-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
           >
             {heroImage && (
@@ -66,7 +63,7 @@ export default function Home() {
                 priority
               />
             )}
-          </motion.div>
+          </div>
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
