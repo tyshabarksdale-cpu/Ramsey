@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section - Maté Split Style */}
+      {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center">
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
           <motion.div 
@@ -89,7 +89,7 @@ export default function Home() {
                 <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10">
+                <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10 bg-transparent">
                   <Link href="/services">Our Services</Link>
                 </Button>
               </div>
@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section - Tightened spacing */}
+      {/* Mission Section */}
       <motion.section 
         {...fadeInUp}
         className="py-12 bg-background"
@@ -118,7 +118,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Benefits Grid Section - Centered & Purple Subtitles */}
+      {/* Benefits Grid Section */}
       <section className="pt-8 pb-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -126,7 +126,7 @@ export default function Home() {
             className="text-center mb-16 space-y-6"
           >
             <h2 className="text-4xl lg:text-6xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">How We Transform Together</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-primary max-w-2xl mx-auto font-medium">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
@@ -154,7 +154,7 @@ export default function Home() {
             {...fadeInUp}
             className="mt-20 text-center"
           >
-            <Button asChild size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg">
+            <Button asChild size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg text-white">
               <Link href="/connect">Schedule Your Discovery Call</Link>
             </Button>
           </motion.div>
