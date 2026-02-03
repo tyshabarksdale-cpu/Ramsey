@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {
   Sheet,
   SheetContent,
@@ -27,6 +27,14 @@ const navLinks = [
 export function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Use a stable year for SSR and initial hydration to prevent mismatches
+  const currentYear = mounted ? new Date().getFullYear().toString() : "2025"
 
   return (
     <motion.header 
@@ -49,24 +57,27 @@ export function Navbar() {
         
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary relative py-1",
-                pathname === link.href ? "text-primary font-bold" : "text-primary/70"
-              )}
-            >
-              {link.name}
-              {pathname === link.href && (
-                <motion.div 
-                  layoutId="nav-underline"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
-                />
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = mounted && pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  "text-sm font-medium transition-colors hover:text-primary relative py-1",
+                  isActive ? "text-primary font-bold" : "text-primary/70"
+                )}
+              >
+                {link.name}
+                {isActive && (
+                  <motion.div 
+                    layoutId="nav-underline"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                  />
+                )}
+              </Link>
+            )
+          })}
           <Link
             href="/connect"
             className="rounded-full bg-primary px-6 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95"
@@ -90,19 +101,22 @@ export function Navbar() {
                 <SheetDescription>Access the main sections of Ramsey Empowerment Collective.</SheetDescription>
               </SheetHeader>
               <div className="flex flex-col gap-8 pt-12">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={cn(
-                      "text-xl font-headline transition-colors hover:text-primary",
-                      pathname === link.href ? "text-primary font-bold" : "text-primary/70"
-                    )}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  const isActive = mounted && pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        "text-xl font-headline transition-colors hover:text-primary",
+                        isActive ? "text-primary font-bold" : "text-primary/70"
+                      )}
+                    >
+                      {link.name}
+                    </Link>
+                  )
+                })}
                 <Link
                   href="/connect"
                   onClick={() => setIsOpen(false)}
@@ -112,7 +126,7 @@ export function Navbar() {
                 </Link>
               </div>
               <div className="mt-auto pt-12 text-center text-xs text-primary/60">
-                <p>© {new Date().getFullYear()} Ramsey Empowerment Collective</p>
+                <p>© {currentYear} Ramsey Empowerment Collective</p>
               </div>
             </SheetContent>
           </Sheet>
