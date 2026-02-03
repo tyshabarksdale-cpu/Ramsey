@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -54,103 +53,106 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 lg:pt-32 pb-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div 
-              initial={{ x: -40, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="space-y-10"
-            >
-              <div className="space-y-6">
-                <h1 className="text-6xl lg:text-8xl font-headline font-bold leading-[1.1]">
-                  You Steer, <br />
-                  <span className="text-primary italic">We Pedal.</span>
-                </h1>
-                <p className="text-2xl text-muted-foreground font-headline italic tracking-wide">
-                  Empowering you to step into your power.
-                </p>
-              </div>
-              <p className="text-xl leading-relaxed text-muted-foreground max-w-xl">
+      {/* Hero Section - Maté Split Style */}
+      <section className="relative min-h-[90vh] flex items-center">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="relative aspect-[4/5] lg:aspect-auto rounded-l-3xl overflow-hidden shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000"
+          >
+            {heroImage && (
+              <Image
+                src={heroImage.imageUrl}
+                alt={heroImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={heroImage.imageHint}
+                priority
+              />
+            )}
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="bg-ombre-dark p-12 lg:p-24 flex flex-col justify-center text-primary-foreground rounded-r-3xl"
+          >
+            <div className="space-y-8 max-w-xl">
+              <h1 className="text-5xl lg:text-7xl font-headline leading-[1.1]">
+                You Steer, <br />
+                <span className="text-accent italic">We Pedal.</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-primary-foreground/80 font-headline italic">
+                Empowering you to step into your power.
+              </p>
+              <p className="text-lg leading-relaxed text-primary-foreground/70">
                 As an Empowerment Strategist, Sybil Ramsey helps women and professionals 
                 navigate the complex terrains of life, career, and personal growth with 
                 unwavering support and strategic advocacy.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 pt-4">
-                <Button asChild size="lg" className="rounded-full px-10 h-16 text-xl font-bold shadow-xl hover:scale-105 transition-transform">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button asChild size="lg" className="rounded-full h-14 bg-accent hover:bg-accent/90 text-white font-bold">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="rounded-full px-10 h-16 text-xl font-bold border-2 hover:bg-primary/5">
+                <Button asChild variant="outline" size="lg" className="rounded-full h-14 border-white/20 text-white hover:bg-white/10">
                   <Link href="/services">Our Services</Link>
                 </Button>
               </div>
-            </motion.div>
-            <motion.div 
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative aspect-[4/5] w-full max-w-lg mx-auto grayscale hover:grayscale-0 transition-all duration-1000 rounded-3xl overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)]"
-            >
-              {heroImage && (
-                <Image
-                  src={heroImage.imageUrl}
-                  alt={heroImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={heroImage.imageHint}
-                  priority
-                />
-              )}
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Section - Minimal Large Typography */}
       <motion.section 
         {...fadeInUp}
-        className="py-32 bg-primary text-primary-foreground"
+        className="py-40 bg-background"
       >
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h2 className="text-4xl lg:text-6xl font-headline mb-16 italic leading-snug">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <span className="text-accent font-bold tracking-widest uppercase text-sm mb-8 block">Our Mission</span>
+          <h2 className="text-3xl lg:text-5xl font-headline italic leading-relaxed text-foreground/90">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power."
           </h2>
-          <div className="w-32 h-1 bg-accent mx-auto"></div>
+          <div className="mt-12 flex items-center justify-center gap-4">
+            <div className="h-px w-12 bg-accent/30"></div>
+            <span className="font-headline text-xl text-accent">— Sybil Ramsey</span>
+            <div className="h-px w-12 bg-accent/30"></div>
+          </div>
         </div>
       </motion.section>
 
-      {/* Benefits Grid Section */}
-      <section className="py-32 bg-background">
+      {/* Benefits Grid Section - Subtle & Clean */}
+      <section className="py-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
             className="text-center mb-24 space-y-6"
           >
-            <h2 className="text-5xl lg:text-7xl font-headline font-bold">How We Transform Together</h2>
-            <p className="text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Our six core benefits are designed to support your journey from where you are to who you are meant to be.
+            <h2 className="text-4xl lg:text-6xl font-headline">How We Transform Together</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 30, opacity: 0 }}
+                initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgb(0,0,0,0.08)] transition-all hover:-translate-y-2 duration-500 bg-white/50 backdrop-blur-sm">
+                <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/40 backdrop-blur-md">
                   <CardContent className="p-10 space-y-6">
-                    <div className="w-20 h-20 rounded-2xl bg-primary/5 flex items-center justify-center text-primary">
-                      <benefit.icon className="w-10 h-10" />
+                    <div className="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center text-primary">
+                      <benefit.icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-3xl font-headline font-bold">{benefit.title}</h3>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
+                    <h3 className="text-2xl font-headline">{benefit.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       {benefit.description}
                     </p>
                   </CardContent>
@@ -162,7 +164,7 @@ export default function Home() {
             {...fadeInUp}
             className="mt-24 text-center"
           >
-            <Button asChild size="lg" className="rounded-full px-16 h-20 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl">
+            <Button asChild size="lg" className="rounded-full px-12 h-16 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg">
               <Link href="/connect">Schedule Your Discovery Call</Link>
             </Button>
           </motion.div>
