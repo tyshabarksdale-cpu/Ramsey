@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -29,7 +28,7 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-20 space-y-4">
           <h1 className="text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Connect</h1>
-          <p className="text-xl text-muted-foreground font-headline italic leading-relaxed tracking-wide">
+          <p className="text-xl text-primary font-headline italic leading-relaxed tracking-wide">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide.
           </p>
@@ -43,11 +42,11 @@ export default function Connect() {
               <div className="space-y-8">
                 <div>
                   <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">Email</p>
-                  <p className="text-xl font-bold">sybil@ramseyempowerment.com</p>
+                  <p className="text-xl font-bold text-primary">sybil@ramseyempowerment.com</p>
                 </div>
                 <div>
                   <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">LinkedIn</p>
-                  <p className="text-xl font-bold">Sybil Ramsey, Empowerment Strategist</p>
+                  <p className="text-xl font-bold text-primary">Sybil Ramsey, Empowerment Strategist</p>
                 </div>
                 <div>
                   <p className="text-xs text-primary uppercase font-bold tracking-[0.2em] mb-2">Location</p>
@@ -84,22 +83,22 @@ export default function Connect() {
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name*</Label>
-                      <Input id="name" required placeholder="Jane Doe" className="rounded-xl" />
+                      <Label htmlFor="name" className="text-primary">Full Name*</Label>
+                      <Input id="name" required placeholder="Jane Doe" className="rounded-xl border-primary/20 text-primary" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address*</Label>
-                      <Input id="email" type="email" required placeholder="jane@example.com" className="rounded-xl" />
+                      <Label htmlFor="email" className="text-primary">Email Address*</Label>
+                      <Input id="email" type="email" required placeholder="jane@example.com" className="rounded-xl border-primary/20 text-primary" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number (Optional)</Label>
-                    <Input id="phone" type="tel" placeholder="(555) 000-0000" className="rounded-xl" />
+                    <Label htmlFor="phone" className="text-primary">Phone Number (Optional)</Label>
+                    <Input id="phone" type="tel" placeholder="(555) 000-0000" className="rounded-xl border-primary/20 text-primary" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="source">How did you hear about us?</Label>
+                    <Label htmlFor="source" className="text-primary">How did you hear about us?</Label>
                     <Select>
-                      <SelectTrigger className="rounded-xl">
+                      <SelectTrigger className="rounded-xl border-primary/20 text-primary">
                         <SelectValue placeholder="Please select an option" />
                       </SelectTrigger>
                       <SelectContent>
@@ -111,25 +110,25 @@ export default function Connect() {
                     </Select>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">How can I help you?*</Label>
-                    <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] rounded-xl" />
+                    <Label htmlFor="message" className="text-primary">How can I help you?*</Label>
+                    <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] rounded-xl border-primary/20 text-primary" />
                   </div>
                 </div>
                 <Button type="submit" className="w-full rounded-full py-6 text-lg font-bold">
                   Send Message
                 </Button>
-                <p className="text-xs text-muted-foreground text-center">
+                <p className="text-xs text-primary/60 text-center">
                   *Required fields. We respect your privacy and will never share your info.
                 </p>
               </form>
             ) : (
               <div className="text-center py-20 space-y-6">
                 <h3 className="text-3xl font-headline font-bold text-primary">Thank You!</h3>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-primary/80">
                   Your message has been received. Sybil will review your inquiry and 
                   respond within the next 24-48 business hours.
                 </p>
-                <Button variant="outline" onClick={() => setIsSubmitted(false)} className="rounded-full">
+                <Button variant="outline" onClick={() => setIsSubmitted(false)} className="rounded-full border-primary text-primary hover:bg-primary/10">
                   Send Another Message
                 </Button>
               </div>
@@ -139,4 +138,3 @@ export default function Connect() {
       </div>
     </div>
   )
-}
