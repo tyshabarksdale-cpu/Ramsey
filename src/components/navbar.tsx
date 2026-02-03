@@ -9,6 +9,9 @@ import { useState } from "react"
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
@@ -82,6 +85,10 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l">
+              <SheetHeader className="sr-only">
+                <SheetTitle>Navigation Menu</SheetTitle>
+                <SheetDescription>Access the main sections of Ramsey Empowerment Collective.</SheetDescription>
+              </SheetHeader>
               <div className="flex flex-col gap-8 pt-12">
                 {navLinks.map((link) => (
                   <Link
