@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -105,7 +104,7 @@ export default function Home() {
         className="py-12 bg-background"
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Our Mission</span>
+          <span className="text-primary font-bold tracking-widest uppercase text-base mb-4 block">Our Mission</span>
           <h2 className="text-2xl lg:text-4xl font-headline italic leading-relaxed text-primary">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
