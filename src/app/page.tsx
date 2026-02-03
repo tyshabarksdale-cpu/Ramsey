@@ -102,7 +102,7 @@ export default function Home() {
       {/* Mission Section - Minimal Large Typography */}
       <motion.section 
         {...fadeInUp}
-        className="py-40 bg-background"
+        className="py-16 bg-background"
       >
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <span className="text-accent font-bold tracking-widest uppercase text-sm mb-8 block">Our Mission</span>
