@@ -49,7 +49,7 @@ export default function Connect() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-w-7xl mx-auto">
-          <div className="space-y-12">
+          <div className="space-y-12 text-center">
             <div className="space-y-10">
               <h2 className="text-3xl font-headline font-bold text-primary">Direct Access</h2>
               <div className="space-y-10">
@@ -72,7 +72,7 @@ export default function Connect() {
               </div>
             </div>
 
-            <Card className="bg-primary text-primary-foreground p-10 lg:p-14 rounded-[3rem] overflow-hidden relative border-none shadow-2xl">
+            <Card className="bg-primary text-primary-foreground p-10 lg:p-14 rounded-[3rem] overflow-hidden relative border-none shadow-2xl mx-auto">
               <div className="relative z-10 space-y-8">
                 <h3 className="text-4xl font-headline font-bold text-white">Book Instantly</h3>
                 <p className="text-xl text-primary-foreground/90 leading-relaxed">

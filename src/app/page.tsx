@@ -75,9 +75,9 @@ export default function Home() {
             initial={{ x: 60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-ombre-dark p-8 lg:p-14 flex flex-col justify-center text-primary-foreground rounded-r-3xl text-left"
+            className="bg-ombre-dark p-8 lg:p-14 flex flex-col justify-center items-center text-primary-foreground rounded-r-3xl text-center"
           >
-            <div className="space-y-6">
+            <div className="space-y-6 max-w-md">
               <h1 className="text-4xl lg:text-5xl font-headline leading-[1.2] text-white">
                 You Steer <br />
                 <span className="text-accent italic">As We Pedal</span>
@@ -92,7 +92,7 @@ export default function Home() {
                 </p>
                 <p className="font-bold text-accent">You set the direction; I help you get there.</p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                 <Button asChild size="lg" className="rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-lg tracking-wide px-8 py-6">
                   <Link href="/connect">Start Your Journey</Link>
                 </Button>
@@ -147,7 +147,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/60 backdrop-blur-md h-full">
-                  <CardContent className="p-10 space-y-5 flex flex-col items-center">
+                  <CardContent className="p-10 space-y-5 flex flex-col items-center text-center">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
                       <benefit.icon className="w-8 h-8" />
                     </div>

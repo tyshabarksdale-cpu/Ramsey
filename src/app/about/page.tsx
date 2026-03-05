@@ -41,9 +41,9 @@ export default function About() {
               />
             )}
           </div>
-          <div className="space-y-10">
+          <div className="space-y-10 text-center lg:text-left">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest mx-auto lg:mx-0">
                 Meet Sybil Elise
               </div>
               <h1 className="text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1 tracking-tight">
@@ -51,7 +51,7 @@ export default function About() {
               </h1>
             </div>
             
-            <div className="prose prose-lg text-primary space-y-6 max-w-none">
+            <div className="prose prose-lg text-primary space-y-6 max-w-none text-center lg:text-left">
               <p className="text-2xl font-headline italic tracking-wide leading-relaxed">
                 I am not an executive coach. <br /> I am an Empowerment Strategist.
               </p>
@@ -66,7 +66,7 @@ export default function About() {
                 especially women and women of color. I understand the nuances of career transitions, 
                 the weight of unspoken expectations, and the incredible power of a voice rediscovered.
               </p>
-              <p className="font-headline text-xl italic bg-secondary/30 p-8 rounded-2xl border-l-4 border-accent">
+              <p className="font-headline text-xl italic bg-secondary/30 p-8 rounded-2xl border-l-4 border-accent text-center">
                 "Think of our work together like riding a tandem bike. You're in the front seat — steering, 
                 deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
                 you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'"
@@ -78,7 +78,7 @@ export default function About() {
               </p>
             </div>
             
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-10">
+            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-10 text-center lg:text-left">
               <div className="space-y-2">
                 <span className="block text-primary text-xs font-bold uppercase tracking-widest">Certification</span>
                 <span className="font-bold text-xl text-primary">Certified Leadership Coach</span>
@@ -106,7 +106,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-10 space-y-6 flex flex-col justify-between h-full">
+                <CardContent className="p-10 space-y-6 flex flex-col justify-between h-full text-center">
                   <p className="text-lg italic text-primary/80 leading-relaxed">"{t.text}"</p>
                   <div>
                     <p className="font-bold text-primary text-base">{t.name}</p>

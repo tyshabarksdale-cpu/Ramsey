@@ -16,8 +16,8 @@ export function Footer() {
   return (
     <footer className="border-t bg-secondary/30">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
-          <div className="md:col-span-2 space-y-6 flex flex-col items-center md:items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+          <div className="md:col-span-4 space-y-6 flex flex-col items-center">
             <Link href="/" className="inline-block">
               <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Coaching</span>
             </Link>
@@ -29,7 +29,8 @@ export function Footer() {
               Based in the Louisville (Kentuckiana) area, serving clients everywhere.
             </p>
           </div>
-          <div className="space-y-4">
+          
+          <div className="md:col-span-2 space-y-4">
             <h4 className="font-headline font-bold text-lg text-primary">Quick Links</h4>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Sybil Elise</Link></li>
@@ -38,9 +39,10 @@ export function Footer() {
               <li><Link href="/connect" className="text-muted-foreground hover:text-primary transition-colors">Contact & Scheduling</Link></li>
             </ul>
           </div>
-          <div className="space-y-4">
+          
+          <div className="md:col-span-2 space-y-4">
             <h4 className="font-headline font-bold text-lg text-primary">Connect</h4>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col items-center gap-2">
               <a href="https://www.linkedin.com/company/ramsey-empowerment/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
                 LinkedIn
               </a>
