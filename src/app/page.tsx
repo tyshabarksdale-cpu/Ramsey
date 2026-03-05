@@ -78,8 +78,8 @@ export default function Home() {
           >
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-5xl font-headline leading-[1.2] text-white">
-                You Steer, <br />
-                <span className="text-accent italic">We Pedal.</span>
+                You Steer <br />
+                <span className="text-accent italic">As We Pedal</span>
               </h1>
               <p className="text-xl text-primary-foreground/90 font-headline tracking-wide leading-relaxed">
                 Empowering women and professionals to recognize their strength and step into their power.
