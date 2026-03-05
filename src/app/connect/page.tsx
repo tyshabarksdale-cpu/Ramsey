@@ -31,7 +31,7 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-10 flex flex-col items-center">
           {connectImage && (
-            <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white grayscale">
+            <div className="relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white grayscale transition-all duration-700 hover:grayscale-0">
               <Image
                 src={connectImage.imageUrl}
                 alt="Sybil Elise portrait"

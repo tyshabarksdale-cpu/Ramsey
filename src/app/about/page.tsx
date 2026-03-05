@@ -30,7 +30,7 @@ export default function About() {
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start mb-24 max-w-6xl mx-auto">
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl w-full">
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl w-full grayscale transition-all duration-700 hover:grayscale-0">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}

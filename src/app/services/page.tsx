@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -73,7 +74,7 @@ export default function Services() {
 
         <section className="mb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl grayscale">
+            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl grayscale transition-all duration-700 hover:grayscale-0">
               {sybilImage && (
                 <Image
                   src={sybilImage.imageUrl}
