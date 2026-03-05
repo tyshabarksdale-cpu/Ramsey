@@ -7,6 +7,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react"
 
 const services = [
   {
@@ -127,12 +128,13 @@ export default function Services() {
             </div>
             <div className="grid grid-cols-2 gap-4 sm:gap-8">
               {[
-                { label: "Clarity" },
-                { label: "Results" },
-                { label: "Action" },
-                { label: "Empowerment" }
+                { label: "Clarity", icon: Sparkles },
+                { label: "Results", icon: TrendingUp },
+                { label: "Action", icon: Zap },
+                { label: "Empowerment", icon: ShieldCheck }
               ].map((item, idx) => (
                 <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-4 sm:p-10 text-center flex flex-col items-center justify-center gap-4 sm:gap-6 group hover:bg-white/10 transition-all aspect-square">
+                  <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   <p className="font-bold tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[10px] sm:text-sm text-accent">{item.label}</p>
                 </Card>
               ))}
