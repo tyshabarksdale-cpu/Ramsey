@@ -58,7 +58,7 @@ export default function Home() {
       <section className="relative min-h-[50vh] flex items-center py-10 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-0 items-stretch max-w-5xl">
           <div 
-            className="relative aspect-[4/5] lg:aspect-auto rounded-l-3xl overflow-hidden shadow-2xl grayscale transition-all duration-700 hover:grayscale-0"
+            className="relative aspect-[4/5] lg:aspect-auto rounded-l-3xl overflow-hidden shadow-2xl grayscale"
           >
             {heroImage && (
               <Image
