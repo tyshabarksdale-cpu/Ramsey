@@ -56,9 +56,9 @@ export default function Services() {
                 </div>
               </CardHeader>
               <CardContent className="p-6 sm:p-8 pt-0 space-y-8">
-                <ul className="space-y-3 sm:space-y-4 inline-block text-left w-full">
+                <ul className="space-y-3 sm:space-y-4 flex flex-col items-center w-full">
                   {service.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-3 sm:gap-4 text-sm sm:text-base font-medium text-primary/80">
+                    <li key={j} className="flex items-center gap-3 sm:gap-4 text-sm sm:text-base font-medium text-primary/80 justify-center">
                       <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent flex-shrink-0" />
                       {f}
                     </li>
@@ -105,7 +105,7 @@ export default function Services() {
         <div className="bg-ombre-dark text-primary-foreground rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 lg:p-20 shadow-2xl relative overflow-hidden max-w-7xl mx-auto">
           <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-accent/10 blur-[120px] rounded-full"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-20 items-center relative z-10">
-            <div className="space-y-8 sm:space-y-12 text-center lg:text-left">
+            <div className="space-y-8 sm:space-y-12 text-center">
               <div className="space-y-4">
                 <Badge variant="outline" className="border-accent/30 text-accent px-4 py-1">The Methodology</Badge>
                 <h2 className="text-3xl sm:text-4xl lg:text-6xl font-headline text-white pb-1">The Empowerment Process</h2>
@@ -116,8 +116,8 @@ export default function Services() {
                   { step: "2", title: "Strategic Roadmap", text: "We map out your destinations and define the metrics of success for our journey together." },
                   { step: "3", title: "The Pedal Sessions", text: "Regular sessions focused on action, accountability, and advocacy to move you forward." }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4 sm:gap-8">
-                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-accent/40 flex items-center justify-center font-headline font-bold text-xl sm:text-2xl text-accent mx-auto lg:mx-0">{item.step}</div>
+                  <div key={idx} className="flex flex-col items-center text-center gap-4 sm:gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full border border-accent/40 flex items-center justify-center font-headline font-bold text-xl sm:text-2xl text-accent mx-auto">{item.step}</div>
                     <div>
                       <h4 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-white">{item.title}</h4>
                       <p className="text-sm sm:text-lg text-primary-foreground/80 leading-relaxed">{item.text}</p>
