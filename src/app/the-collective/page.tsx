@@ -1,28 +1,31 @@
+"use client"
+
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 
 const collectiveMembers = [
   {
-    name: "Wisdom Works",
-    tagline: "Cultivating leadership in later life",
-    description: "A community focused on helping professionals over 55 find meaning and impact in their legacy years.",
-    image: PlaceHolderImages.find(img => img.id === "collective-1"),
-    link: "#"
+    name: "GirlTrek",
+    tagline: "Healing & Self-Care",
+    description: "A national movement that mobilizes Black women and girls to reclaim their health, find their voice, and step into their power together.",
+    link: "https://www.girltrek.org",
+    image: PlaceHolderImages.find(img => img.id === "collective-1")
   },
   {
-    name: "Vocalize advocacy",
-    tagline: "Your voice, amplified",
-    description: "An organization providing tools and training for women of color to advocate for themselves in corporate environments.",
-    image: PlaceHolderImages.find(img => img.id === "collective-2"),
-    link: "#"
+    name: "Evolve Women's Network",
+    tagline: "Louisville-Based Community",
+    description: "Creating safe, supportive spaces where women—especially women of color—feel heard, valued, and empowered to show up boldly.",
+    link: "https://evolvewomensnetwork.com",
+    image: PlaceHolderImages.find(img => img.id === "collective-2")
   },
   {
-    name: "Empowered Philadelphia",
-    tagline: "Local impact, global change",
-    description: "Connecting local empowerment leaders to resources and collaborative opportunities.",
-    image: PlaceHolderImages.find(img => img.id === "collective-1"), // Reusing for placeholder
-    link: "#"
+    name: "Taylor Your Leadership Coaching",
+    tagline: "ICF-Certified Advocacy",
+    description: "Dedicated to helping leaders break free from limiting beliefs and embrace their authentic voice in a safe and supportive environment.",
+    link: "https://taylorleadershipcoaching.com",
+    image: PlaceHolderImages.find(img => img.id === "collective-1")
   }
 ]
 
@@ -30,7 +33,7 @@ export default function TheCollective() {
   return (
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-20 space-y-6">
+        <div className="max-w-4xl mx-auto text-center mb-24 space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest">
             Community & Growth
           </div>
@@ -42,47 +45,48 @@ export default function TheCollective() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
           {collectiveMembers.map((member, i) => (
-            <Card key={i} className="overflow-hidden border-none shadow-lg group text-center">
-              <div className="relative aspect-video overflow-hidden">
+            <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white">
+              <div className="relative aspect-video overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
                 {member.image && (
                   <Image
                     src={member.image.imageUrl}
-                    alt={member.image.description}
+                    alt={member.name}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    data-ai-hint={member.image.imageHint}
+                    data-ai-hint="diverse women empowering each other"
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center p-6">
-                  <a href={member.link} className="text-primary-foreground font-bold hover:underline tracking-widest uppercase text-xs">
-                    Visit Website
-                  </a>
-                </div>
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <CardContent className="p-8 space-y-4">
-                <div>
-                  <h3 className="text-2xl font-headline font-bold mb-1 text-primary">{member.name}</h3>
-                  <p className="text-sm font-bold text-primary/70 uppercase tracking-widest">{member.tagline}</p>
+              <CardContent className="p-10 space-y-6 flex flex-col flex-1">
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-headline font-bold text-primary">{member.name}</h3>
+                  <p className="text-xs font-bold text-accent uppercase tracking-widest">{member.tagline}</p>
                 </div>
-                <p className="text-primary/80 leading-relaxed">
+                <p className="text-primary/70 leading-relaxed flex-1">
                   {member.description}
                 </p>
+                <div className="pt-6">
+                  <Button variant="outline" className="rounded-full border-primary/20 text-primary hover:bg-primary/5 font-bold uppercase tracking-widest text-xs px-8" asChild>
+                    <a href={member.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-12 p-12 bg-secondary/30 rounded-3xl text-center space-y-6">
-          <h2 className="text-3xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">Want to join The Collective?</h2>
-          <p className="text-lg text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
+        <div className="mt-24 p-12 lg:p-20 bg-ombre-light rounded-[3rem] text-center space-y-8 max-w-5xl mx-auto">
+          <h2 className="text-3xl lg:text-5xl font-headline font-bold text-primary">Join the Momentum</h2>
+          <p className="text-xl text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.
           </p>
-          <a href="/connect" className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full transition-all hover:bg-primary/90 uppercase tracking-[0.2em] text-xs font-headline">
-            Inquire About Membership
-          </a>
+          <Button asChild size="lg" className="rounded-full bg-primary text-white font-bold px-10 h-16 shadow-lg uppercase tracking-widest text-xs font-headline">
+            <Link href="/connect">Inquire About Membership</Link>
+          </Button>
         </div>
       </div>
     </div>

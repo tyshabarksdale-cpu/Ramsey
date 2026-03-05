@@ -32,7 +32,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body selection:bg-primary/20;
+    @apply bg-background text-foreground font-body selection:bg-primary/20 text-lg;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-headline font-bold text-primary;
