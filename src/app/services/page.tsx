@@ -52,7 +52,7 @@ export default function Services() {
             <Card 
               key={i} 
               className={cn(
-                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white text-center rounded-[2rem]",
+                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-[2rem] text-left",
                 i === 2 ? "md:col-span-2 md:max-w-lg md:mx-auto w-full" : ""
               )}
             >
@@ -63,9 +63,9 @@ export default function Services() {
                 </div>
               </CardHeader>
               <CardContent className="p-8 sm:p-10 pt-0 space-y-6">
-                <ul className="space-y-3 sm:space-y-4 flex flex-col items-center w-full">
+                <ul className="space-y-3 sm:space-y-4 flex flex-col items-start w-full">
                   {service.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-4 text-base sm:text-lg font-medium text-primary/80 justify-center">
+                    <li key={j} className="flex items-center gap-4 text-base sm:text-lg font-medium text-primary/80 justify-start">
                       <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                       {f}
                     </li>
