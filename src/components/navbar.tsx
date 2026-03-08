@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -38,18 +37,18 @@ export function Navbar() {
 
   return (
     <motion.header 
-      initial={{ y: -20, opacity: 0 }}
+      initial={{ y: -10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-20 items-center justify-between px-4 lg:px-8">
+      <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex items-center justify-center w-10 h-10 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
-            <Bike className="w-6 h-6 text-primary group-hover:text-accent transition-colors duration-300" />
+          <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
+            <Bike className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:text-accent transition-colors duration-300" />
           </div>
           <div className="flex flex-col">
-            <span className="text-xl md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight text-primary">
+            <span className="text-lg md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight text-primary">
               Ramsey Empowerment
             </span>
             <span className="text-base font-headline italic text-accent font-medium leading-none">
@@ -101,7 +100,7 @@ export function Navbar() {
                 <SheetTitle>Navigation Menu</SheetTitle>
                 <SheetDescription>Access the main sections of Ramsey Empowerment Coaching.</SheetDescription>
               </SheetHeader>
-              <div className="flex flex-col gap-8 pt-12">
+              <div className="flex flex-col gap-6 pt-10">
                 {navLinks.map((link) => {
                   const isActive = mounted && pathname === link.href;
                   return (
@@ -121,12 +120,12 @@ export function Navbar() {
                 <Link
                   href="/connect"
                   onClick={() => setIsOpen(false)}
-                  className="rounded-full bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-4 font-headline"
+                  className="rounded-full bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-2 font-headline"
                 >
                   Start Your Journey
                 </Link>
               </div>
-              <div className="mt-auto pt-12 text-center text-xs text-primary/60">
+              <div className="mt-auto pb-8 text-center text-xs text-primary/60">
                 <p>© {currentYear} Ramsey Empowerment Coaching</p>
               </div>
             </SheetContent>

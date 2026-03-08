@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -33,9 +32,9 @@ const collectiveMembers = [
 
 export default function TheCollective() {
   return (
-    <div className="py-12 lg:py-24">
+    <div className="py-10 lg:py-16">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16 sm:mb-24 space-y-6 sm:space-y-8">
+        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-4 sm:space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest">
             Community & Growth
           </div>
@@ -47,7 +46,7 @@ export default function TheCollective() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 max-w-7xl mx-auto">
           {collectiveMembers.map((member, i) => (
             <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white">
               <div className="relative aspect-video overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
@@ -62,15 +61,15 @@ export default function TheCollective() {
                 )}
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              <CardContent className="p-8 sm:p-10 space-y-6 flex flex-col flex-1">
-                <div className="space-y-2">
+              <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col flex-1">
+                <div className="space-y-1">
                   <h3 className="text-xl sm:text-2xl font-headline font-bold text-primary">{member.name}</h3>
                   <p className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-widest">{member.tagline}</p>
                 </div>
                 <p className="text-sm sm:text-base text-primary/70 leading-relaxed flex-1">
                   {member.description}
                 </p>
-                <div className="pt-6">
+                <div className="pt-4">
                   <Button variant="outline" className="w-full sm:w-auto rounded-full border-primary/20 text-primary hover:bg-primary/5 font-bold uppercase tracking-widest text-[10px] sm:text-xs px-8" asChild>
                     <a href={member.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
                   </Button>
@@ -80,7 +79,7 @@ export default function TheCollective() {
           ))}
         </div>
 
-        <div className="mt-16 sm:mt-24 p-8 sm:p-12 lg:p-20 bg-ombre-light rounded-[2rem] sm:rounded-[3rem] text-center space-y-8 max-w-5xl mx-auto">
+        <div className="mt-12 sm:mt-16 p-8 sm:p-12 lg:p-16 bg-ombre-light rounded-[2rem] sm:rounded-[3rem] text-center space-y-6 max-w-5xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary">Join the Momentum</h2>
           <p className="text-lg sm:text-xl text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 
