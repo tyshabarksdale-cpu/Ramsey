@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 const services = [
   {
@@ -40,18 +41,24 @@ export default function Services() {
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-primary/10 text-primary font-bold text-sm uppercase tracking-widest mb-2">
             Our Offerings
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-headline text-primary pb-6">Tailored Strategies</h1>
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-headline text-primary pb-6 leading-relaxed">Tailored Strategies</h1>
           <p className="text-2xl sm:text-3xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 max-w-5xl mx-auto">
           {services.map((service, i) => (
-            <Card key={i} className="relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white text-center rounded-[2rem]">
+            <Card 
+              key={i} 
+              className={cn(
+                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white text-center rounded-[2rem]",
+                i === 2 ? "md:col-span-2 md:max-w-lg md:mx-auto w-full" : ""
+              )}
+            >
               <CardHeader className="p-8 sm:p-10 space-y-4 pb-4">
                 <div>
-                  <CardTitle className="text-3xl sm:text-4xl font-headline mb-2 text-primary pb-6">{service.title}</CardTitle>
+                  <CardTitle className="text-3xl sm:text-4xl font-headline mb-2 text-primary pb-6 leading-relaxed">{service.title}</CardTitle>
                   <CardDescription className="text-lg sm:text-xl leading-relaxed text-primary/70">{service.description}</CardDescription>
                 </div>
               </CardHeader>
@@ -87,7 +94,7 @@ export default function Services() {
               )}
             </div>
             <div className="space-y-4 text-center lg:text-left">
-              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary leading-tight pb-6">A Partnership Built on Trust</h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary leading-relaxed pb-6">A Partnership Built on Trust</h2>
               <div className="space-y-4 text-xl sm:text-2xl text-primary/80 italic font-headline leading-relaxed">
                 <p>
                   In our sessions, you aren't just a client; you are the driver. 
@@ -108,7 +115,7 @@ export default function Services() {
             <div className="space-y-6 text-center">
               <div className="space-y-2">
                 <Badge variant="outline" className="border-accent/30 text-accent px-6 py-2 text-sm">The Methodology</Badge>
-                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-white pb-6">The Empowerment Process</h2>
+                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-white pb-6 leading-relaxed">The Empowerment Process</h2>
               </div>
               <div className="space-y-6 sm:space-y-8">
                 {[
@@ -119,7 +126,7 @@ export default function Services() {
                   <div key={idx} className="flex flex-col items-center text-center gap-4">
                     <div className="flex-shrink-0 w-12 h-12 rounded-full border border-accent/40 flex items-center justify-center font-headline font-bold text-xl text-accent mx-auto">{item.step}</div>
                     <div>
-                      <h4 className="text-2xl sm:text-3xl font-bold mb-1 text-white pb-4">{item.title}</h4>
+                      <h4 className="text-2xl sm:text-3xl font-bold mb-1 text-white pb-6 leading-relaxed">{item.title}</h4>
                       <p className="text-lg sm:text-xl text-primary-foreground/80 leading-relaxed">{item.text}</p>
                     </div>
                   </div>
@@ -143,7 +150,7 @@ export default function Services() {
         </div>
 
         <div className="mt-12 text-center space-y-6 flex flex-col items-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">Ready to start pedaling?</h2>
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6 leading-relaxed">Ready to start pedaling?</h2>
           <Button asChild size="lg" className="w-full sm:w-auto rounded-full px-16 h-18 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
             <Link href="/connect">Book Your Strategy Session</Link>
           </Button>
