@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -55,7 +56,7 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative py-12 lg:py-24 overflow-hidden bg-white">
-        <div className="container mx-auto px-4 flex flex-col items-center max-w-4xl text-center">
+        <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -81,10 +82,9 @@ export default function Home() {
             className="space-y-8"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary">
-              You Steer <br />
-              <span className="text-accent italic">As We Pedal</span>
+              You Steer <span className="text-accent italic">As We Pedal</span>
             </h1>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-3xl mx-auto">
               Empowering women and professionals to recognize their strength and step into their power.
             </p>
             <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto">
