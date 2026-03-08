@@ -1,7 +1,7 @@
 
 "use client"
 
-import Link from "next/link"
+import Link from "link"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
@@ -52,26 +52,28 @@ export default function Services() {
             <Card 
               key={i} 
               className={cn(
-                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-[2rem] text-left",
+                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-[2rem]",
                 i === 2 ? "md:col-span-2 md:max-w-lg md:mx-auto w-full" : ""
               )}
             >
-              <CardHeader className="p-8 sm:p-10 space-y-4 pb-4">
+              <CardHeader className="p-8 sm:p-10 space-y-4 pb-4 text-center">
                 <div>
                   <CardTitle className="text-3xl sm:text-4xl font-headline mb-2 text-primary pb-6 leading-relaxed">{service.title}</CardTitle>
                   <CardDescription className="text-lg sm:text-xl leading-relaxed text-primary/70">{service.description}</CardDescription>
                 </div>
               </CardHeader>
               <CardContent className="p-8 sm:p-10 pt-0 space-y-6">
-                <ul className="space-y-3 sm:space-y-4 flex flex-col items-start w-full">
-                  {service.features.map((f, j) => (
-                    <li key={j} className="flex items-center gap-4 text-base sm:text-lg font-medium text-primary/80 justify-start">
-                      <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-6 sm:pt-8 border-t border-secondary">
+                <div className="flex justify-center">
+                  <ul className="space-y-3 sm:space-y-4 flex flex-col items-start w-full max-w-fit">
+                    {service.features.map((f, j) => (
+                      <li key={j} className="flex items-center gap-4 text-base sm:text-lg font-medium text-primary/80 justify-start">
+                        <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="pt-6 sm:pt-8 border-t border-secondary text-center">
                   <p className="text-[10px] font-bold text-primary/60 uppercase tracking-widest mb-1">Investment</p>
                   <p className="text-3xl sm:text-4xl font-bold text-primary font-headline pb-1">{service.price}</p>
                 </div>
