@@ -50,7 +50,7 @@ export default function TheCollective() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 max-w-7xl mx-auto">
           {collectiveMembers.map((member, i) => (
             <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white">
-              <div className="relative aspect-video overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+              <div className="relative aspect-video overflow-hidden">
                 {member.image && (
                   <Image
                     src={member.image.imageUrl}

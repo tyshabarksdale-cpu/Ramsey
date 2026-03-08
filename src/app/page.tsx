@@ -61,7 +61,7 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl scale-x-[-1] mb-6"
+            className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl scale-x-[-1] mb-6 grayscale"
           >
             {heroImage && (
               <Image

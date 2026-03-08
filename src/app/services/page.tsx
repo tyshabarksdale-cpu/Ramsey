@@ -84,7 +84,7 @@ export default function Services() {
 
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl grayscale transition-all duration-700 hover:grayscale-0">
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
               {sybilImage && (
                 <Image
                   src={sybilImage.imageUrl}
