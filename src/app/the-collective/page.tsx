@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -32,17 +33,17 @@ const collectiveMembers = [
 
 export default function TheCollective() {
   return (
-    <div className="py-10 lg:py-16">
+    <div className="py-8 lg:py-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-4 sm:space-y-6">
+        <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14 space-y-2 sm:space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest">
             Community & Growth
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">The Collective</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6">The Collective</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
-            "Empowerment grows in community. The Collective features women and organizations who share 
+            Empowerment grows in community. The Collective features women and organizations who share 
             our commitment to creating safe, supportive spaces where people feel heard, valued, and 
-            empowered to step into their power."
+            empowered to step into their power.
           </p>
         </div>
 
@@ -63,7 +64,7 @@ export default function TheCollective() {
               </div>
               <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col flex-1">
                 <div className="space-y-1">
-                  <h3 className="text-xl sm:text-2xl font-headline font-bold text-primary">{member.name}</h3>
+                  <h3 className="text-xl sm:text-2xl font-headline font-bold text-primary pb-4">{member.name}</h3>
                   <p className="text-[10px] sm:text-xs font-bold text-accent uppercase tracking-widest">{member.tagline}</p>
                 </div>
                 <p className="text-sm sm:text-base text-primary/70 leading-relaxed flex-1">
@@ -79,8 +80,8 @@ export default function TheCollective() {
           ))}
         </div>
 
-        <div className="mt-12 sm:mt-16 p-8 sm:p-12 lg:p-16 bg-ombre-light rounded-[2rem] sm:rounded-[3rem] text-center space-y-6 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary">Join the Momentum</h2>
+        <div className="mt-10 sm:mt-14 p-8 sm:p-12 lg:p-14 bg-ombre-light rounded-[2rem] sm:rounded-[3rem] text-center space-y-6 max-w-5xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-6">Join the Momentum</h2>
           <p className="text-lg sm:text-xl text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.

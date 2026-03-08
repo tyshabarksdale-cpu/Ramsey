@@ -27,9 +27,9 @@ export default function About() {
   const aboutImage = PlaceHolderImages.find(img => img.id === "about-sybil")
 
   return (
-    <div className="py-8 lg:py-12">
+    <div className="py-6 lg:py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-12 items-start mb-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10 items-start mb-8 max-w-6xl mx-auto">
           <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl w-full grayscale transition-all duration-700 hover:grayscale-0">
             {aboutImage && (
               <Image
@@ -41,12 +41,12 @@ export default function About() {
               />
             )}
           </div>
-          <div className="space-y-6 sm:space-y-8 text-center">
-            <div className="space-y-3">
+          <div className="space-y-4 sm:space-y-6 text-center">
+            <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
                 Meet Sybil Elise
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-4 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6 tracking-tight">
                 Empowerment Strategist
               </h1>
             </div>
@@ -69,9 +69,9 @@ export default function About() {
                 </p>
               </div>
               <p className="font-headline text-lg sm:text-xl italic bg-secondary/30 p-6 sm:p-8 rounded-2xl border-l-4 border-accent text-center">
-                "Think of our work together like riding a tandem bike. You're in the front seat — steering, 
+                Think of our work together like riding a tandem bike. You're in the front seat — steering, 
                 deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
-                you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'"
+                you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'
               </p>
               <div className="text-base sm:text-lg space-y-3">
                 <p>
@@ -95,17 +95,17 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-secondary/20 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 lg:p-16 max-w-6xl mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-4">Voices of Transformation</h2>
+        <div className="bg-secondary/20 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 lg:p-14 max-w-6xl mx-auto">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-6">Voices of Transformation</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((t, i) => (
               <Card key={i} className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow h-full">
                 <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col justify-between h-full text-center">
-                  <p className="text-base sm:text-lg italic text-primary/80 leading-relaxed">"{t.text}"</p>
+                  <p className="text-base sm:text-lg italic text-primary/80 leading-relaxed">{t.text}</p>
                   <div>
-                    <p className="font-bold text-primary text-base pb-0">{t.name}</p>
+                    <p className="font-bold text-primary text-base pb-1">{t.name}</p>
                     <p className="text-[10px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-1">{t.title}</p>
                   </div>
                 </CardContent>
