@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -55,10 +54,13 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center py-8 lg:py-16 overflow-hidden">
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-0 items-stretch max-w-5xl">
-          <div 
-            className="relative aspect-[4/5] lg:aspect-auto rounded-t-3xl lg:rounded-tr-none lg:rounded-l-3xl overflow-hidden shadow-2xl grayscale"
+      <section className="relative py-12 lg:py-24 overflow-hidden bg-white">
+        <div className="container mx-auto px-4 flex flex-col items-center max-w-4xl text-center">
+          <motion.div 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl grayscale scale-x-[-1] mb-12"
           >
             {heroImage && (
               <Image
@@ -70,36 +72,35 @@ export default function Home() {
                 priority
               />
             )}
-          </div>
+          </motion.div>
+          
           <motion.div 
-            initial={{ x: 60, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="bg-ombre-dark p-6 sm:p-10 lg:p-14 flex flex-col justify-center items-center text-primary-foreground rounded-b-3xl lg:rounded-bl-none lg:rounded-r-3xl text-center"
+            className="space-y-8"
           >
-            <div className="space-y-6 max-w-md">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-headline leading-[1.2] text-white">
-                You Steer <br />
-                <span className="text-accent italic">As We Pedal</span>
-              </h1>
-              <p className="text-lg sm:text-xl text-primary-foreground/90 font-headline tracking-wide leading-relaxed">
-                Empowering women and professionals to recognize their strength and step into their power.
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary">
+              You Steer <br />
+              <span className="text-accent italic">As We Pedal</span>
+            </h1>
+            <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-2xl mx-auto">
+              Empowering women and professionals to recognize their strength and step into their power.
+            </p>
+            <div className="space-y-6 text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto">
+              <p>
+                Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
+                I'm in the back, pedaling alongside you, helping power the journey.
               </p>
-              <div className="space-y-4 text-sm sm:text-base leading-relaxed text-primary-foreground/80">
-                <p>
-                  Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
-                  I'm in the back, pedaling alongside you, helping power the journey.
-                </p>
-                <p className="font-bold text-accent">You set the direction; I help you get there.</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center items-center">
-                <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-lg tracking-wide px-8 py-6">
-                  <Link href="/connect">Start Your Journey</Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-white/20 text-white hover:bg-white/10 bg-transparent font-headline text-lg tracking-wide px-8 py-6">
-                  <Link href="/services">Our Services</Link>
-                </Button>
-              </div>
+              <p className="font-bold text-accent text-xl">You set the direction; I help you get there.</p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-6 pt-6 justify-center">
+              <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-xl tracking-wide px-10 py-8 shadow-lg">
+                <Link href="/connect">Start Your Journey</Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary/5 bg-transparent font-headline text-xl tracking-wide px-10 py-8">
+                <Link href="/services">Our Services</Link>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -108,36 +109,36 @@ export default function Home() {
       {/* Mission Section */}
       <motion.section 
         {...fadeInUp}
-        className="py-12 lg:py-24 bg-white"
+        className="py-16 lg:py-32 bg-secondary/20"
       >
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-6 block">Our Mission</span>
-          <h2 className="text-xl sm:text-2xl lg:text-4xl font-headline leading-relaxed text-primary font-normal italic tracking-wide">
+        <div className="container mx-auto px-4 max-w-5xl text-center">
+          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-8 block">Our Mission</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power—fostering a cycle of empowerment, connection, and positive change."
           </h2>
-          <div className="mt-8 sm:mt-10 flex items-center justify-center gap-4 sm:gap-6">
-            <div className="h-px w-10 sm:w-16 bg-primary/20"></div>
-            <span className="font-headline text-xl sm:text-2xl text-primary">Sybil Elise</span>
-            <div className="h-px w-10 sm:w-16 bg-primary/20"></div>
+          <div className="mt-12 flex items-center justify-center gap-6">
+            <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
+            <span className="font-headline text-2xl sm:text-3xl text-primary">Sybil Elise</span>
+            <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
           </div>
         </div>
       </motion.section>
 
       {/* Benefits Grid Section */}
-      <section className="py-16 lg:py-24 bg-ombre-light">
+      <section className="py-20 lg:py-32 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
-            className="text-center mb-12 sm:mb-16 space-y-4"
+            className="text-center mb-16 sm:mb-24 space-y-6"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1">The Cycle of Empowerment</h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto font-headline italic leading-relaxed tracking-wide">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-4">The Cycle of Empowerment</h2>
+            <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto font-headline italic leading-relaxed tracking-wide">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 text-center max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -146,13 +147,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="border-none shadow-sm hover:shadow-xl transition-all duration-500 bg-white/60 backdrop-blur-md h-full">
-                  <CardContent className="p-6 sm:p-10 space-y-5 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
-                      <benefit.icon className="w-8 h-8" />
+                <Card className="border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md h-full rounded-[2rem]">
+                  <CardContent className="p-10 sm:p-12 space-y-6 flex flex-col items-center text-center">
+                    <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                      <benefit.icon className="w-10 h-10" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-headline text-primary">{benefit.title}</h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <h3 className="text-2xl sm:text-3xl font-headline text-primary">{benefit.title}</h3>
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {benefit.description}
                     </p>
                   </CardContent>
@@ -162,9 +163,9 @@ export default function Home() {
           </div>
           <motion.div 
             {...fadeInUp}
-            className="mt-12 sm:mt-20 text-center"
+            className="mt-16 sm:mt-24 text-center"
           >
-            <Button asChild size="lg" className="rounded-full px-8 sm:px-12 h-14 sm:h-16 text-base sm:text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg text-white font-headline tracking-wide w-full sm:w-auto">
+            <Button asChild size="lg" className="rounded-full px-12 h-16 sm:h-20 text-xl font-bold bg-primary hover:bg-primary/90 shadow-xl text-white font-headline tracking-wide w-full sm:w-auto">
               <Link href="/connect">Schedule Your Discovery Call</Link>
             </Button>
           </motion.div>
