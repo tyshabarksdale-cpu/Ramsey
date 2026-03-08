@@ -1,7 +1,7 @@
 
 "use client"
 
-import Link from "link"
+import Link from "next/link"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
