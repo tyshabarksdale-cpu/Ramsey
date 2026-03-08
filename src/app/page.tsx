@@ -88,8 +88,14 @@ export default function Home() {
               Empowering women and professionals to recognize their strength and step into their power.
             </p>
 
-            {/* Redesigned Tandem Section */}
-            <div className="relative max-w-2xl mx-auto py-2">
+            {/* Redesigned Tandem Section with Scroll Fade-In */}
+            <motion.div 
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="relative max-w-2xl mx-auto py-4"
+            >
               <div className="relative bg-secondary/30 backdrop-blur-sm border-l-4 border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-left">
                 <p className="text-lg sm:text-xl leading-relaxed text-primary/90 font-medium">
                   Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
@@ -100,7 +106,7 @@ export default function Home() {
                   <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest">You set the direction; I help you get there.</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
