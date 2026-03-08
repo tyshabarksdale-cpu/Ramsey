@@ -46,7 +46,7 @@ export default function About() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
                 Meet Sybil Elise
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-1 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-4 tracking-tight">
                 Empowerment Strategist
               </h1>
             </div>
@@ -73,12 +73,18 @@ export default function About() {
                 deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
                 you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'"
               </p>
-              <div className="text-base sm:text-lg">
+              <div className="text-base sm:text-lg space-y-4">
                 <p>
                   This isn't my journey. It's yours. I'm just honored to ride with you. Whether you're navigating 
                   phased retirement, a career pivot, or simply looking to find your unapologetically authentic 
                   self, I am here to provide the momentum and the map.
                 </p>
+                <div className="pt-4">
+                  <p className="text-muted-foreground italic font-medium">
+                    Empowering women and professionals to recognize their strength and step into their power. <br />
+                    Based in the Louisville (Kentuckiana) area, serving clients everywhere.
+                  </p>
+                </div>
               </div>
             </div>
             
@@ -105,7 +111,7 @@ export default function About() {
 
         <div className="bg-secondary/20 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 lg:p-20 max-w-6xl mx-auto">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary">Voices of Transformation</h2>
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-4">Voices of Transformation</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             {testimonials.map((t, i) => (
