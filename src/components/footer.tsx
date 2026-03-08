@@ -3,6 +3,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
   const [mounted, setMounted] = useState(false)
@@ -24,7 +25,7 @@ export function Footer() {
             <p className="text-xl font-headline italic text-primary/80">
               "You steer as we pedal"
             </p>
-            <p className="max-w-md text-muted-foreground leading-relaxed">
+            <p className="max-w-md text-muted-foreground leading-relaxed mx-auto">
               Empowering women and professionals to recognize their strength and step into their power. 
               Based in the Louisville (Kentuckiana) area, serving clients everywhere.
             </p>
@@ -40,22 +41,46 @@ export function Footer() {
             </ul>
           </div>
           
-          <div className="md:col-span-2 space-y-4">
-            <h4 className="font-headline font-bold text-lg text-primary">Connect</h4>
-            <div className="flex flex-col items-center gap-2">
-              <a href="https://www.linkedin.com/company/ramsey-empowerment/" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
-                LinkedIn
-              </a>
-              <a href="https://www.instagram.com/CoachSybil" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
-                Instagram (@CoachSybil)
-              </a>
-              <a href="mailto:Ramsey.empowerment@gmail.com" className="text-sm font-bold text-primary hover:underline uppercase tracking-widest">
-                Email
-              </a>
+          <div className="md:col-span-2 space-y-6">
+            <div className="space-y-4">
+              <h4 className="font-headline font-bold text-lg text-primary">Connect</h4>
+              <div className="flex items-center justify-center gap-6">
+                <a 
+                  href="https://www.linkedin.com/company/ramsey-empowerment/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary hover:text-accent transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.instagram.com/CoachSybil" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-primary hover:text-accent transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a 
+                  href="mailto:Ramsey.empowerment@gmail.com" 
+                  className="text-primary hover:text-accent transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail className="w-6 h-6" />
+                </a>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground pt-4">
-              © {currentYear} Ramsey Empowerment Coaching, LLC. All rights reserved.
-            </p>
+            
+            <div className="pt-4 border-t border-primary/10 max-w-[280px] mx-auto">
+              <p className="text-sm text-muted-foreground font-medium">
+                © {currentYear} Ramsey Empowerment Coaching, LLC.
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>
