@@ -52,7 +52,7 @@ export function Navbar() {
             <span className="text-xl md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight text-primary">
               Ramsey Empowerment
             </span>
-            <span className="text-sm font-headline italic text-accent font-medium leading-none">
+            <span className="text-base font-headline italic text-accent font-medium leading-none">
               Coaching
             </span>
           </div>
