@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -6,7 +7,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Compass, ShieldCheck, Megaphone, Scale, ArrowRightCircle, Heart } from "lucide-react"
+import { Compass, ShieldCheck, Megaphone, Scale, ArrowRightCircle, Heart, Quote } from "lucide-react"
 
 const benefits = [
   {
@@ -54,13 +55,13 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-10 lg:py-16 overflow-hidden bg-white">
+      <section className="relative py-8 lg:py-12 overflow-hidden bg-white">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl grayscale scale-x-[-1] mb-8"
+            className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl grayscale scale-x-[-1] mb-6"
           >
             {heroImage && (
               <Image
@@ -80,19 +81,30 @@ export default function Home() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-6"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary whitespace-nowrap">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary whitespace-nowrap pb-2">
               You Steer <span className="text-accent italic">As We Pedal</span>
             </h1>
             <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-3xl mx-auto">
               Empowering women and professionals to recognize their strength and step into their power.
             </p>
-            <div className="space-y-4 text-lg sm:text-xl leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-              <p>
-                Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
-                I'm in the back, pedaling alongside you, helping power the journey.
-              </p>
-              <p className="font-bold text-accent text-xl">You set the direction; I help you get there.</p>
+
+            {/* Redesigned Tandem Section */}
+            <div className="relative max-w-2xl mx-auto py-4">
+              <div className="absolute -left-4 -top-4 text-accent/10">
+                <Quote size={80} fill="currentColor" />
+              </div>
+              <div className="relative bg-secondary/30 backdrop-blur-sm border-l-4 border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-left">
+                <p className="text-lg sm:text-xl leading-relaxed text-primary/90 font-medium">
+                  Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
+                  I'm in the back, pedaling alongside you, helping power the journey.
+                </p>
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="h-px w-8 bg-accent/40" />
+                  <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest">You set the direction; I help you get there.</p>
+                </div>
+              </div>
             </div>
+
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
                 <Link href="/connect">Start Your Journey</Link>
@@ -108,16 +120,16 @@ export default function Home() {
       {/* Mission Section */}
       <motion.section 
         {...fadeInUp}
-        className="py-12 lg:py-20 bg-secondary/20"
+        className="py-10 lg:py-16 bg-secondary/20"
       >
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <span className="text-primary font-bold tracking-widest uppercase text-sm mb-6 block">Our Mission</span>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-4">
+          <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Our Mission</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-6">
             "I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
             and step into their power—fostering a cycle of empowerment, connection, and positive change."
           </h2>
-          <div className="mt-8 flex items-center justify-center gap-6">
+          <div className="mt-6 flex items-center justify-center gap-6">
             <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
             <span className="font-headline text-2xl sm:text-3xl text-primary">Sybil Elise</span>
             <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
@@ -126,18 +138,18 @@ export default function Home() {
       </motion.section>
 
       {/* Benefits Grid Section */}
-      <section className="py-16 lg:py-24 bg-ombre-light">
+      <section className="py-12 lg:py-20 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
-            className="text-center mb-12 sm:mb-16 space-y-4"
+            className="text-center mb-10 sm:mb-14 space-y-4"
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-2">The Cycle of Empowerment</h2>
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-4">The Cycle of Empowerment</h2>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto font-headline italic leading-relaxed tracking-wide">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 text-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -151,7 +163,7 @@ export default function Home() {
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
                       <benefit.icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-headline text-primary">{benefit.title}</h3>
+                    <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-2">{benefit.title}</h3>
                     <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {benefit.description}
                     </p>
@@ -162,7 +174,7 @@ export default function Home() {
           </div>
           <motion.div 
             {...fadeInUp}
-            className="mt-12 sm:mt-16 text-center"
+            className="mt-12 text-center"
           >
             <Button asChild size="lg" className="rounded-full px-12 h-16 sm:h-18 text-xl font-bold bg-primary hover:bg-primary/90 shadow-xl text-white font-headline tracking-wide w-full sm:w-auto">
               <Link href="/connect">Schedule Your Discovery Call</Link>
