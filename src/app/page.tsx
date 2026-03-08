@@ -120,7 +120,7 @@ export default function Home() {
         className="py-8 lg:py-12 bg-secondary/20"
       >
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Our Mission</span>
+          <span className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6 block">Our Mission</span>
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-8">
             I create a safe, supportive space where individuals feel heard, empowered, and valued. 
             Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
