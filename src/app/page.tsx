@@ -49,6 +49,13 @@ const fadeInUp = {
   transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
 }
 
+const fadeInLeft = {
+  initial: { x: -60, opacity: 0 },
+  whileInView: { x: 0, opacity: 1 },
+  viewport: { once: true },
+  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+}
+
 export default function Home() {
   const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
@@ -120,23 +127,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Section - Updated with Side Entrance and Placard */}
       <motion.section 
-        {...fadeInUp}
-        className="py-8 lg:py-12 bg-secondary/20"
+        {...fadeInLeft}
+        className="py-12 lg:py-16 bg-secondary/20"
       >
-        <div className="container mx-auto px-4 max-w-5xl text-center">
-          <span className="text-primary font-bold tracking-widest uppercase text-base sm:text-lg mb-6 block">Our Mission</span>
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-8">
-            I create a safe, supportive space where individuals feel heard, empowered, and valued. 
-            Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
-            and step into their power—fostering a cycle of empowerment, connection, and positive change.
-          </h2>
-          <div className="mt-4 flex items-center justify-center gap-6">
-            <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
-            <span className="font-headline text-2xl sm:text-3xl text-primary">Sybil Elise</span>
-            <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
-          </div>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <Card className="border-none shadow-xl bg-white/80 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
+            <CardContent className="p-10 sm:p-16 text-center space-y-8">
+              <span className="text-primary font-bold tracking-[0.2em] uppercase text-base sm:text-lg block">Our Mission</span>
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-4">
+                I create a safe, supportive space where individuals feel heard, empowered, and valued. 
+                Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
+                and step into their power—fostering a cycle of empowerment, connection, and positive change.
+              </h2>
+              <div className="flex items-center justify-center gap-6 pt-4">
+                <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
+                <span className="font-headline text-2xl sm:text-3xl text-primary">Sybil Elise</span>
+                <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </motion.section>
 
