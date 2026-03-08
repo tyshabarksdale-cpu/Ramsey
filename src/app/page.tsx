@@ -143,7 +143,7 @@ export default function Home() {
               </h2>
               <div className="flex items-center justify-center gap-6 pt-4">
                 <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
-                <span className="font-headline text-2xl sm:text-3xl text-primary">Sybil Elise</span>
+                <span className="font-headline text-2xl sm:text-3xl text-primary">Sybil Elise Ramsey</span>
                 <div className="h-px w-16 sm:w-24 bg-primary/20"></div>
               </div>
             </CardContent>
