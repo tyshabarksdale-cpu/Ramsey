@@ -30,13 +30,13 @@ export default function About() {
     <div className="py-6 lg:py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10 items-start mb-8 max-w-6xl mx-auto">
-          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl w-full">
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl w-full group">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}
                 alt={aboutImage.description}
                 fill
-                className="object-cover"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
                 data-ai-hint="professional woman smiling"
               />
             )}
