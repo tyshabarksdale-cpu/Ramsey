@@ -84,13 +84,13 @@ export default function Services() {
 
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
+            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl group">
               {sybilImage && (
                 <Image
                   src={sybilImage.imageUrl}
                   alt="Sybil Elise"
                   fill
-                  className="object-cover"
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
                   data-ai-hint="empowerment coach portrait"
                 />
               )}
