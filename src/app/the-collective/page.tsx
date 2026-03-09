@@ -68,7 +68,7 @@ export default function TheCollective() {
                   {member.description}
                 </p>
                 <div className="pt-4">
-                  <Button variant="outline" className="w-full sm:w-auto rounded-full border-primary/20 text-primary hover:bg-primary/5 font-bold uppercase tracking-widest text-[10px] sm:text-xs px-8" asChild>
+                  <Button variant="outline" className="w-full sm:w-auto rounded-full border-primary/20 text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 font-bold uppercase tracking-widest text-[10px] sm:text-xs px-8" asChild>
                     <a href={member.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
                   </Button>
                 </div>

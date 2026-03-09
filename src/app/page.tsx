@@ -97,10 +97,10 @@ export default function Home() {
 
             {/* Redesigned Tandem Section with Scroll Fade-In */}
             <motion.div 
-              initial={{ y: 30, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
               className="relative max-w-2xl mx-auto py-4"
             >
               <div className="relative bg-secondary/30 backdrop-blur-sm border-l-4 border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-left">
@@ -112,7 +112,7 @@ export default function Home() {
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
                 <Link href="/services">Our Services</Link>
               </Button>
               <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 active:bg-accent active:scale-95 transition-all text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Section - Sliding in from the side */}
       <motion.section 
         {...fadeInLeft}
         className="py-12 lg:py-16 bg-secondary/20"

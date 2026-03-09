@@ -72,10 +72,10 @@ export default function About() {
                 <p className="font-headline text-lg sm:text-xl italic text-primary leading-relaxed">
                   Think of our work together like riding a tandem bike. You're in the front seat — steering, 
                   deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
-                  you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'
+                  you, help power the journey.
                 </p>
                 <div className="pt-2">
-                  <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest">
+                  <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest leading-relaxed">
                     You set the direction;<br />I help you get there.
                   </p>
                 </div>
