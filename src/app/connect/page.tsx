@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -44,7 +43,7 @@ export default function Connect() {
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary">Start Your Journey</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl">
             Whether you're ready to start your journey or just have a few questions, 
-            I'm here to listen and guide. You steer, we pedal.
+            I'm here to listen and guide. You steer as we pedal.
           </p>
         </div>
 
