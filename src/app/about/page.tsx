@@ -69,11 +69,6 @@ export default function About() {
                 </p>
               </div>
               <div className="bg-secondary/30 p-8 sm:p-10 rounded-2xl border-l-4 border-accent text-center space-y-4 shadow-sm">
-                <p className="font-headline text-lg sm:text-xl italic text-primary leading-relaxed">
-                  Think of our work together like riding a tandem bike. You're in the front seat — steering, 
-                  deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
-                  you, help power the journey.
-                </p>
                 <div className="pt-2">
                   <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest leading-relaxed">
                     You set the direction;<br />I help you get there.
