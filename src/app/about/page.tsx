@@ -44,7 +44,7 @@ export default function About() {
           <div className="space-y-4 sm:space-y-6 text-center">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
-                Meet Sybil Elise
+                Meet Sybil Elise Ramsey
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6 tracking-tight">
                 Empowerment Strategist
@@ -68,11 +68,18 @@ export default function About() {
                   the weight of unspoken expectations, and the incredible power of a voice rediscovered.
                 </p>
               </div>
-              <p className="font-headline text-lg sm:text-xl italic bg-secondary/30 p-6 sm:p-8 rounded-2xl border-l-4 border-accent text-center">
-                Think of our work together like riding a tandem bike. You're in the front seat — steering, 
-                deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
-                you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'
-              </p>
+              <div className="bg-secondary/30 p-8 sm:p-10 rounded-2xl border-l-4 border-accent text-center space-y-4 shadow-sm">
+                <p className="font-headline text-lg sm:text-xl italic text-primary leading-relaxed">
+                  Think of our work together like riding a tandem bike. You're in the front seat — steering, 
+                  deciding the direction, owning the destination. I'm right behind you, pedaling alongside 
+                  you, help power the journey. That's what I mean when I say, 'You steer as we pedal.'
+                </p>
+                <div className="pt-2">
+                  <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest">
+                    You set the direction; I help you get there.
+                  </p>
+                </div>
+              </div>
               <div className="text-base sm:text-lg space-y-3">
                 <p>
                   This isn't my journey. It's yours. I'm just honored to ride with you. Whether you're navigating 

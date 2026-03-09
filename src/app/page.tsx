@@ -108,10 +108,6 @@ export default function Home() {
                   Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
                   I'm in the back, pedaling alongside you, helping power the journey.
                 </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <div className="h-px w-8 bg-accent/40" />
-                  <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest">You set the direction; I help you get there.</p>
-                </div>
               </div>
             </motion.div>
 
@@ -127,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section - Updated with Side Entrance and Placard */}
+      {/* Mission Section */}
       <motion.section 
         {...fadeInLeft}
         className="py-12 lg:py-16 bg-secondary/20"
@@ -135,7 +131,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-5xl">
           <Card className="border-none shadow-xl bg-white/80 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
             <CardContent className="p-10 sm:p-16 text-center space-y-8">
-              <span className="text-primary font-bold tracking-[0.2em] uppercase text-base sm:text-lg block">Our Mission</span>
+              <span className="text-primary font-bold tracking-[0.2em] uppercase text-xl sm:text-2xl block">Our Mission</span>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-4">
                 I create a safe, supportive space where individuals feel heard, empowered, and valued. 
                 Through compassionate advocacy, I help others recognize their strength, embrace their voice, 
