@@ -95,7 +95,7 @@ export default function Home() {
               Empowering women and professionals to recognize their strength and step into their power.
             </p>
 
-            {/* Redesigned Tandem Section with Scroll Fade-In */}
+            {/* Preferred Tandem Section with Scroll Fade-In */}
             <motion.div 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -105,8 +105,8 @@ export default function Home() {
             >
               <div className="relative bg-secondary/30 backdrop-blur-sm border-l-4 border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-left">
                 <p className="text-lg sm:text-xl leading-relaxed text-primary/90 font-medium">
-                  Coaching is like riding a tandem bike — you're always in the front seat, steering toward your own destination. 
-                  I'm in the back, pedaling alongside you, helping power the journey.
+                  Think of our work together like riding a tandem bike. You're in the front seat — steering, deciding the direction, owning the destination. 
+                  I'm right behind you, pedaling alongside you, help power the journey.
                 </p>
               </div>
             </motion.div>
