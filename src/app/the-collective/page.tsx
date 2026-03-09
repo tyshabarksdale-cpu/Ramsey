@@ -13,7 +13,7 @@ const collectiveMembers = [
     tagline: "Healing & Self-Care",
     description: "A national movement that mobilizes Black women and girls to reclaim their health, find their voice, and step into their power together.",
     link: "https://www.girltrek.org",
-    image: PlaceHolderImages.find(img => img.id === "collective-1")
+    image: PlaceHolderImages.find(img => img.id === "girltrek-image")
   },
   {
     name: "Evolve Women's Network",
