@@ -36,9 +36,6 @@ export default function TheCollective() {
     <div className="py-8 lg:py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-10 sm:mb-14 space-y-2 sm:space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest">
-            Community & Growth
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6">The Collective</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
             Empowerment grows in community. The Collective features women and organizations who share 
