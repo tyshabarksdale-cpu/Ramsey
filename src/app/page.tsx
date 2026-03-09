@@ -112,11 +112,11 @@ export default function Home() {
             </motion.div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
-                <Link href="/connect">Start Your Journey</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary/5 bg-transparent font-headline text-xl tracking-wide px-10 py-7">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
                 <Link href="/services">Our Services</Link>
+              </Button>
+              <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 active:bg-accent active:scale-95 transition-all text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
+                <Link href="/connect">Start Your Journey</Link>
               </Button>
             </div>
           </motion.div>
