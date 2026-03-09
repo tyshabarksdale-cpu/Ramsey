@@ -29,6 +29,12 @@
       "description": "Diverse professional women networking and sharing ideas",
       "imageUrl": "https://images.unsplash.com/photo-1573164713988-8665fc963095?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21lbiUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzUwMTI5NjI1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "women networking"
+    },
+    {
+      "id": "girltrek-image",
+      "description": "GirlTrek healing and self-care movement logo/image",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1773051973206.png?alt=media&token=c878ca87-5175-4d10-a97a-0670fa97e741",
+      "imageHint": "women empowerment"
     }
   ]
 }
