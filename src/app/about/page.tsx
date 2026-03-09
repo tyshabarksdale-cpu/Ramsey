@@ -76,7 +76,7 @@ export default function About() {
                 </p>
                 <div className="pt-2">
                   <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest">
-                    You set the direction; I help you get there.
+                    You set the direction;<br />I help you get there.
                   </p>
                 </div>
               </div>
