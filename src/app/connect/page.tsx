@@ -76,7 +76,7 @@ export default function Connect() {
               <div className="relative z-10 space-y-6 sm:space-y-8">
                 <h3 className="text-3xl sm:text-4xl font-headline font-bold text-white">Book Instantly</h3>
                 <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed">
-                  Ready to see if we're a fit? Schedule a complimentary 15-minute 
+                  Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
                 </p>
                 <Button size="lg" className="w-full rounded-full py-8 sm:py-10 text-xl sm:text-2xl font-bold bg-accent hover:bg-accent/90 border-none font-headline shadow-lg" asChild>

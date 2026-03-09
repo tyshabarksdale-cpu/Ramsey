@@ -118,7 +118,7 @@ export default function Services() {
               </div>
               <div className="space-y-6 sm:space-y-8">
                 {[
-                  { step: "1", title: "Discovery Call", text: "A 15-minute deep dive to understand your current landscape and see if our tandem is a match." },
+                  { step: "1", title: "Discovery Call", text: "A 30-minute deep dive to understand your current landscape and see if our tandem is a match." },
                   { step: "2", title: "Strategic Roadmap", text: "We map out your destinations and define the metrics of success for our journey together." },
                   { step: "3", title: "The Pedal Sessions", text: "Regular sessions focused on action, accountability, and advocacy to move you forward." }
                 ].map((item, idx) => (
