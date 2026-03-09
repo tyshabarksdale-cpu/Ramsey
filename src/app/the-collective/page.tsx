@@ -26,7 +26,7 @@ const collectiveMembers = [
     name: "Taylor Your Leadership Coaching",
     tagline: "ICF-Certified Advocacy",
     description: "Dedicated to helping leaders break free from limiting beliefs and embrace their authentic voice in a safe and supportive environment.",
-    link: "https://taylorleadershipcoaching.com",
+    link: "https://www.taylorleadershipcoaching.com/",
     image: PlaceHolderImages.find(img => img.id === "collective-1")
   }
 ]
