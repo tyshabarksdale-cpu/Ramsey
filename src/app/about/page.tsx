@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -52,13 +51,10 @@ export default function About() {
             </div>
             
             <div className="prose prose-lg text-primary space-y-4 max-w-none text-center">
-              <p className="text-xl sm:text-2xl font-headline italic tracking-wide leading-relaxed">
-                I am not an executive coach. <br /> I am an Empowerment Strategist.
-              </p>
               <div className="text-base sm:text-lg space-y-3">
                 <p>
                   With decades of professional experience and a deep commitment to the growth of others, 
-                  I established Ramsey Empowerment Coaching in 2025. My mission is simple but profound: 
+                  I established Ramsey Empowerment Collective in 2025. My mission is simple but profound: 
                   to give you a room to think out loud without judgment — and the momentum to act on what you discover.
                 </p>
                 <p>
@@ -77,9 +73,9 @@ export default function About() {
               </div>
               <div className="text-base sm:text-lg space-y-3">
                 <p>
-                  This isn't my journey. It's yours. I'm just honored to ride with you. Whether you're navigating 
-                  phased retirement, a career pivot, or simply looking to find your unapologetically authentic 
-                  self, I am here to provide the momentum and the map.
+                  This is your journey. I'm honored to ride with you. <br />
+                  Whether you're stepping into your leadership presence, navigating a career pivot, or 
+                  embracing your most unapologetically authentic self — I'm here to provide the momentum and the map.
                 </p>
               </div>
             </div>

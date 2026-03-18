@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -84,7 +83,7 @@ export default function TheCollective() {
             compassionate advocacy and genuine empowerment.
           </p>
           <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-primary text-white font-bold px-10 h-14 sm:h-16 shadow-lg uppercase tracking-widest text-[10px] sm:text-xs font-headline">
-            <Link href="/connect">Inquire About Membership</Link>
+            <Link href="/connect">Join the Collective</Link>
           </Button>
         </div>
       </div>

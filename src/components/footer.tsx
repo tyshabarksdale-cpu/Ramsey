@@ -19,7 +19,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
           <div className="md:col-span-4 space-y-4 flex flex-col items-center text-center">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Coaching</span>
+              <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Collective</span>
             </Link>
             <p className="text-xl font-headline italic text-primary/80 pb-0">
               "You steer as we pedal"
@@ -70,7 +70,7 @@ export function Footer() {
             
             <div className="pt-4 border-t border-primary/10 max-w-[320px] mx-auto">
               <p className="text-sm text-muted-foreground font-medium">
-                © {currentYear} Ramsey Empowerment Coaching, LLC.
+                © {currentYear} Ramsey Empowerment Collective, LLC.
               </p>
               <p className="text-sm text-muted-foreground mt-1">
                 All rights reserved.
