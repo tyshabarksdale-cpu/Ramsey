@@ -76,13 +76,13 @@ export default function TheCollective() {
           ))}
         </div>
 
-        <div className="mt-10 sm:mt-14 p-8 sm:p-12 lg:p-14 bg-ombre-light rounded-[2rem] sm:rounded-[3rem] text-center space-y-6 max-w-5xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-6">Join the Momentum</h2>
-          <p className="text-lg sm:text-xl text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
+        <div className="mt-8 sm:mt-10 p-6 sm:p-8 lg:p-10 bg-ombre-light rounded-[2rem] sm:rounded-[2.5rem] text-center space-y-4 max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-headline font-bold text-primary pb-2">Join the Momentum</h2>
+          <p className="text-base sm:text-lg text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.
           </p>
-          <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-primary text-white font-bold px-10 h-14 sm:h-16 shadow-lg uppercase tracking-widest text-[10px] sm:text-xs font-headline">
+          <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-primary text-white font-bold px-10 h-12 sm:h-14 shadow-lg uppercase tracking-widest text-[10px] sm:text-xs font-headline">
             <Link href="/connect">Join the Collective</Link>
           </Button>
         </div>
