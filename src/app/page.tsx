@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -62,13 +61,13 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative py-6 lg:py-10 overflow-hidden bg-white">
+      <section className="relative py-6 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl scale-x-[-1] mb-6 grayscale"
+            className="relative w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl scale-x-[-1] mb-8 grayscale"
           >
             {heroImage && (
               <Image
@@ -86,14 +85,11 @@ export default function Home() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="space-y-4"
+            className="space-y-6"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary whitespace-nowrap pb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-4">
               You Steer <span className="text-accent italic">As We Pedal</span>
             </h1>
-            <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-3xl mx-auto">
-              Empowering women and professionals to recognize their strength and step into their power.
-            </p>
 
             {/* Preferred Tandem Section with Scroll Fade-In */}
             <motion.div 
@@ -103,15 +99,19 @@ export default function Home() {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="relative max-w-2xl mx-auto py-4"
             >
-              <div className="relative bg-secondary/30 backdrop-blur-sm border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-center">
-                <p className="text-lg sm:text-xl leading-relaxed text-primary/90 font-medium">
+              <div className="relative bg-primary/95 backdrop-blur-sm border-accent p-8 sm:p-12 rounded-3xl shadow-2xl text-center">
+                <p className="text-lg sm:text-xl leading-relaxed text-primary-foreground font-medium">
                   Think of our work together like riding a tandem bike. You're in the front seat — steering, deciding the direction, owning the destination. 
                   I'm right behind you, pedaling alongside you, helping power the journey.
                 </p>
               </div>
             </motion.div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-3xl mx-auto">
+              Empowering women and professionals to recognize their strength and step into their power.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
               <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
                 <Link href="/services">Our Services</Link>
               </Button>
@@ -126,10 +126,10 @@ export default function Home() {
       {/* Mission Section - Sliding in from the side */}
       <motion.section 
         {...fadeInLeft}
-        className="py-12 lg:py-16 bg-secondary/20"
+        className="py-12 lg:py-20 bg-secondary/30"
       >
         <div className="container mx-auto px-4 max-w-5xl">
-          <Card className="border-none shadow-xl bg-white/80 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
+          <Card className="border-none shadow-2xl bg-white/90 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
             <CardContent className="p-10 sm:p-16 text-center space-y-8">
               <span className="text-primary font-bold tracking-[0.2em] uppercase text-xl sm:text-2xl block">Our Mission</span>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-4">
@@ -148,18 +148,18 @@ export default function Home() {
       </motion.section>
 
       {/* Benefits Grid Section */}
-      <section className="py-10 lg:py-16 bg-ombre-light">
+      <section className="py-16 lg:py-24 bg-ombre-light">
         <div className="container mx-auto px-4">
           <motion.div 
             {...fadeInUp}
-            className="text-center mb-8 sm:mb-12 space-y-2"
+            className="text-center mb-12 sm:mb-16 space-y-2"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6">The Cycle of Empowerment</h2>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto font-headline italic leading-relaxed tracking-wide">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 text-center max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
@@ -184,7 +184,7 @@ export default function Home() {
           </div>
           <motion.div 
             {...fadeInUp}
-            className="mt-10 text-center"
+            className="mt-16 text-center"
           >
             <Button asChild size="lg" className="rounded-full px-12 h-16 sm:h-18 text-xl font-bold bg-primary hover:bg-primary/90 shadow-xl text-white font-headline tracking-wide w-full sm:w-auto">
               <Link href="/connect">Schedule Your Discovery Call</Link>
