@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 
 const testimonials = [
   {
