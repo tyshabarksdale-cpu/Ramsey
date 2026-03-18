@@ -130,7 +130,7 @@ export default function Home() {
         className="py-12 lg:py-20 bg-secondary/30"
       >
         <div className="container mx-auto px-4 max-w-5xl">
-          <Card className="border-none shadow-2xl bg-white/90 backdrop-blur-md rounded-[2.5rem] overflow-hidden">
+          <Card className="border-none shadow-2xl bg-white/90 backdrop-blur-md rounded-none overflow-hidden">
             <CardContent className="p-10 sm:p-16 text-center space-y-8">
               <span className="text-primary font-bold tracking-[0.2em] uppercase text-xl sm:text-2xl block">Our Mission</span>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-4">

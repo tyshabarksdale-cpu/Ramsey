@@ -64,9 +64,6 @@ export function Footer() {
               <p className="text-sm text-muted-foreground font-medium">
                 © 2025 Ramsey Empowerment Collective, LLC
               </p>
-              <p className="text-sm text-muted-foreground mt-1">
-                All rights reserved.
-              </p>
             </div>
           </div>
         </div>
