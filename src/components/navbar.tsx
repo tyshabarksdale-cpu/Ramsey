@@ -127,7 +127,7 @@ export function Navbar() {
                 </Link>
               </div>
               <div className="mt-auto pb-8 text-center text-xs text-primary/60">
-                <p>Copyright © {currentYear} Ramsey Empowerment Collective, LLC</p>
+                <p>© {currentYear} Ramsey Empowerment Collective, LLC</p>
               </div>
             </SheetContent>
           </Sheet>
