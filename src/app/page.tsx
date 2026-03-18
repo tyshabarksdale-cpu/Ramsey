@@ -99,7 +99,7 @@ export default function Home() {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="relative max-w-2xl mx-auto py-4"
             >
-              <div className="relative bg-primary/95 backdrop-blur-sm border-accent p-8 sm:p-12 shadow-2xl text-center">
+              <div className="relative bg-primary/95 backdrop-blur-sm border-accent p-8 sm:p-12 shadow-2xl text-center rounded-none">
                 <p className="text-lg sm:text-xl leading-relaxed text-primary-foreground font-medium">
                   Think of our work together like riding a tandem bike. You're in the front seat — steering, deciding the direction, owning the destination. 
                   I'm right behind you, pedaling alongside you, helping power the journey.
@@ -112,10 +112,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-full border-primary text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-none border-primary text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
                 <Link href="/services">Our Services</Link>
               </Button>
-              <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-accent hover:bg-accent/90 active:bg-accent active:scale-95 transition-all text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
+              <Button asChild size="lg" className="w-full sm:w-auto rounded-none bg-accent hover:bg-accent/90 active:bg-accent active:scale-95 transition-all text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
                 <Link href="/connect">Start Your Journey</Link>
               </Button>
             </div>
@@ -186,7 +186,7 @@ export default function Home() {
             {...fadeInUp}
             className="mt-16 text-center"
           >
-            <Button asChild size="lg" className="rounded-full px-12 h-16 sm:h-18 text-xl font-bold bg-primary hover:bg-primary/90 shadow-xl text-white font-headline tracking-wide w-full sm:w-auto">
+            <Button asChild size="lg" className="rounded-none px-12 h-16 sm:h-18 text-xl font-bold bg-primary hover:bg-primary/90 shadow-xl text-white font-headline tracking-wide w-full sm:w-auto">
               <Link href="/connect">Schedule Your Discovery Call</Link>
             </Button>
           </motion.div>

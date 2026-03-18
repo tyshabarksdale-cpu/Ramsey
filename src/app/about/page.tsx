@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
 
 const testimonials = [
   {
@@ -29,7 +30,12 @@ export default function About() {
     <div className="py-6 lg:py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10 items-start mb-8 max-w-6xl mx-auto">
-          <div className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale"
+          >
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}
@@ -37,12 +43,13 @@ export default function About() {
                 fill
                 className="object-cover"
                 data-ai-hint="professional woman smiling black and white"
+                priority
               />
             )}
-          </div>
+          </motion.div>
           <div className="space-y-4 sm:space-y-6 text-center">
             <div className="space-y-2">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
                 Meet Sybil Elise Ramsey
               </div>
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6 tracking-tight">
@@ -82,21 +89,29 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-secondary/20 p-8 sm:p-12 lg:p-14 max-w-6xl mx-auto">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-6">Voices of Transformation</h2>
+        <div className="bg-secondary/10 p-8 sm:p-12 lg:p-20 max-w-5xl mx-auto">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-primary pb-6">Voices of Transformation</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="flex flex-col gap-10 sm:gap-16 max-w-3xl mx-auto">
             {testimonials.map((t, i) => (
-              <Card key={i} className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow h-full rounded-none">
-                <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col justify-between h-full text-center">
-                  <p className="text-base sm:text-lg italic text-primary/80 leading-relaxed">{t.text}</p>
-                  <div>
-                    <p className="font-bold text-primary text-base pb-1">{t.name}</p>
-                    <p className="text-[10px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-1">{t.title}</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <Card className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow rounded-none">
+                  <CardContent className="p-8 sm:p-12 space-y-6 flex flex-col items-center text-center">
+                    <p className="text-lg sm:text-xl lg:text-2xl italic text-primary/80 leading-relaxed max-w-2xl">{t.text}</p>
+                    <div className="pt-4 border-t border-primary/10 w-full max-w-xs">
+                      <p className="font-bold text-primary text-lg pb-1">{t.name}</p>
+                      <p className="text-[10px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-1">{t.title}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
