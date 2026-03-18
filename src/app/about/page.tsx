@@ -59,7 +59,7 @@ export default function About() {
                 <p>
                   With decades of professional experience and a deep commitment to the growth of others, 
                   I established Ramsey Empowerment Coaching in 2025. My mission is simple but profound: 
-                  to create a safe haven for those seeking to reclaim their agency.
+                  to give you a room to think out loud without judgment — and the momentum to act on what you discover.
                 </p>
                 <p>
                   Having spent over 30 years in corporate settings — often as the only woman and the only 
@@ -81,17 +81,6 @@ export default function About() {
                   phased retirement, a career pivot, or simply looking to find your unapologetically authentic 
                   self, I am here to provide the momentum and the map.
                 </p>
-              </div>
-            </div>
-            
-            <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-center">
-              <div className="space-y-1">
-                <span className="block text-primary text-[10px] font-bold uppercase tracking-widest">Certification</span>
-                <span className="font-bold text-base sm:text-lg text-primary">Certified Leadership Coach</span>
-              </div>
-              <div className="space-y-1">
-                <span className="block text-primary text-[10px] font-bold uppercase tracking-widest">Expertise</span>
-                <span className="font-bold text-base sm:text-lg text-primary">35+ Years Professional Experience</span>
               </div>
             </div>
           </div>
