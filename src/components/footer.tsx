@@ -1,25 +1,17 @@
+
 "use client"
 
 import Link from "next/link"
-import { useState, useEffect } from "react"
 import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  const currentYear = mounted ? new Date().getFullYear().toString() : "2025"
-
   return (
     <footer className="border-t bg-secondary/30">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
           <div className="md:col-span-4 space-y-4 flex flex-col items-center text-center">
             <Link href="/" className="inline-block">
-              <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Collective</span>
+              <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Coaching</span>
             </Link>
             <p className="text-xl font-headline italic text-primary/80 pb-0">
               "You steer as we pedal"
@@ -70,7 +62,7 @@ export function Footer() {
             
             <div className="pt-4 border-t border-primary/10 max-w-[320px] mx-auto">
               <p className="text-sm text-muted-foreground font-medium">
-                © {currentYear} Ramsey Empowerment Collective, LLC.
+                © 2025 Ramsey Empowerment Collective, LLC.
               </p>
               <p className="text-sm text-muted-foreground mt-1">
                 All rights reserved.
