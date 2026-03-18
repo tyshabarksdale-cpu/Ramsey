@@ -62,7 +62,7 @@ export function Footer() {
             
             <div className="pt-4 border-t border-primary/10 max-w-[400px] mx-auto">
               <p className="text-sm text-muted-foreground font-medium">
-                © Ramsey Empowerment Collective, LLC (2025)
+                Copyright © 2025 Ramsey Empowerment Collective, LLC
               </p>
               <p className="text-sm text-muted-foreground mt-1">
                 All rights reserved.
