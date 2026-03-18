@@ -33,7 +33,7 @@ export function Navbar() {
     setMounted(true)
   }, [])
 
-  const currentYear = mounted ? new Date().getFullYear().toString() : "2025"
+  const currentYear = "2025"
 
   return (
     <motion.header 
