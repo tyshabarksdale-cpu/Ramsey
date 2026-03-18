@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 const testimonials = [
   {
@@ -29,7 +29,7 @@ export default function About() {
   return (
     <div className="py-6 lg:py-10">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10 items-start mb-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -47,18 +47,18 @@ export default function About() {
               />
             )}
           </motion.div>
-          <div className="space-y-4 sm:space-y-6 text-center">
-            <div className="space-y-2">
+          <div className="space-y-6 sm:space-y-8 text-center">
+            <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
                 Meet Sybil Elise Ramsey
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-2 tracking-tight">
                 Empowerment Strategist
               </h1>
             </div>
             
-            <div className="prose prose-lg text-primary space-y-4 max-w-none text-center">
-              <div className="text-base sm:text-lg space-y-3">
+            <div className="prose prose-lg text-primary space-y-6 max-w-none text-center">
+              <div className="text-base sm:text-lg space-y-4">
                 <p>
                   With decades of professional experience and a deep commitment to the growth of others, 
                   I established Ramsey Empowerment Collective in 2025. My mission is simple but profound: 
@@ -78,7 +78,7 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="text-base sm:text-lg space-y-3">
+              <div className="text-base sm:text-lg space-y-4">
                 <p>
                   This is your journey. I'm honored to ride with you. <br />
                   Whether you're stepping into your leadership presence, navigating a career pivot, or 
@@ -93,7 +93,7 @@ export default function About() {
           <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-primary pb-2">Voices of Transformation</h2>
           </div>
-          <div className="flex flex-col gap-6 max-w-3xl mx-auto">
+          <div className="flex flex-col gap-4 max-w-3xl mx-auto">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
