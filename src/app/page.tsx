@@ -170,7 +170,7 @@ export default function Home() {
               >
                 <Card className="border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md h-full rounded-none">
                   <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2">
+                    <div className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full">
                       <benefit.icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>
