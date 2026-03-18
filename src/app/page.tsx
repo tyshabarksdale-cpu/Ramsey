@@ -103,7 +103,7 @@ export default function Home() {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="relative max-w-2xl mx-auto py-4"
             >
-              <div className="relative bg-secondary/30 backdrop-blur-sm border-l-4 border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-left">
+              <div className="relative bg-secondary/30 backdrop-blur-sm border-accent p-8 sm:p-10 rounded-2xl sm:rounded-3xl shadow-sm text-center">
                 <p className="text-lg sm:text-xl leading-relaxed text-primary/90 font-medium">
                   Think of our work together like riding a tandem bike. You're in the front seat — steering, deciding the direction, owning the destination. 
                   I'm right behind you, pedaling alongside you, helping power the journey.
