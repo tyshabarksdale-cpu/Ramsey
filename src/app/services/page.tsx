@@ -5,7 +5,6 @@ import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -80,7 +79,7 @@ export default function Services() {
 
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-square overflow-hidden shadow-2xl group grayscale">
+            <div className="relative aspect-square overflow-hidden shadow-2xl group grayscale rounded-none">
               {sybilImage && (
                 <Image
                   src={sybilImage.imageUrl}
@@ -107,12 +106,11 @@ export default function Services() {
           </div>
         </section>
 
-        <div className="bg-ombre-dark text-primary-foreground p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden max-w-7xl mx-auto">
+        <div className="bg-ombre-dark text-primary-foreground p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden max-w-7xl mx-auto rounded-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 blur-[150px] rounded-full"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
             <div className="space-y-6 text-center">
               <div className="space-y-2">
-                <Badge variant="outline" className="border-accent/30 text-accent px-6 py-2 text-sm rounded-full">The Methodology</Badge>
                 <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-white pb-6 leading-relaxed">The Empowerment Process</h2>
               </div>
               <div className="space-y-6 sm:space-y-8">
@@ -149,7 +147,7 @@ export default function Services() {
 
         <div className="mt-12 text-center space-y-6 flex flex-col items-center">
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6 leading-relaxed">Ready to start pedaling?</h2>
-          <Button asChild size="lg" className="w-full sm:w-auto rounded-full px-16 h-18 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
+          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-16 h-18 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
             <Link href="/connect">Book Your Strategy Session</Link>
           </Button>
         </div>

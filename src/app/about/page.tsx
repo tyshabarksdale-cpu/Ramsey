@@ -47,7 +47,7 @@ export default function About() {
               />
             )}
           </motion.div>
-          <div className="space-y-6 sm:space-y-8 text-center">
+          <div className="space-y-6 sm:space-y-8 text-center flex flex-col items-center justify-center">
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
                 Meet Sybil Elise Ramsey
