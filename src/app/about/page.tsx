@@ -34,7 +34,7 @@ export default function About() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale"
+            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale rounded-none"
           >
             {aboutImage && (
               <Image
@@ -71,7 +71,7 @@ export default function About() {
                   the weight of unspoken expectations, and the incredible power of a voice rediscovered.
                 </p>
               </div>
-              <div className="bg-secondary/30 p-8 sm:p-10 border-l-4 border-accent text-center space-y-4 shadow-sm">
+              <div className="bg-secondary/30 p-8 sm:p-10 border-l-4 border-accent text-center space-y-4 shadow-sm rounded-none">
                 <div className="pt-2">
                   <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest leading-relaxed">
                     You set the direction;<br />I help you get there.
@@ -89,11 +89,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-secondary/10 p-8 sm:p-12 lg:p-20 max-w-5xl mx-auto">
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-primary pb-6">Voices of Transformation</h2>
+        <div className="bg-secondary/10 p-8 sm:p-12 lg:p-20 max-w-5xl mx-auto rounded-none">
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-primary pb-2">Voices of Transformation</h2>
           </div>
-          <div className="flex flex-col gap-10 sm:gap-16 max-w-3xl mx-auto">
+          <div className="flex flex-col gap-6 max-w-3xl mx-auto">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -103,7 +103,7 @@ export default function About() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
               >
                 <Card className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow rounded-none">
-                  <CardContent className="p-8 sm:p-12 space-y-6 flex flex-col items-center text-center">
+                  <CardContent className="p-8 sm:p-10 space-y-6 flex flex-col items-center text-center">
                     <p className="text-lg sm:text-xl lg:text-2xl italic text-primary/80 leading-relaxed max-w-2xl">{t.text}</p>
                     <div className="pt-4 border-t border-primary/10 w-full max-w-xs">
                       <p className="font-bold text-primary text-lg pb-1">{t.name}</p>
