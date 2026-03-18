@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Ramsey Empowerment Collective | Sybil Elise',
+  title: 'Ramsey Empowerment Coaching | Sybil Elise',
   description: 'Empowerment Strategist helping women and professionals recognize their strength, embrace their voice, and step into their power.',
 };
 
