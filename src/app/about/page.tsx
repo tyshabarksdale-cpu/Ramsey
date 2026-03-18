@@ -24,7 +24,8 @@ const testimonials = [
 ]
 
 export default function About() {
-  const aboutImage = PlaceHolderImages.find(img => img.id === "about-sybil")
+  // Updated to use the hero portrait as requested
+  const bioImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
     <div className="py-6 lg:py-10">
@@ -36,10 +37,10 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale rounded-none"
           >
-            {aboutImage && (
+            {bioImage && (
               <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
+                src={bioImage.imageUrl}
+                alt={bioImage.description}
                 fill
                 className="object-cover"
                 data-ai-hint="professional woman smiling black and white"
