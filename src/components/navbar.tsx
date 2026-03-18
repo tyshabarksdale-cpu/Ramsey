@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -52,7 +53,7 @@ export function Navbar() {
               Ramsey Empowerment
             </span>
             <span className="text-base font-headline italic text-accent font-medium leading-none">
-              Coaching
+              Collective
             </span>
           </div>
         </Link>
@@ -98,7 +99,7 @@ export function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l">
               <SheetHeader className="sr-only">
                 <SheetTitle>Navigation Menu</SheetTitle>
-                <SheetDescription>Access the main sections of Ramsey Empowerment Coaching.</SheetDescription>
+                <SheetDescription>Access the main sections of Ramsey Empowerment Collective.</SheetDescription>
               </SheetHeader>
               <div className="flex flex-col gap-6 pt-10">
                 {navLinks.map((link) => {
