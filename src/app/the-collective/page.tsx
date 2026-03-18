@@ -45,14 +45,14 @@ export default function TheCollective() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 max-w-7xl mx-auto">
           {collectiveMembers.map((member, i) => (
-            <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white">
+            <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white rounded-none">
               <div className="relative aspect-video overflow-hidden">
                 {member.image && (
                   <Image
                     src={member.image.imageUrl}
                     alt={member.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale"
                     data-ai-hint="diverse women empowering each other"
                   />
                 )}
@@ -76,7 +76,7 @@ export default function TheCollective() {
           ))}
         </div>
 
-        <div className="mt-8 sm:mt-10 p-6 sm:p-8 lg:p-10 bg-ombre-light rounded-[2rem] sm:rounded-[2.5rem] text-center space-y-4 max-w-4xl mx-auto">
+        <div className="mt-8 sm:mt-10 p-6 sm:p-8 lg:p-10 bg-ombre-light text-center space-y-4 max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-headline font-bold text-primary pb-2">Join the Momentum</h2>
           <p className="text-base sm:text-lg text-primary/80 max-w-2xl mx-auto italic font-headline tracking-wide">
             We are always looking to partner with individuals and organizations who prioritize 

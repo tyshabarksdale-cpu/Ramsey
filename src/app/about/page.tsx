@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -30,13 +29,13 @@ export default function About() {
     <div className="py-6 lg:py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10 items-start mb-8 max-w-6xl mx-auto">
-          <div className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full">
+          <div className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale">
             {aboutImage && (
               <Image
                 src={aboutImage.imageUrl}
                 alt={aboutImage.description}
                 fill
-                className="object-cover grayscale"
+                className="object-cover"
                 data-ai-hint="professional woman smiling black and white"
               />
             )}
@@ -65,7 +64,7 @@ export default function About() {
                   the weight of unspoken expectations, and the incredible power of a voice rediscovered.
                 </p>
               </div>
-              <div className="bg-secondary/30 p-8 sm:p-10 rounded-2xl border-l-4 border-accent text-center space-y-4 shadow-sm">
+              <div className="bg-secondary/30 p-8 sm:p-10 border-l-4 border-accent text-center space-y-4 shadow-sm">
                 <div className="pt-2">
                   <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest leading-relaxed">
                     You set the direction;<br />I help you get there.
@@ -83,13 +82,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="bg-secondary/20 rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 lg:p-14 max-w-6xl mx-auto">
+        <div className="bg-secondary/20 p-8 sm:p-12 lg:p-14 max-w-6xl mx-auto">
           <div className="text-center mb-6">
             <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline font-bold text-primary pb-6">Voices of Transformation</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((t, i) => (
-              <Card key={i} className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow h-full">
+              <Card key={i} className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow h-full rounded-none">
                 <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col justify-between h-full text-center">
                   <p className="text-base sm:text-lg italic text-primary/80 leading-relaxed">{t.text}</p>
                   <div>

@@ -1,4 +1,3 @@
-
 "use client"
 
 import Image from "next/image"
@@ -124,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section - Sliding in from the side */}
+      {/* Mission Section */}
       <motion.section 
         {...fadeInLeft}
         className="py-12 lg:py-20 bg-secondary/30"
@@ -169,9 +168,9 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md h-full rounded-[2rem]">
+                <Card className="border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md h-full rounded-none">
                   <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                    <div className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2">
                       <benefit.icon className="w-8 h-8" />
                     </div>
                     <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>

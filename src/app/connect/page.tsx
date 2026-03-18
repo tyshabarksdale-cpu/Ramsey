@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -31,12 +30,12 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-8 sm:space-y-10 flex flex-col items-center">
           {connectImage && (
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white group">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white grayscale">
               <Image
                 src={connectImage.imageUrl}
                 alt="Sybil Elise portrait"
                 fill
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
+                className="object-cover"
                 data-ai-hint="professional portrait"
               />
             </div>
@@ -72,7 +71,7 @@ export default function Connect() {
               </div>
             </div>
 
-            <Card className="bg-primary text-primary-foreground p-8 sm:p-10 lg:p-14 rounded-[2rem] sm:rounded-[3rem] overflow-hidden relative border-none shadow-2xl mx-auto">
+            <Card className="bg-primary text-primary-foreground p-8 sm:p-10 lg:p-14 overflow-hidden relative border-none shadow-2xl mx-auto rounded-none">
               <div className="relative z-10 space-y-6 sm:space-y-8">
                 <h3 className="text-3xl sm:text-4xl font-headline font-bold text-white">Book Instantly</h3>
                 <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed">
@@ -92,7 +91,7 @@ export default function Connect() {
             </Card>
           </div>
 
-          <div className="bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-2xl border border-secondary">
+          <div className="bg-white p-6 sm:p-10 lg:p-16 shadow-2xl border border-secondary rounded-none">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
                 <h3 className="text-2xl sm:text-3xl font-headline font-bold mb-6 sm:mb-10 text-center text-primary">Send a Message</h3>
@@ -100,21 +99,21 @@ export default function Connect() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-primary font-bold">Full Name*</Label>
-                      <Input id="name" required placeholder="Jane Doe" className="h-12 sm:h-14 rounded-xl border-primary/20 text-primary" />
+                      <Input id="name" required placeholder="Jane Doe" className="h-12 sm:h-14 rounded-none border-primary/20 text-primary" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-primary font-bold">Email Address*</Label>
-                      <Input id="email" type="email" required placeholder="jane@example.com" className="h-12 sm:h-14 rounded-xl border-primary/20 text-primary" />
+                      <Input id="email" type="email" required placeholder="jane@example.com" className="h-12 sm:h-14 rounded-none border-primary/20 text-primary" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone" className="text-primary font-bold">Phone Number (Optional)</Label>
-                    <Input id="phone" type="tel" placeholder="(555) 000-0000" className="h-12 sm:h-14 rounded-xl border-primary/20 text-primary" />
+                    <Input id="phone" type="tel" placeholder="(555) 000-0000" className="h-12 sm:h-14 rounded-none border-primary/20 text-primary" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="source" className="text-primary font-bold">How did you hear about us?</Label>
                     <Select>
-                      <SelectTrigger className="h-12 sm:h-14 rounded-xl border-primary/20 text-primary">
+                      <SelectTrigger className="h-12 sm:h-14 rounded-none border-primary/20 text-primary">
                         <SelectValue placeholder="Please select an option" />
                       </SelectTrigger>
                       <SelectContent>
@@ -128,7 +127,7 @@ export default function Connect() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="message" className="text-primary font-bold">How can I help you?*</Label>
-                    <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] sm:min-h-[180px] rounded-xl border-primary/20 text-primary" />
+                    <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] sm:min-h-[180px] rounded-none border-primary/20 text-primary" />
                   </div>
                 </div>
                 <Button type="submit" className="w-full rounded-full py-6 sm:py-8 text-lg sm:text-xl font-bold bg-primary text-white hover:bg-primary/90 font-headline shadow-md">

@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -45,7 +44,7 @@ export function Navbar() {
     >
       <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/5 group-hover:bg-primary/10 transition-colors">
+          <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 bg-primary/5 group-hover:bg-primary/10 transition-colors">
             <Bike className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:text-accent transition-colors duration-300" />
           </div>
           <div className="flex flex-col">

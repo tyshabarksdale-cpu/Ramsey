@@ -1,4 +1,3 @@
-
 "use client"
 
 import Link from "next/link"
@@ -49,7 +48,7 @@ export default function Services() {
             <Card 
               key={i} 
               className={cn(
-                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-[2rem]",
+                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-none",
                 i === 2 ? "md:col-span-2 md:max-w-lg md:mx-auto w-full" : ""
               )}
             >
@@ -81,13 +80,13 @@ export default function Services() {
 
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl group">
+            <div className="relative aspect-square overflow-hidden shadow-2xl group grayscale">
               {sybilImage && (
                 <Image
                   src={sybilImage.imageUrl}
                   alt="Sybil Elise"
                   fill
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
+                  className="object-cover"
                   data-ai-hint="empowerment coach portrait"
                 />
               )}
@@ -108,12 +107,12 @@ export default function Services() {
           </div>
         </section>
 
-        <div className="bg-ombre-dark text-primary-foreground rounded-[3rem] p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden max-w-7xl mx-auto">
+        <div className="bg-ombre-dark text-primary-foreground p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden max-w-7xl mx-auto">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 blur-[150px] rounded-full"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
             <div className="space-y-6 text-center">
               <div className="space-y-2">
-                <Badge variant="outline" className="border-accent/30 text-accent px-6 py-2 text-sm">The Methodology</Badge>
+                <Badge variant="outline" className="border-accent/30 text-accent px-6 py-2 text-sm rounded-full">The Methodology</Badge>
                 <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-white pb-6 leading-relaxed">The Empowerment Process</h2>
               </div>
               <div className="space-y-6 sm:space-y-8">
@@ -123,7 +122,7 @@ export default function Services() {
                   { step: "3", title: "The Pedal Sessions", text: "Regular sessions focused on action, accountability, and advocacy to move you forward." }
                 ].map((item, idx) => (
                   <div key={idx} className="flex flex-col items-center text-center gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full border border-accent/40 flex items-center justify-center font-headline font-bold text-xl text-accent mx-auto">{item.step}</div>
+                    <div className="flex-shrink-0 w-12 h-12 border border-accent/40 flex items-center justify-center font-headline font-bold text-xl text-accent mx-auto">{item.step}</div>
                     <div>
                       <h4 className="text-2xl sm:text-3xl font-bold mb-1 text-white pb-6 leading-relaxed">{item.title}</h4>
                       <p className="text-lg sm:text-xl text-primary-foreground/80 leading-relaxed">{item.text}</p>
@@ -139,7 +138,7 @@ export default function Services() {
                 { label: "Action", icon: Zap },
                 { label: "Empowerment", icon: ShieldCheck }
               ].map((item, idx) => (
-                <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-6 text-center flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-all aspect-square rounded-[2rem]">
+                <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-6 text-center flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-all aspect-square rounded-none">
                   <item.icon className="w-8 h-8 text-accent" />
                   <p className="font-bold tracking-[0.3em] uppercase text-[10px] sm:text-xs text-accent pb-1">{item.label}</p>
                 </Card>
