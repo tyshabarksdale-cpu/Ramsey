@@ -30,7 +30,7 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-8 sm:space-y-10 flex flex-col items-center">
           {connectImage && (
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white grayscale">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white grayscale rounded-none">
               <Image
                 src={connectImage.imageUrl}
                 alt="Sybil Elise portrait"
@@ -78,7 +78,7 @@ export default function Connect() {
                   Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
                 </p>
-                <Button size="lg" className="w-full rounded-full py-8 sm:py-10 text-xl sm:text-2xl font-bold bg-accent hover:bg-accent/90 border-none font-headline shadow-lg" asChild>
+                <Button size="lg" className="w-full rounded-none py-8 sm:py-10 text-xl sm:text-2xl font-bold bg-accent hover:bg-accent/90 border-none font-headline shadow-lg" asChild>
                   <a href="https://calendly.com/ramsey-empowerment/15min" target="_blank" rel="noopener noreferrer">
                     Open Calendly
                   </a>
@@ -130,7 +130,7 @@ export default function Connect() {
                     <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] sm:min-h-[180px] rounded-none border-primary/20 text-primary" />
                   </div>
                 </div>
-                <Button type="submit" className="w-full rounded-full py-6 sm:py-8 text-lg sm:text-xl font-bold bg-primary text-white hover:bg-primary/90 font-headline shadow-md">
+                <Button type="submit" className="w-full rounded-none py-6 sm:py-8 text-lg sm:text-xl font-bold bg-primary text-white hover:bg-primary/90 font-headline shadow-md">
                   Send Message
                 </Button>
                 <p className="text-[10px] sm:text-xs text-primary/60 text-center">
@@ -149,7 +149,7 @@ export default function Connect() {
                   Your message has been received. Sybil will review your inquiry and 
                   respond within the next 24-48 business hours.
                 </p>
-                <Button variant="outline" onClick={() => setIsSubmitted(false)} className="w-full sm:w-auto rounded-full border-primary text-primary hover:bg-primary/10 font-headline h-12 sm:h-14 px-8 sm:px-10 text-base sm:text-lg">
+                <Button variant="outline" onClick={() => setIsSubmitted(false)} className="w-full sm:w-auto rounded-none border-primary text-primary hover:bg-primary/10 font-headline h-12 sm:h-14 px-8 sm:px-10 text-base sm:text-lg">
                   Send Another Message
                 </Button>
               </div>

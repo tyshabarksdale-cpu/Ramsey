@@ -67,7 +67,7 @@ export default function TheCollective() {
                   {member.description}
                 </p>
                 <div className="pt-4">
-                  <Button variant="outline" className="w-full sm:w-auto rounded-full border-primary/20 text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 font-bold uppercase tracking-widest text-[10px] sm:text-xs px-8" asChild>
+                  <Button variant="outline" className="w-full sm:w-auto rounded-none border-primary/20 text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 font-bold uppercase tracking-widest text-[10px] sm:text-xs px-8" asChild>
                     <a href={member.link} target="_blank" rel="noopener noreferrer">Visit Website</a>
                   </Button>
                 </div>
@@ -82,7 +82,7 @@ export default function TheCollective() {
             We are always looking to partner with individuals and organizations who prioritize 
             compassionate advocacy and genuine empowerment.
           </p>
-          <Button asChild size="lg" className="w-full sm:w-auto rounded-full bg-primary text-white font-bold px-10 h-12 sm:h-14 shadow-lg uppercase tracking-widest text-[10px] sm:text-xs font-headline">
+          <Button asChild size="lg" className="w-full sm:w-auto rounded-none bg-primary text-white font-bold px-10 h-12 sm:h-14 shadow-lg uppercase tracking-widest text-[10px] sm:text-xs font-headline">
             <Link href="/connect">Join the Collective</Link>
           </Button>
         </div>

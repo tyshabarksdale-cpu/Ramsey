@@ -147,7 +147,7 @@ export default function Services() {
 
         <div className="mt-12 text-center space-y-6 flex flex-col items-center">
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6 leading-relaxed">Ready to start pedaling?</h2>
-          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-16 h-18 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
+          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-24 h-24 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
             <Link href="/connect">Book Your Strategy Session</Link>
           </Button>
         </div>

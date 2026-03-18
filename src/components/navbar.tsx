@@ -81,7 +81,7 @@ export function Navbar() {
           })}
           <Link
             href="/connect"
-            className="rounded-full bg-primary px-6 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline"
+            className="rounded-none bg-primary px-6 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline"
           >
             Start Your Journey
           </Link>
@@ -120,7 +120,7 @@ export function Navbar() {
                 <Link
                   href="/connect"
                   onClick={() => setIsOpen(false)}
-                  className="rounded-full bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-2 font-headline"
+                  className="rounded-none bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-2 font-headline"
                 >
                   Start Your Journey
                 </Link>
