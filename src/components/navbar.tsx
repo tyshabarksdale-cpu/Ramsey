@@ -126,7 +126,7 @@ export function Navbar() {
                 </Link>
               </div>
               <div className="mt-auto pb-8 text-center text-xs text-primary/60">
-                <p>© {currentYear} Ramsey Empowerment Coaching</p>
+                <p>© {currentYear} Ramsey Empowerment Collective</p>
               </div>
             </SheetContent>
           </Sheet>
