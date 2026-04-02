@@ -46,9 +46,9 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="flex h-24 lg:h-40 items-center justify-between w-full px-4 lg:pl-0 lg:pr-12 xl:pr-20 relative">
+      <div className="flex h-24 lg:h-40 items-center justify-between w-full px-4 lg:px-0 relative">
         {/* Logo - Centered on Mobile/Tablet (Portrait), Far Left on Desktop/Tablet (Landscape) */}
-        <Link href="/" className="flex items-center group py-2 mx-auto lg:mx-0">
+        <Link href="/" className="flex items-center group py-2 mx-auto lg:ml-0 lg:mr-auto">
           <div className="relative h-20 w-64 lg:h-36 lg:w-[500px]">
             <Image 
               src={headerLogoUrl}
@@ -61,7 +61,7 @@ export function Navbar() {
         </Link>
         
         {/* Navigation Actions */}
-        <div className="flex items-center lg:static absolute right-4 h-full">
+        <div className="flex items-center lg:static absolute right-4 lg:right-12 xl:right-20 h-full">
           <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => {
               const isActive = mounted && pathname === link.href;
