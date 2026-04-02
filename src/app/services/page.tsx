@@ -102,7 +102,6 @@ export default function Services() {
                           >
                             <div className="bg-white p-12 text-center border border-primary/5 hover:shadow-2xl transition-all duration-500 rounded-none relative overflow-hidden">
                               <div className="relative z-10 space-y-6">
-                                <p className="text-accent font-bold tracking-[0.2em] text-xs">COACHING QUESTION</p>
                                 <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-0 group-hover:text-accent transition-colors">
                                   {service.question}
                                 </h3>
