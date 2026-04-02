@@ -32,26 +32,23 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-8 sm:space-y-10 flex flex-col items-center">
           <motion.div 
-            initial={false}
-            animate={{ 
-              filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' 
-            }}
+            initial={{ filter: 'grayscale(100%)' }}
+            animate={{ filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' }}
             onMouseEnter={() => setIsActivated(true)}
             onClick={() => setIsActivated(true)}
             onTouchStart={() => setIsActivated(true)}
-            transition={{ duration: 0.8 }}
-            className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none bg-muted"
+            onViewportEnter={() => setIsActivated(true)}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
           >
-            {tandemImage && (
-              <Image
-                src={tandemImage.imageUrl}
-                alt="Women on tandem bike"
-                fill
-                className="object-cover"
-                data-ai-hint="women tandem bike"
-                priority
-              />
-            )}
+            <Image
+              src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
+              alt="Women on tandem bike"
+              fill
+              className="object-cover"
+              data-ai-hint="women tandem bike"
+              priority
+            />
           </motion.div>
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary">Start Your Journey</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl mx-auto">

@@ -34,15 +34,14 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
-            initial={false}
-            animate={{ 
-              filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)'
-            }}
+            initial={{ filter: 'grayscale(100%)' }}
+            animate={{ filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' }}
             onMouseEnter={() => setIsActivated(true)}
             onClick={() => setIsActivated(true)}
             onTouchStart={() => setIsActivated(true)}
-            transition={{ duration: 0.8 }}
-            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer bg-muted"
+            onViewportEnter={() => setIsActivated(true)}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer"
           >
             {bioImage && (
               <Image

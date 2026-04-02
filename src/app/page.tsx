@@ -45,7 +45,6 @@ const benefits = [
 
 export default function Home() {
   const [isHeroActivated, setIsHeroActivated] = useState(false)
-  const [activeBenefits, setActiveBenefits] = useState<Record<number, boolean>>({})
   const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
@@ -53,15 +52,14 @@ export default function Home() {
       <section className="relative py-6 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
-            initial={false}
-            animate={{ 
-              filter: isHeroActivated ? 'grayscale(0%)' : 'grayscale(100%)'
-            }}
+            initial={{ filter: 'grayscale(100%)' }}
+            animate={{ filter: isHeroActivated ? 'grayscale(0%)' : 'grayscale(100%)' }}
             onMouseEnter={() => setIsHeroActivated(true)}
             onClick={() => setIsHeroActivated(true)}
             onTouchStart={() => setIsHeroActivated(true)}
-            transition={{ duration: 0.8 }}
-            className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer bg-muted"
+            onViewportEnter={() => setIsHeroActivated(true)}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
           >
             {heroImage && (
               <Image
@@ -77,7 +75,8 @@ export default function Home() {
           
           <motion.div 
             initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 1 }}
             className="space-y-6"
           >
@@ -142,13 +141,7 @@ export default function Home() {
             {benefits.map((benefit, index) => (
               <Card key={index} className="border-none shadow-sm bg-white/80 h-full rounded-none">
                 <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
-                  <div 
-                    onMouseEnter={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
-                    onClick={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
-                    onTouchStart={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
-                    className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-all"
-                    style={{ filter: activeBenefits[index] ? 'grayscale(0%)' : 'grayscale(100%)' }}
-                  >
+                  <div className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full grayscale hover:grayscale-0 transition-all cursor-pointer">
                     <benefit.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>

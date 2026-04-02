@@ -84,26 +84,23 @@ export default function Services() {
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <motion.div 
-              initial={false}
-              animate={{ 
-                filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' 
-              }}
+              initial={{ filter: 'grayscale(100%)' }}
+              animate={{ filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' }}
               onMouseEnter={() => setIsActivated(true)}
               onClick={() => setIsActivated(true)}
               onTouchStart={() => setIsActivated(true)}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-[4/3] w-full overflow-hidden shadow-2xl rounded-none cursor-pointer bg-muted"
+              onViewportEnter={() => setIsActivated(true)}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="relative aspect-[4/3] w-full overflow-hidden shadow-2xl rounded-none cursor-pointer"
             >
-              {tandemImage && (
-                <Image
-                  src={tandemImage.imageUrl}
-                  alt="Women on tandem bike"
-                  fill
-                  className="object-cover"
-                  data-ai-hint="women tandem bike"
-                  priority
-                />
-              )}
+              <Image
+                src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
+                alt="Women on tandem bike"
+                fill
+                className="object-cover"
+                data-ai-hint="women tandem bike"
+                priority
+              />
             </motion.div>
             <div className="space-y-4 text-center lg:text-left">
               <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">A Partnership Built on Trust</h2>
