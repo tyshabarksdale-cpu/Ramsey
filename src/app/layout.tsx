@@ -7,6 +7,10 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Ramsey Empowerment Coaching | Sybil Elise',
   description: 'Empowerment Strategist helping women and professionals recognize their strength, embrace their voice, and step into their power.',
+  icons: {
+    icon: 'https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4',
+    apple: 'https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4',
+  },
 };
 
 export default function RootLayout({

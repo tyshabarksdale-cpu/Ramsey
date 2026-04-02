@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState } from "react"
@@ -8,7 +7,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Compass, ShieldCheck, Megaphone, Scale, ArrowRightCircle, Heart } from "lucide-react"
+import { Compass, ShieldCheck, Megaphone, Scale, ArrowRightCircle, Heart, LucideIcon } from "lucide-react"
 
 const benefits = [
   {
@@ -42,6 +41,34 @@ const benefits = [
     description: "Build meaningful relationships and create positive change that ripples beyond yourself.",
   },
 ]
+
+function BenefitCard({ benefit }: { benefit: typeof benefits[0] }) {
+  const [isActivated, setIsActivated] = useState(false);
+  const Icon = benefit.icon;
+
+  return (
+    <Card className="border-none shadow-sm bg-white/80 h-full rounded-none">
+      <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
+        <motion.div 
+          initial={{ filter: 'grayscale(100%)' }}
+          animate={{ filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' }}
+          onMouseEnter={() => setIsActivated(true)}
+          onClick={() => setIsActivated(true)}
+          onTouchStart={() => setIsActivated(true)}
+          onViewportEnter={() => setIsActivated(true)}
+          viewport={{ once: true, amount: 0.5 }}
+          className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-all"
+        >
+          <Icon className="w-8 h-8" />
+        </motion.div>
+        <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>
+        <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+          {benefit.description}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
 
 export default function Home() {
   const [isHeroActivated, setIsHeroActivated] = useState(false)
@@ -138,31 +165,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 text-center max-w-7xl mx-auto">
-            {benefits.map((benefit, index) => {
-              const [isActivated, setIsActivated] = useState(false);
-              return (
-                <Card key={index} className="border-none shadow-sm bg-white/80 h-full rounded-none">
-                  <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
-                    <motion.div 
-                      initial={{ filter: 'grayscale(100%)' }}
-                      animate={{ filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' }}
-                      onMouseEnter={() => setIsActivated(true)}
-                      onClick={() => setIsActivated(true)}
-                      onTouchStart={() => setIsActivated(true)}
-                      onViewportEnter={() => setIsActivated(true)}
-                      viewport={{ once: true, amount: 0.5 }}
-                      className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-all"
-                    >
-                      <benefit.icon className="w-8 h-8" />
-                    </motion.div>
-                    <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>
-                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+            {benefits.map((benefit, index) => (
+              <BenefitCard key={index} benefit={benefit} />
+            ))}
           </div>
         </div>
       </section>
