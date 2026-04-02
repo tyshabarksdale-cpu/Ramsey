@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronRight } from "lucide-react"
 
 const services = [
   {
@@ -121,6 +121,89 @@ export default function Services() {
             ))}
           </Tabs>
         </div>
+
+        {/* Career Evolution Framework Section */}
+        <section className="mb-24 py-16 bg-white/50 border-y border-primary/5">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12 space-y-4">
+              <h2 className="text-4xl sm:text-5xl font-headline text-primary pb-2">Career Evolution Framework</h2>
+              <p className="text-lg sm:text-xl text-primary/70 font-headline italic max-w-3xl mx-auto">
+                Navigating the organizational landscape requires understanding where you are and the momentum needed to reach the next horizon.
+              </p>
+            </div>
+            
+            <div className="overflow-x-auto shadow-2xl">
+              <div className="min-w-[800px] border-collapse bg-background">
+                {/* Header Row */}
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] bg-secondary/50 text-primary font-bold uppercase tracking-widest text-xs border-b border-white">
+                  <div className="p-4 border-r border-white flex items-center justify-center text-center leading-tight">Career<br/>Level</div>
+                  <div className="p-4 border-r border-white text-center">Management</div>
+                  <div className="p-4 border-r border-white text-center">Professionals</div>
+                  <div className="p-4 text-center">Para-Professionals</div>
+                </div>
+
+                {/* Levels */}
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L6</div>
+                  <div className="bg-primary text-white p-4 border-r border-white text-center font-bold">Senior Director (M6)</div>
+                  <div className="bg-accent text-white p-4 border-r border-white text-center font-bold">Pre-Eminent (P6)</div>
+                  <div className="bg-secondary/10 p-4"></div>
+                </div>
+
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L5</div>
+                  <div className="bg-primary/90 text-white p-4 border-r border-white text-center font-medium">Director (M5)</div>
+                  <div className="bg-accent/90 text-white p-4 border-r border-white text-center font-medium">Expert (P5)</div>
+                  <div className="bg-secondary/10 p-4"></div>
+                </div>
+
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L4</div>
+                  <div className="bg-primary/80 text-white p-4 border-r border-white text-center">Senior Manager (M4)</div>
+                  <div className="bg-accent/80 text-white p-4 border-r border-white text-center">Specialist (P4)</div>
+                  <div className="bg-secondary/10 p-4"></div>
+                </div>
+
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L3</div>
+                  <div className="bg-primary/70 text-white p-4 border-r border-white text-center">Manager (M3)</div>
+                  <div className="bg-accent/70 text-white p-4 border-r border-white text-center">Senior (P3)</div>
+                  <div className="bg-secondary/10 p-4"></div>
+                </div>
+
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L2</div>
+                  <div className="bg-primary/60 text-white p-4 border-r border-white text-center text-sm leading-tight flex items-center justify-center">Team Leader - Professionals (M2)</div>
+                  <div className="bg-accent/60 text-white p-4 border-r border-white text-center flex items-center justify-center">Experienced (P2)</div>
+                  <div className="bg-primary/40 text-primary p-4 text-center font-bold flex items-center justify-center">Specialist (S4)</div>
+                </div>
+
+                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L1</div>
+                  <div className="bg-primary text-white p-8 border-r border-white text-center font-bold leading-tight flex items-center justify-center row-span-3">Team Leader - Para-Professionals (M1)</div>
+                  <div className="bg-accent text-white p-8 border-r border-white text-center font-bold flex items-center justify-center row-span-3">Entry (P1)</div>
+                  <div className="bg-primary/30 text-primary p-4 text-center font-bold flex items-center justify-center">Senior (S3)</div>
+                </div>
+
+                <div className="grid grid-cols-[100px_3fr_1fr] border-b border-white">
+                  {/* The L1 row above covers M1 and P1. This row is for the offset S2 level */}
+                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary ml-[100px] hidden">L1-B</div>
+                  <div className="bg-primary/20 text-primary p-4 text-center font-medium flex items-center justify-center col-start-4">Experienced (S2)</div>
+                </div>
+
+                <div className="grid grid-cols-[100px_3fr_1fr]">
+                  {/* The L1 row above covers M1 and P1. This row is for the offset S1 level */}
+                  <div className="bg-primary/10 text-primary p-4 text-center flex items-center justify-center col-start-4">Entry (S1)</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 flex items-start gap-4 p-6 bg-secondary/20 border border-primary/5 italic text-sm text-primary/80">
+              <ChevronRight className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+              <p>This framework serves as a guide for our work together. Whether you are aiming for a Senior Director role or transitioning from an entry-level professional to a specialist path, we provide the strategy to help you navigate each milestone.</p>
+            </div>
+          </div>
+        </section>
 
         <section className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
