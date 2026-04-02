@@ -11,12 +11,12 @@ export function Footer() {
   const footerLogoUrl = footerLogo?.imageUrl || "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Tandem%20logo%20with%20phrase.png?alt=media&token=3087b72a-4860-483d-805f-3a7e5a930fdb"
 
   return (
-    <footer className="border-t bg-secondary/30">
+    <footer className="border-t bg-background">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
           <div className="md:col-span-4 space-y-4 flex flex-col items-center text-center">
             <Link href="/" className="inline-block mb-4">
-              <div className="relative h-16 w-80">
+              <div className="relative h-20 w-80">
                 <Image 
                   src={footerLogoUrl}
                   alt="Ramsey Empowerment Coaching"

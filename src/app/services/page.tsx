@@ -91,13 +91,13 @@ export default function Services() {
               onClick={() => setIsActivated(true)}
               onTouchStart={() => setIsActivated(true)}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer bg-white"
+              className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer"
             >
               <Image
                 src={tandemImage}
                 alt="Two ladies on a tandem bike"
                 fill
-                className="object-cover"
+                className="object-contain"
                 data-ai-hint="women tandem bike"
                 priority
               />
