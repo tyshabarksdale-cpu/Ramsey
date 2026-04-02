@@ -35,7 +35,7 @@ export function Navbar() {
   }, [])
 
   const currentYear = "2025"
-  const headerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Untitled%20(8.5%20x%207%20in).png?alt=media&token=5b3512cd-fcb5-4525-9df1-16abca334fd2"
+  const headerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Tandem%20logo%20no%20phrase.png?alt=media&token=df6db688-f696-4111-b7c3-7768de4fc1fb"
 
   return (
     <motion.header 
