@@ -1,6 +1,8 @@
+
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
@@ -9,8 +11,16 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
           <div className="md:col-span-4 space-y-4 flex flex-col items-center text-center">
-            <Link href="/" className="inline-block">
-              <span className="text-2xl font-headline font-bold text-primary">Ramsey Empowerment Coaching</span>
+            <Link href="/" className="inline-block mb-4">
+              <div className="relative h-16 w-64">
+                <Image 
+                  src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4"
+                  alt="Ramsey Empowerment Coaching"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
             <p className="text-xl font-headline italic text-primary/80 pb-0">
               "You steer as we pedal"
@@ -20,10 +30,10 @@ export function Footer() {
           <div className="md:col-span-2 space-y-3">
             <h4 className="font-headline font-bold text-lg text-primary">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Sybil Elise</Link></li>
-              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link></li>
-              <li><Link href="/the-collective" className="text-muted-foreground hover:text-primary transition-colors">The Collective</Link></li>
-              <li><Link href="/connect" className="text-muted-foreground hover:text-primary transition-colors">Contact & Scheduling</Link></li>
+              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors text-base">About Sybil Elise</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors text-base">Our Services</Link></li>
+              <li><Link href="/the-collective" className="text-muted-foreground hover:text-primary transition-colors text-base">The Collective</Link></li>
+              <li><Link href="/connect" className="text-muted-foreground hover:text-primary transition-colors text-base">Contact & Scheduling</Link></li>
             </ul>
           </div>
           

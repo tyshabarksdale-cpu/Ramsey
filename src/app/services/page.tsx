@@ -4,7 +4,6 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react"
@@ -34,7 +33,7 @@ const services = [
 
 export default function Services() {
   const [isActivated, setIsActivated] = useState(false)
-  const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
+  const tandemImage = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
 
   return (
     <div className="py-6 lg:py-10">
@@ -92,16 +91,14 @@ export default function Services() {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer bg-white"
             >
-              {tandemImage && (
-                <Image
-                  src={tandemImage.imageUrl}
-                  alt={tandemImage.description}
-                  fill
-                  className="object-contain"
-                  data-ai-hint="women tandem bike"
-                  priority
-                />
-              )}
+              <Image
+                src={tandemImage}
+                alt="Two ladies on a tandem bike"
+                fill
+                className="object-contain"
+                data-ai-hint="women tandem bike"
+                priority
+              />
             </motion.div>
             <div className="space-y-4 text-center lg:text-left">
               <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">A Partnership Built on Trust</h2>

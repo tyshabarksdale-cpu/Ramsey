@@ -74,8 +74,7 @@ export default function Home() {
           
           <motion.div 
             initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className="space-y-6"
           >
