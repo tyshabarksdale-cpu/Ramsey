@@ -12,10 +12,10 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-background">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-          <div className="md:col-span-4 space-y-6 flex flex-col items-center text-center">
-            <Link href="/" className="inline-block mb-4">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center items-start">
+          <div className="md:col-span-4 flex flex-col items-center text-center mb-4">
+            <Link href="/" className="inline-block">
               <div className="relative h-40 w-[300px] sm:w-[500px] bg-transparent">
                 <Image 
                   src={footerLogoUrl}
@@ -28,9 +28,9 @@ export function Footer() {
             </Link>
           </div>
           
-          <div className="md:col-span-2 space-y-3">
-            <h4 className="font-headline font-bold text-lg text-primary">Quick Links</h4>
-            <ul className="space-y-2">
+          <div className="md:col-span-2 space-y-2">
+            <h4 className="font-headline font-bold text-lg text-primary pb-1">Quick Links</h4>
+            <ul className="space-y-1">
               <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors text-base">About Sybil Elise</Link></li>
               <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors text-base">Our Services</Link></li>
               <li><Link href="/the-collective" className="text-muted-foreground hover:text-primary transition-colors text-base">The Collective</Link></li>
@@ -38,9 +38,9 @@ export function Footer() {
             </ul>
           </div>
           
-          <div className="md:col-span-2 space-y-4">
-            <div className="space-y-3">
-              <h4 className="font-headline font-bold text-lg text-primary">Connect</h4>
+          <div className="md:col-span-2 space-y-3">
+            <div className="space-y-2">
+              <h4 className="font-headline font-bold text-lg text-primary pb-1">Connect</h4>
               <div className="flex items-center justify-center gap-6">
                 <a 
                   href="https://www.linkedin.com/company/ramsey-empowerment/" 
