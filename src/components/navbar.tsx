@@ -46,10 +46,10 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-16 md:h-24 items-center justify-center px-4 lg:px-8 relative">
+      <div className="container mx-auto flex h-24 md:h-36 items-center justify-center px-4 lg:px-8 relative">
         {/* Centered Logo */}
         <Link href="/" className="flex items-center group py-2">
-          <div className="relative h-14 w-48 md:h-20 md:w-64">
+          <div className="relative h-20 w-64 md:h-32 md:w-[450px]">
             <Image 
               src={headerLogoUrl}
               alt="Ramsey Empowerment Coaching"

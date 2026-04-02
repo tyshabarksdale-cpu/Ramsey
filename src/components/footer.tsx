@@ -12,11 +12,11 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-background">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
-          <div className="md:col-span-4 space-y-4 flex flex-col items-center text-center">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+          <div className="md:col-span-4 space-y-6 flex flex-col items-center text-center">
             <Link href="/" className="inline-block mb-4">
-              <div className="relative h-20 w-80 bg-transparent">
+              <div className="relative h-40 w-[300px] sm:w-[500px] bg-transparent">
                 <Image 
                   src={footerLogoUrl}
                   alt="Ramsey Empowerment Coaching"
