@@ -17,6 +17,9 @@ export default function Connect() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const { toast } = useToast()
 
+  const tandemImagePlaceholder = PlaceHolderImages.find(img => img.id === "tandem-bike")
+  const tandemImage = tandemImagePlaceholder?.imageUrl || "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitted(true)
@@ -37,10 +40,10 @@ export default function Connect() {
             onClick={() => setIsActivated(true)}
             onTouchStart={() => setIsActivated(true)}
             transition={{ duration: 1.2, ease: "easeOut" }}
-            className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
+            className="relative w-48 h-64 sm:w-64 sm:h-80 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
           >
             <Image
-              src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
+              src={tandemImage}
               alt="Women on tandem bike"
               fill
               className="object-cover"

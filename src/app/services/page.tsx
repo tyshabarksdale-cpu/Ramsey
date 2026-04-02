@@ -4,6 +4,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react"
@@ -33,7 +34,8 @@ const services = [
 
 export default function Services() {
   const [isActivated, setIsActivated] = useState(false)
-  const tandemImage = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
+  const tandemImagePlaceholder = PlaceHolderImages.find(img => img.id === "tandem-bike")
+  const tandemImage = tandemImagePlaceholder?.imageUrl || "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
 
   return (
     <div className="py-6 lg:py-10">
@@ -95,7 +97,7 @@ export default function Services() {
                 src={tandemImage}
                 alt="Two ladies on a tandem bike"
                 fill
-                className="object-contain"
+                className="object-cover"
                 data-ai-hint="women tandem bike"
                 priority
               />

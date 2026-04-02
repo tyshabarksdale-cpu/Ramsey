@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 import {
   Sheet,
   SheetContent,
@@ -35,7 +36,8 @@ export function Navbar() {
   }, [])
 
   const currentYear = "2025"
-  const headerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Tandem%20logo%20no%20phrase.png?alt=media&token=df6db688-f696-4111-b7c3-7768de4fc1fb"
+  const headerLogo = PlaceHolderImages.find(img => img.id === "brand-logo-header")
+  const headerLogoUrl = headerLogo?.imageUrl || "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Tandem%20logo%20no%20phrase.png?alt=media&token=df6db688-f696-4111-b7c3-7768de4fc1fb"
 
   return (
     <motion.header 
