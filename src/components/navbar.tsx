@@ -35,7 +35,7 @@ export function Navbar() {
   }, [])
 
   const currentYear = "2025"
-  const headerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/2.png?alt=media&token=0a8dac50-e988-4ee5-9c5e-88847c42e530"
+  const headerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Untitled%20(8.5%20x%207%20in).png?alt=media&token=5b3512cd-fcb5-4525-9df1-16abca334fd2"
 
   return (
     <motion.header 
@@ -47,7 +47,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 md:h-24 items-center justify-center px-4 lg:px-8 relative">
         {/* Centered Logo */}
         <Link href="/" className="flex items-center group py-2">
-          <div className="relative h-12 w-48 md:h-16 md:w-64">
+          <div className="relative h-14 w-48 md:h-20 md:w-64">
             <Image 
               src={headerLogoUrl}
               alt="Ramsey Empowerment Coaching"

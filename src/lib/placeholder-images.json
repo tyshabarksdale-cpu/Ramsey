@@ -1,6 +1,18 @@
 {
   "placeholderImages": [
     {
+      "id": "brand-logo-header",
+      "description": "Ramsey Empowerment Coaching Header Logo",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Untitled%20(8.5%20x%207%20in).png?alt=media&token=5b3512cd-fcb5-4525-9df1-16abca334fd2",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "brand-logo-footer",
+      "description": "Ramsey Empowerment Coaching Footer Logo",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4",
+      "imageHint": "company logo"
+    },
+    {
       "id": "sybil-hero",
       "description": "Professional portrait of Sybil Ramsey",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/AE2B7060-074E-453E-9CE7-8FBC416A36DF.png?alt=media&token=801e4bdd-6ea7-4dbb-b02d-ad067dccff31",
