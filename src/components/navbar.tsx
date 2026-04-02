@@ -44,7 +44,8 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-16 md:h-24 items-center justify-between px-4 lg:px-8">
+      <div className="container mx-auto flex h-16 md:h-24 items-center justify-center px-4 lg:px-8 relative">
+        {/* Centered Logo */}
         <Link href="/" className="flex items-center group py-2">
           <div className="relative h-12 w-48 md:h-16 md:w-64">
             <Image 
@@ -57,79 +58,83 @@ export function Navbar() {
           </div>
         </Link>
         
-        <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => {
-            const isActive = mounted && pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary relative py-1",
-                  isActive ? "text-primary font-bold" : "text-primary/70"
-                )}
-              >
-                {link.name}
-                {isActive && (
-                  <motion.div 
-                    layoutId="nav-underline"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
-                  />
-                )}
-              </Link>
-            )
-          })}
-          <Link
-            href="/connect"
-            className="rounded-none bg-primary px-6 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline"
-          >
-            Start Your Journey
-          </Link>
-        </nav>
-
-        <div className="flex lg:hidden items-center">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" className="hover:bg-transparent -mr-2 text-xs font-bold uppercase tracking-widest text-primary">
-                Menu
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l">
-              <SheetHeader className="sr-only">
-                <SheetTitle>Navigation Menu</SheetTitle>
-                <SheetDescription>Access the main sections of Ramsey Empowerment Coaching.</SheetDescription>
-              </SheetHeader>
-              <div className="flex flex-col gap-6 pt-10">
-                {navLinks.map((link) => {
-                  const isActive = mounted && pathname === link.href;
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className={cn(
-                        "text-xl font-headline transition-colors hover:text-primary",
-                        isActive ? "text-primary font-bold" : "text-primary/70"
-                      )}
-                    >
-                      {link.name}
-                    </Link>
-                  )
-                })}
+        {/* Navigation Actions - Right Aligned */}
+        <div className="absolute right-4 lg:right-8 flex items-center">
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => {
+              const isActive = mounted && pathname === link.href;
+              return (
                 <Link
-                  href="/connect"
-                  onClick={() => setIsOpen(false)}
-                  className="rounded-none bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-2 font-headline"
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "text-sm font-medium transition-colors hover:text-primary relative py-1",
+                    isActive ? "text-primary font-bold" : "text-primary/70"
+                  )}
                 >
-                  Start Your Journey
+                  {link.name}
+                  {isActive && (
+                    <motion.div 
+                      layoutId="nav-underline"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                    />
+                  )}
                 </Link>
-              </div>
-              <div className="mt-auto pb-8 text-center text-xs text-primary/60">
-                <p>© {currentYear} Ramsey Empowerment Collective, LLC</p>
-              </div>
-            </SheetContent>
-          </Sheet>
+              )
+            })}
+            <Link
+              href="/connect"
+              className="rounded-none bg-primary px-6 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline"
+            >
+              Start Your Journey
+            </Link>
+          </nav>
+
+          {/* Mobile Menu Trigger */}
+          <div className="flex lg:hidden items-center">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" className="hover:bg-transparent -mr-2 text-xs font-bold uppercase tracking-widest text-primary">
+                  Menu
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background border-l">
+                <SheetHeader className="sr-only">
+                  <SheetTitle>Navigation Menu</SheetTitle>
+                  <SheetDescription>Access the main sections of Ramsey Empowerment Coaching.</SheetDescription>
+                </SheetHeader>
+                <div className="flex flex-col gap-6 pt-10">
+                  {navLinks.map((link) => {
+                    const isActive = mounted && pathname === link.href;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={cn(
+                          "text-xl font-headline transition-colors hover:text-primary",
+                          isActive ? "text-primary font-bold" : "text-primary/70"
+                        )}
+                      >
+                        {link.name}
+                      </Link>
+                    )
+                  })}
+                  <Link
+                    href="/connect"
+                    onClick={() => setIsOpen(false)}
+                    className="rounded-none bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-2 font-headline"
+                  >
+                    Start Your Journey
+                  </Link>
+                </div>
+                <div className="mt-auto pb-8 text-center text-xs text-primary/60">
+                  <p>© {currentYear} Ramsey Empowerment Collective, LLC</p>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </motion.header>
