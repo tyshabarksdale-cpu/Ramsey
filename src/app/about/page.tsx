@@ -32,10 +32,17 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -20, filter: 'grayscale(100%)' }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full grayscale rounded-none"
+            whileInView={{ filter: 'grayscale(0%)' }}
+            whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
+            transition={{ 
+              opacity: { duration: 0.8 },
+              x: { duration: 0.8 },
+              filter: { duration: 1.5, ease: "easeOut" }
+            }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer"
           >
             {bioImage && (
               <Image
@@ -43,7 +50,7 @@ export default function About() {
                 alt={bioImage.description}
                 fill
                 className="object-cover"
-                data-ai-hint="professional woman smiling black and white"
+                data-ai-hint="professional woman smiling"
                 priority
               />
             )}

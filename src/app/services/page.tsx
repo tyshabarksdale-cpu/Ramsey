@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Sparkles, TrendingUp, Zap, ShieldCheck } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
 
 const services = [
   {
@@ -79,7 +80,14 @@ export default function Services() {
 
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-square overflow-hidden shadow-2xl group grayscale rounded-none">
+            <motion.div 
+              initial={{ filter: 'grayscale(100%)' }}
+              whileInView={{ filter: 'grayscale(0%)' }}
+              whileHover={{ filter: 'grayscale(0%)', scale: 1.01 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="relative aspect-square overflow-hidden shadow-2xl group rounded-none cursor-pointer"
+            >
               {sybilImage && (
                 <Image
                   src={sybilImage.imageUrl}
@@ -89,7 +97,7 @@ export default function Services() {
                   data-ai-hint="empowerment coach portrait"
                 />
               )}
-            </div>
+            </motion.div>
             <div className="space-y-4 text-center lg:text-left">
               <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary leading-relaxed pb-6">A Partnership Built on Trust</h2>
               <div className="space-y-4 text-xl sm:text-2xl text-primary/80 italic font-headline leading-relaxed">

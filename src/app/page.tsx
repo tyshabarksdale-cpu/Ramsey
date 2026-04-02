@@ -64,10 +64,17 @@ export default function Home() {
       <section className="relative py-6 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ y: 20, opacity: 0, filter: 'grayscale(100%)' }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl scale-x-[-1] mb-8 grayscale rounded-none"
+            whileInView={{ filter: 'grayscale(0%)' }}
+            whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
+            transition={{ 
+              y: { duration: 0.8 },
+              opacity: { duration: 0.8 },
+              filter: { duration: 1.2, ease: "easeOut" }
+            }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="relative w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl scale-x-[-1] mb-8 rounded-none cursor-pointer"
           >
             {heroImage && (
               <Image

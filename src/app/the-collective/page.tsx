@@ -5,6 +5,7 @@ import Link from "next/link"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { motion } from "framer-motion"
 
 const collectiveMembers = [
   {
@@ -46,18 +47,25 @@ export default function TheCollective() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 max-w-7xl mx-auto">
           {collectiveMembers.map((member, i) => (
             <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white rounded-none">
-              <div className="relative aspect-video overflow-hidden">
+              <motion.div 
+                initial={{ filter: 'grayscale(100%)' }}
+                whileInView={{ filter: 'grayscale(0%)' }}
+                whileHover={{ filter: 'grayscale(0%)' }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                viewport={{ once: true, amount: 0.3 }}
+                className="relative aspect-video overflow-hidden"
+              >
                 {member.image && (
                   <Image
                     src={member.image.imageUrl}
                     alt={member.name}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                     data-ai-hint="diverse women empowering each other"
                   />
                 )}
-                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </div>
+                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </motion.div>
               <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col flex-1">
                 <div className="space-y-1">
                   <h3 className="text-xl sm:text-2xl font-headline font-bold text-primary pb-4">{member.name}</h3>
