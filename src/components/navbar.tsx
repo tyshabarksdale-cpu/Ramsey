@@ -46,10 +46,10 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-24 md:h-36 items-center justify-between px-4 lg:px-8">
-        {/* Logo - Left Aligned */}
-        <Link href="/" className="flex items-center group py-2">
-          <div className="relative h-20 w-64 md:h-32 md:w-[450px]">
+      <div className="container mx-auto flex h-24 lg:h-40 items-center lg:justify-between px-4 lg:px-8 relative">
+        {/* Logo - Centered on Mobile/Tablet (mx-auto), Left on Desktop (lg:mx-0) */}
+        <Link href="/" className="flex items-center group py-2 mx-auto lg:mx-0">
+          <div className="relative h-20 w-64 lg:h-36 lg:w-[500px]">
             <Image 
               src={headerLogoUrl}
               alt="Ramsey Empowerment Coaching"
@@ -60,9 +60,9 @@ export function Navbar() {
           </div>
         </Link>
         
-        {/* Navigation Actions - Right Aligned */}
-        <div className="flex items-center">
-          <nav className="hidden lg:flex items-center gap-8">
+        {/* Navigation Actions - Absolute on mobile/tablet to not affect logo centering, static on desktop */}
+        <div className="flex items-center lg:static absolute right-4 h-full">
+          <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => {
               const isActive = mounted && pathname === link.href;
               return (
@@ -70,26 +70,25 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-primary relative py-1",
-                    isActive ? "text-primary font-bold" : "text-primary/70"
+                    "text-sm font-bold uppercase tracking-widest transition-colors hover:text-accent relative py-1",
+                    isActive ? "text-primary" : "text-primary/70"
                   )}
                 >
                   {link.name}
                   {isActive && (
                     <motion.div 
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
                     />
                   )}
                 </Link>
               )
             })}
-            <Link
-              href="/connect"
-              className="rounded-none bg-primary px-6 py-2 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline"
-            >
-              Start Your Journey
-            </Link>
+            <Button asChild className="rounded-none bg-primary px-8 py-6 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline uppercase tracking-widest">
+              <Link href="/connect">
+                Start Your Journey
+              </Link>
+            </Button>
           </nav>
 
           {/* Mobile Menu Trigger */}
