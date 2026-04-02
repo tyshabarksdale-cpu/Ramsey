@@ -132,69 +132,55 @@ export default function Services() {
               </p>
             </div>
             
-            <div className="overflow-x-auto shadow-2xl">
-              <div className="min-w-[800px] border-collapse bg-background">
+            <div className="overflow-x-auto">
+              <div className="min-w-[800px] grid grid-cols-[100px_1fr_1fr_1fr] bg-background border border-white shadow-2xl">
                 {/* Header Row */}
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] bg-secondary/50 text-primary font-bold uppercase tracking-widest text-xs border-b border-white">
-                  <div className="p-4 border-r border-white flex items-center justify-center text-center leading-tight">Career<br/>Level</div>
-                  <div className="p-4 border-r border-white text-center">Management</div>
-                  <div className="p-4 border-r border-white text-center">Professionals</div>
-                  <div className="p-4 text-center">Para-Professionals</div>
-                </div>
+                <div className="bg-secondary/50 text-primary font-bold uppercase tracking-widest text-xs p-4 border-r border-b border-white flex items-center justify-center text-center leading-tight">Career<br/>Level</div>
+                <div className="bg-secondary/50 text-primary font-bold uppercase tracking-widest text-xs p-4 border-r border-b border-white text-center">Management</div>
+                <div className="bg-secondary/50 text-primary font-bold uppercase tracking-widest text-xs p-4 border-r border-b border-white text-center">Professionals</div>
+                <div className="bg-secondary/50 text-primary font-bold uppercase tracking-widest text-xs p-4 border-b border-white text-center">Para-Professionals</div>
 
-                {/* Levels */}
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L6</div>
-                  <div className="bg-primary text-white p-4 border-r border-white text-center font-bold">Senior Director (M6)</div>
-                  <div className="bg-accent text-white p-4 border-r border-white text-center font-bold">Pre-Eminent (P6)</div>
-                  <div className="bg-secondary/10 p-4"></div>
-                </div>
+                {/* Level 6 */}
+                <div className="bg-secondary/30 border-r border-b border-white p-4 flex items-center justify-center font-bold text-primary">L6</div>
+                <div className="bg-primary text-white p-4 border-r border-b border-white text-center font-bold">Senior Director (M6)</div>
+                <div className="bg-accent text-white p-4 border-r border-b border-white text-center font-bold">Pre-Eminent (P6)</div>
+                <div className="bg-secondary/10 border-b border-white p-4"></div>
 
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L5</div>
-                  <div className="bg-primary/90 text-white p-4 border-r border-white text-center font-medium">Director (M5)</div>
-                  <div className="bg-accent/90 text-white p-4 border-r border-white text-center font-medium">Expert (P5)</div>
-                  <div className="bg-secondary/10 p-4"></div>
-                </div>
+                {/* Level 5 */}
+                <div className="bg-secondary/30 border-r border-b border-white p-4 flex items-center justify-center font-bold text-primary">L5</div>
+                <div className="bg-primary/90 text-white p-4 border-r border-b border-white text-center font-medium">Director (M5)</div>
+                <div className="bg-accent/90 text-white p-4 border-r border-b border-white text-center font-medium">Expert (P5)</div>
+                <div className="bg-secondary/10 border-b border-white p-4"></div>
 
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L4</div>
-                  <div className="bg-primary/80 text-white p-4 border-r border-white text-center">Senior Manager (M4)</div>
-                  <div className="bg-accent/80 text-white p-4 border-r border-white text-center">Specialist (P4)</div>
-                  <div className="bg-secondary/10 p-4"></div>
-                </div>
+                {/* Level 4 */}
+                <div className="bg-secondary/30 border-r border-b border-white p-4 flex items-center justify-center font-bold text-primary">L4</div>
+                <div className="bg-primary/80 text-white p-4 border-r border-b border-white text-center">Senior Manager (M4)</div>
+                <div className="bg-accent/80 text-white p-4 border-r border-b border-white text-center">Specialist (P4)</div>
+                <div className="bg-secondary/10 border-b border-white p-4"></div>
 
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L3</div>
-                  <div className="bg-primary/70 text-white p-4 border-r border-white text-center">Manager (M3)</div>
-                  <div className="bg-accent/70 text-white p-4 border-r border-white text-center">Senior (P3)</div>
-                  <div className="bg-secondary/10 p-4"></div>
-                </div>
+                {/* Level 3 */}
+                <div className="bg-secondary/30 border-r border-b border-white p-4 flex items-center justify-center font-bold text-primary">L3</div>
+                <div className="bg-primary/70 text-white p-4 border-r border-b border-white text-center">Manager (M3)</div>
+                <div className="bg-accent/70 text-white p-4 border-r border-b border-white text-center">Senior (P3)</div>
+                <div className="bg-secondary/10 border-b border-white p-4"></div>
 
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L2</div>
-                  <div className="bg-primary/60 text-white p-4 border-r border-white text-center text-sm leading-tight flex items-center justify-center">Team Leader - Professionals (M2)</div>
-                  <div className="bg-accent/60 text-white p-4 border-r border-white text-center flex items-center justify-center">Experienced (P2)</div>
-                  <div className="bg-primary/40 text-primary p-4 text-center font-bold flex items-center justify-center">Specialist (S4)</div>
-                </div>
+                {/* Level 2 */}
+                <div className="bg-secondary/30 border-r border-b border-white p-4 flex items-center justify-center font-bold text-primary">L2</div>
+                <div className="bg-primary/60 text-white p-4 border-r border-b border-white text-center text-sm leading-tight flex items-center justify-center">Team Leader - Professionals (M2)</div>
+                <div className="bg-accent/60 text-white p-4 border-r border-b border-white text-center flex items-center justify-center">Experienced (P2)</div>
+                <div className="bg-primary/40 text-primary p-4 border-b border-white text-center font-bold flex items-center justify-center">Specialist (S4)</div>
 
-                <div className="grid grid-cols-[100px_1fr_1fr_1fr] border-b border-white">
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary">L1</div>
-                  <div className="bg-primary text-white p-8 border-r border-white text-center font-bold leading-tight flex items-center justify-center row-span-3">Team Leader - Para-Professionals (M1)</div>
-                  <div className="bg-accent text-white p-8 border-r border-white text-center font-bold flex items-center justify-center row-span-3">Entry (P1)</div>
-                  <div className="bg-primary/30 text-primary p-4 text-center font-bold flex items-center justify-center">Senior (S3)</div>
-                </div>
+                {/* Level 1 - Start Row 1 */}
+                <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary row-span-3">L1</div>
+                <div className="bg-primary text-white p-8 border-r border-white text-center font-bold leading-tight flex items-center justify-center row-span-3">Team Leader - Para-Professionals (M1)</div>
+                <div className="bg-accent text-white p-8 border-r border-white text-center font-bold flex items-center justify-center row-span-3">Entry (P1)</div>
+                <div className="bg-primary/30 text-primary p-4 border-b border-white text-center font-bold flex items-center justify-center">Senior (S3)</div>
 
-                <div className="grid grid-cols-[100px_3fr_1fr] border-b border-white">
-                  {/* The L1 row above covers M1 and P1. This row is for the offset S2 level */}
-                  <div className="bg-secondary/30 border-r border-white p-4 flex items-center justify-center font-bold text-primary ml-[100px] hidden">L1-B</div>
-                  <div className="bg-primary/20 text-primary p-4 text-center font-medium flex items-center justify-center col-start-4">Experienced (S2)</div>
-                </div>
+                {/* Level 1 - Start Row 2 (S2) */}
+                <div className="bg-primary/20 text-primary p-4 border-b border-white text-center font-bold flex items-center justify-center col-start-4">Experienced (S2)</div>
 
-                <div className="grid grid-cols-[100px_3fr_1fr]">
-                  {/* The L1 row above covers M1 and P1. This row is for the offset S1 level */}
-                  <div className="bg-primary/10 text-primary p-4 text-center flex items-center justify-center col-start-4">Entry (S1)</div>
-                </div>
+                {/* Level 1 - Start Row 3 (S1) */}
+                <div className="bg-primary/10 text-primary p-4 text-center font-bold flex items-center justify-center col-start-4">Entry (S1)</div>
               </div>
             </div>
             
