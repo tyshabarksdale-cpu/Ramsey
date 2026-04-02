@@ -6,6 +6,8 @@ import Image from "next/image"
 import { Linkedin, Instagram, Mail } from "lucide-react"
 
 export function Footer() {
+  const footerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4"
+
   return (
     <footer className="border-t bg-secondary/30">
       <div className="container mx-auto px-4 py-12">
@@ -14,7 +16,7 @@ export function Footer() {
             <Link href="/" className="inline-block mb-4">
               <div className="relative h-16 w-64">
                 <Image 
-                  src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4"
+                  src={footerLogoUrl}
                   alt="Ramsey Empowerment Coaching"
                   fill
                   className="object-contain"

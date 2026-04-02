@@ -2,8 +2,14 @@
 {
   "placeholderImages": [
     {
-      "id": "brand-logo",
-      "description": "Ramsey Empowerment Coaching Logo",
+      "id": "brand-logo-header",
+      "description": "Ramsey Empowerment Coaching Header Logo",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/2.png?alt=media&token=0a8dac50-e988-4ee5-9c5e-88847c42e530",
+      "imageHint": "company logo"
+    },
+    {
+      "id": "brand-logo-footer",
+      "description": "Ramsey Empowerment Coaching Footer Logo",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4",
       "imageHint": "company logo"
     },

@@ -14,7 +14,7 @@ const services = [
   {
     title: "Executive Empowerment",
     description: "For high-level leaders seeking to lead with authenticity and advocate for organizational change.",
-    features: ["Strategic Leadership", "Organizational Advocacy", "Conflict Resolution", "Phased Retirement Planning"],
+    features: ["Strategic Leadership", "Organizational Advocacy", "Phased Retirement Planning", "Presence Building"],
     price: "Custom Packages Available"
   },
   {
