@@ -47,7 +47,7 @@ export function Navbar() {
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container mx-auto flex h-24 lg:h-40 items-center lg:justify-between px-4 lg:px-8 relative">
-        {/* Logo - Centered on Mobile/Tablet (mx-auto), Left on Desktop (lg:mx-0) */}
+        {/* Logo - Centered on Mobile/Tablet, Left on Desktop */}
         <Link href="/" className="flex items-center group py-2 mx-auto lg:mx-0">
           <div className="relative h-20 w-64 lg:h-36 lg:w-[500px]">
             <Image 
@@ -60,7 +60,7 @@ export function Navbar() {
           </div>
         </Link>
         
-        {/* Navigation Actions - Absolute on mobile/tablet to not affect logo centering, static on desktop */}
+        {/* Navigation Actions */}
         <div className="flex items-center lg:static absolute right-4 h-full">
           <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => {
@@ -85,9 +85,9 @@ export function Navbar() {
               )
             })}
             <Button asChild className="rounded-none bg-primary px-8 py-6 text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg active:scale-95 font-headline uppercase tracking-widest">
-              <Link href="/connect">
+              <a href="https://calendly.com/ramsey-empowerment/15min" target="_blank" rel="noopener noreferrer">
                 Start Your Journey
-              </Link>
+              </a>
             </Button>
           </nav>
 
@@ -122,13 +122,15 @@ export function Navbar() {
                       </Link>
                     )
                   })}
-                  <Link
-                    href="/connect"
+                  <a
+                    href="https://calendly.com/ramsey-empowerment/15min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setIsOpen(false)}
                     className="rounded-none bg-primary px-6 py-4 text-center text-sm font-bold text-primary-foreground transition-all hover:bg-primary/90 shadow-md mt-2 font-headline"
                   >
                     Start Your Journey
-                  </Link>
+                  </a>
                 </div>
                 <div className="mt-auto pb-8 text-center text-xs text-primary/60">
                   <p>© {currentYear} Ramsey Empowerment Collective, LLC</p>
