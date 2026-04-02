@@ -44,7 +44,7 @@ const benefits = [
 ]
 
 export default function Home() {
-  const [isHeroActive, setIsHeroActive] = useState(false)
+  const [isHeroActivated, setIsHeroActivated] = useState(false)
   const [activeBenefits, setActiveBenefits] = useState<Record<number, boolean>>({})
   const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
@@ -53,17 +53,15 @@ export default function Home() {
       <section className="relative py-6 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ 
-              opacity: 1, 
-              y: 0,
-              filter: isHeroActive ? 'grayscale(0%)' : 'grayscale(100%)'
+              filter: isHeroActivated ? 'grayscale(0%)' : 'grayscale(100%)'
             }}
-            onMouseEnter={() => setIsHeroActive(true)}
-            onClick={() => setIsHeroActive(true)}
-            onTouchStart={() => setIsHeroActive(true)}
+            onMouseEnter={() => setIsHeroActivated(true)}
+            onClick={() => setIsHeroActivated(true)}
+            onTouchStart={() => setIsHeroActivated(true)}
             transition={{ duration: 0.8 }}
-            className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
+            className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer bg-muted"
           >
             {heroImage && (
               <Image
@@ -147,6 +145,7 @@ export default function Home() {
                   <div 
                     onMouseEnter={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
                     onClick={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
+                    onTouchStart={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
                     className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-all"
                     style={{ filter: activeBenefits[index] ? 'grayscale(0%)' : 'grayscale(100%)' }}
                   >

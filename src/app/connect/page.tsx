@@ -9,12 +9,11 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
 import { motion } from "framer-motion"
 
 export default function Connect() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActivated, setIsActivated] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const { toast } = useToast()
   const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
@@ -33,14 +32,13 @@ export default function Connect() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-8 sm:space-y-10 flex flex-col items-center">
           <motion.div 
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ 
-              opacity: 1,
-              filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' 
+              filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' 
             }}
-            onMouseEnter={() => setIsActive(true)}
-            onClick={() => setIsActive(true)}
-            onTouchStart={() => setIsActive(true)}
+            onMouseEnter={() => setIsActivated(true)}
+            onClick={() => setIsActivated(true)}
+            onTouchStart={() => setIsActivated(true)}
             transition={{ duration: 0.8 }}
             className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none bg-muted"
           >

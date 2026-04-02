@@ -33,7 +33,7 @@ const services = [
 ]
 
 export default function Services() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActivated, setIsActivated] = useState(false)
   const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   return (
@@ -84,14 +84,13 @@ export default function Services() {
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <motion.div 
-              initial={{ opacity: 0 }}
+              initial={false}
               animate={{ 
-                opacity: 1, 
-                filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' 
+                filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)' 
               }}
-              onMouseEnter={() => setIsActive(true)}
-              onClick={() => setIsActive(true)}
-              onTouchStart={() => setIsActive(true)}
+              onMouseEnter={() => setIsActivated(true)}
+              onClick={() => setIsActivated(true)}
+              onTouchStart={() => setIsActivated(true)}
               transition={{ duration: 0.8 }}
               className="relative aspect-square overflow-hidden shadow-2xl rounded-none cursor-pointer bg-muted"
             >

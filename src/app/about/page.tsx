@@ -26,7 +26,7 @@ const testimonials = [
 ]
 
 export default function About() {
-  const [isActive, setIsActive] = useState(false)
+  const [isActivated, setIsActivated] = useState(false)
   const bioImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
@@ -34,14 +34,13 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ 
-              opacity: 1, 
-              filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)'
+              filter: isActivated ? 'grayscale(0%)' : 'grayscale(100%)'
             }}
-            onMouseEnter={() => setIsActive(true)}
-            onClick={() => setIsActive(true)}
-            onTouchStart={() => setIsActive(true)}
+            onMouseEnter={() => setIsActivated(true)}
+            onClick={() => setIsActivated(true)}
+            onTouchStart={() => setIsActivated(true)}
             transition={{ duration: 0.8 }}
             className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer bg-muted"
           >
