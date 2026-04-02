@@ -1,11 +1,12 @@
+
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
-import { Bike } from "lucide-react"
 import {
   Sheet,
   SheetContent,
@@ -42,18 +43,16 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 bg-primary/5 group-hover:bg-primary/10 transition-colors">
-            <Bike className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:text-accent transition-colors duration-300" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-lg md:text-2xl font-headline font-bold tracking-tight transition-colors group-hover:text-primary leading-tight text-primary">
-              Ramsey Empowerment
-            </span>
-            <span className="text-base font-headline italic text-accent font-medium leading-none">
-              Coaching
-            </span>
+      <div className="container mx-auto flex h-16 md:h-24 items-center justify-between px-4 lg:px-8">
+        <Link href="/" className="flex items-center group py-2">
+          <div className="relative h-12 w-48 md:h-16 md:w-64">
+            <Image 
+              src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4"
+              alt="Ramsey Empowerment Coaching"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
         

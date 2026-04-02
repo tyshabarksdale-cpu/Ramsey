@@ -34,6 +34,7 @@ const services = [
 
 export default function Services() {
   const [isActivated, setIsActivated] = useState(false)
+  const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   return (
     <div className="py-6 lg:py-10">
@@ -89,16 +90,18 @@ export default function Services() {
               onClick={() => setIsActivated(true)}
               onTouchStart={() => setIsActivated(true)}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer"
+              className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer bg-white"
             >
-              <Image
-                src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"
-                alt="Women on tandem bike"
-                fill
-                className="object-cover"
-                data-ai-hint="women tandem bike"
-                priority
-              />
+              {tandemImage && (
+                <Image
+                  src={tandemImage.imageUrl}
+                  alt={tandemImage.description}
+                  fill
+                  className="object-contain"
+                  data-ai-hint="women tandem bike"
+                  priority
+                />
+              )}
             </motion.div>
             <div className="space-y-4 text-center lg:text-left">
               <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">A Partnership Built on Trust</h2>
@@ -155,7 +158,7 @@ export default function Services() {
 
         <div className="mt-12 text-center space-y-6 flex flex-col items-center">
           <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">Ready to start pedaling?</h2>
-          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-16 h-20 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
+          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-24 h-24 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
             <a href="https://calendly.com/ramsey-empowerment/15min" target="_blank" rel="noopener noreferrer">
               Book Your Strategy Session
             </a>
