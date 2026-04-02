@@ -40,7 +40,7 @@ export default function Services() {
     <div className="py-6 lg:py-10">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-8 sm:mb-12 space-y-2 flex flex-col items-center">
-          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-headline text-primary pb-6 leading-relaxed">Tailored Strategies</h1>
+          <h1 className="text-5xl sm:text-6xl lg:text-8xl font-headline text-primary pb-6">Tailored Strategies</h1>
           <p className="text-2xl sm:text-3xl text-primary font-headline italic leading-relaxed tracking-wide opacity-80">
             We don't believe in one-size-fits-all coaching. Every partnership is as unique as the path you steer.
           </p>
@@ -51,21 +51,21 @@ export default function Services() {
             <Card 
               key={i} 
               className={cn(
-                "relative overflow-hidden group border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white rounded-none",
+                "relative overflow-hidden border-none shadow-lg bg-white rounded-none",
                 i === 2 ? "md:col-span-2 md:max-w-lg md:mx-auto w-full" : ""
               )}
             >
               <CardHeader className="p-8 sm:p-10 space-y-4 pb-4 text-center">
                 <div>
-                  <CardTitle className="text-3xl sm:text-4xl font-headline mb-2 text-primary pb-6 leading-relaxed">{service.title}</CardTitle>
+                  <CardTitle className="text-3xl sm:text-4xl font-headline mb-2 text-primary pb-6">{service.title}</CardTitle>
                   <CardDescription className="text-lg sm:text-xl leading-relaxed text-primary/70">{service.description}</CardDescription>
                 </div>
               </CardHeader>
               <CardContent className="p-8 sm:p-10 pt-0 space-y-6">
                 <div className="flex justify-center">
-                  <ul className="space-y-3 sm:space-y-4 flex flex-col items-start w-full max-w-fit">
+                  <ul className="space-y-3 sm:space-y-4 flex flex-col items-start w-full max-fit">
                     {service.features.map((f, j) => (
-                      <li key={j} className="flex items-center gap-4 text-base sm:text-lg font-medium text-primary/80 justify-start">
+                      <li key={j} className="flex items-center gap-4 text-base sm:text-lg font-medium text-primary/80">
                         <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
                         {f}
                       </li>
@@ -92,9 +92,8 @@ export default function Services() {
               onMouseEnter={() => setIsActive(true)}
               onClick={() => setIsActive(true)}
               onTouchStart={() => setIsActive(true)}
-              transition={{ duration: 0.8, filter: { duration: 0.6, ease: "easeOut" } }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="relative aspect-square overflow-hidden shadow-2xl group rounded-none cursor-pointer"
+              transition={{ duration: 0.8 }}
+              className="relative aspect-square overflow-hidden shadow-2xl rounded-none cursor-pointer bg-muted"
             >
               {tandemImage && (
                 <Image
@@ -103,11 +102,12 @@ export default function Services() {
                   fill
                   className="object-cover"
                   data-ai-hint="women tandem bike"
+                  priority
                 />
               )}
             </motion.div>
             <div className="space-y-4 text-center lg:text-left">
-              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary leading-relaxed pb-6">A Partnership Built on Trust</h2>
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">A Partnership Built on Trust</h2>
               <div className="space-y-4 text-xl sm:text-2xl text-primary/80 italic font-headline leading-relaxed">
                 <p>
                   In our sessions, you aren't just a client; you are the driver. 
@@ -126,9 +126,7 @@ export default function Services() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 blur-[150px] rounded-full"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
             <div className="space-y-6 text-center">
-              <div className="space-y-2">
-                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-white pb-6 leading-relaxed">The Empowerment Process</h2>
-              </div>
+              <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-white pb-6">The Empowerment Process</h2>
               <div className="space-y-6 sm:space-y-8">
                 {[
                   { step: "1", title: "Discovery Call", text: "A 30-minute deep dive to understand your current landscape and see if our tandem is a match." },
@@ -136,9 +134,9 @@ export default function Services() {
                   { step: "3", title: "The Pedal Sessions", text: "Regular sessions focused on action, accountability, and advocacy to move you forward." }
                 ].map((item, idx) => (
                   <div key={idx} className="flex flex-col items-center text-center gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 border border-accent/40 flex items-center justify-center font-headline font-bold text-xl text-accent mx-auto">{item.step}</div>
+                    <div className="w-12 h-12 border border-accent/40 flex items-center justify-center font-headline font-bold text-xl text-accent mx-auto">{item.step}</div>
                     <div>
-                      <h4 className="text-2xl sm:text-3xl font-bold mb-1 text-white pb-6 leading-relaxed">{item.title}</h4>
+                      <h4 className="text-2xl sm:text-3xl font-bold mb-1 text-white pb-6">{item.title}</h4>
                       <p className="text-lg sm:text-xl text-primary-foreground/80 leading-relaxed">{item.text}</p>
                     </div>
                   </div>
@@ -152,9 +150,9 @@ export default function Services() {
                 { label: "Action", icon: Zap },
                 { label: "Empowerment", icon: ShieldCheck }
               ].map((item, idx) => (
-                <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-6 text-center flex flex-col items-center justify-center gap-4 group hover:bg-white/10 transition-all aspect-square rounded-none">
-                  <item.icon className="w-8 h-8 text-accent" />
-                  <p className="font-bold tracking-[0.3em] uppercase text-[10px] sm:text-xs text-accent pb-1">{item.label}</p>
+                <Card key={idx} className="bg-white/5 border-white/10 text-primary-foreground p-6 text-center flex flex-col items-center justify-center aspect-square rounded-none">
+                  <item.icon className="w-8 h-8 text-accent mb-4" />
+                  <p className="font-bold tracking-[0.3em] uppercase text-[10px] sm:text-xs text-accent">{item.label}</p>
                 </Card>
               ))}
             </div>
@@ -162,8 +160,8 @@ export default function Services() {
         </div>
 
         <div className="mt-12 text-center space-y-6 flex flex-col items-center">
-          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6 leading-relaxed">Ready to start pedaling?</h2>
-          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-24 h-24 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
+          <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">Ready to start pedaling?</h2>
+          <Button asChild size="lg" className="w-full sm:w-auto rounded-none px-16 h-20 text-2xl font-bold bg-accent hover:bg-accent/90 shadow-xl text-white font-headline tracking-wide">
             <a href="https://calendly.com/ramsey-empowerment/15min" target="_blank" rel="noopener noreferrer">
               Book Your Strategy Session
             </a>

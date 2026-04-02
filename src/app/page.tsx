@@ -43,49 +43,26 @@ const benefits = [
   },
 ]
 
-const fadeInUp = {
-  initial: { y: 20, opacity: 0 },
-  whileInView: { y: 0, opacity: 1 },
-  viewport: { once: true },
-  transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] }
-}
-
-const fadeInLeft = {
-  initial: { x: -60, opacity: 0 },
-  whileInView: { x: 0, opacity: 1 },
-  viewport: { once: true },
-  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-}
-
 export default function Home() {
   const [isHeroActive, setIsHeroActive] = useState(false)
   const [activeBenefits, setActiveBenefits] = useState<Record<number, boolean>>({})
   const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
-  const toggleBenefit = (index: number) => {
-    setActiveBenefits(prev => ({ ...prev, [index]: true }))
-  }
-
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
       <section className="relative py-6 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
-            initial={{ y: 20, opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ 
-              y: 0, 
-              opacity: 1,
+              opacity: 1, 
+              y: 0,
               filter: isHeroActive ? 'grayscale(0%)' : 'grayscale(100%)'
             }}
             onMouseEnter={() => setIsHeroActive(true)}
             onClick={() => setIsHeroActive(true)}
             onTouchStart={() => setIsHeroActive(true)}
-            transition={{ 
-              y: { duration: 0.8 },
-              opacity: { duration: 0.8 },
-              filter: { duration: 0.6, ease: "easeOut" }
-            }}
+            transition={{ duration: 0.8 }}
             className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
           >
             {heroImage && (
@@ -103,38 +80,31 @@ export default function Home() {
           <motion.div 
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1 }}
             className="space-y-6"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-4">
               You Steer <span className="text-accent italic">As We Pedal</span>
             </h1>
 
-            {/* Tandem Section */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative max-w-2xl mx-auto py-4"
-            >
-              <div className="relative bg-primary/95 backdrop-blur-sm border-accent p-8 sm:p-12 shadow-2xl text-center rounded-none">
+            <div className="relative max-w-2xl mx-auto py-4">
+              <div className="relative bg-primary/95 backdrop-blur-sm p-8 sm:p-12 shadow-2xl text-center rounded-none">
                 <p className="text-lg sm:text-xl leading-relaxed text-primary-foreground font-medium">
                   Think of our work together like riding a tandem bike. You're in the front seat — steering, deciding the direction, owning the destination. 
                   I'm right behind you, pedaling alongside you, helping power the journey.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             <p className="text-xl sm:text-2xl lg:text-3xl text-primary font-headline tracking-wide leading-relaxed max-w-3xl mx-auto">
               Empowering women and professionals to recognize their strength and step into their power.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-6 justify-center">
-              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-none border-primary text-primary hover:text-primary active:text-primary hover:bg-primary/5 active:bg-primary/10 active:scale-95 transition-all bg-transparent font-headline text-xl tracking-wide px-10 py-7">
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto rounded-none border-primary text-primary font-headline text-xl px-10 py-7">
                 <Link href="/services">Our Services</Link>
               </Button>
-              <Button asChild size="lg" className="w-full sm:w-auto rounded-none bg-accent hover:bg-accent/90 active:bg-accent active:scale-95 transition-all text-white font-bold font-headline text-xl tracking-wide px-10 py-7 shadow-lg">
+              <Button asChild size="lg" className="w-full sm:w-auto rounded-none bg-accent text-white font-headline text-xl px-10 py-7 shadow-lg">
                 <Link href="/connect">Start Your Journey</Link>
               </Button>
             </div>
@@ -142,13 +112,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <motion.section 
-        {...fadeInLeft}
-        className="py-12 lg:py-20 bg-secondary/30"
-      >
+      <section className="py-12 lg:py-20 bg-secondary/30">
         <div className="container mx-auto px-4 max-w-5xl">
-          <Card className="border-none shadow-2xl bg-white/90 backdrop-blur-md rounded-none overflow-hidden">
+          <Card className="border-none shadow-2xl bg-white/90 rounded-none overflow-hidden">
             <CardContent className="p-10 sm:p-16 text-center space-y-8">
               <span className="text-primary font-bold tracking-[0.2em] uppercase text-xl sm:text-2xl block">Our Mission</span>
               <h2 className="text-2xl sm:text-3xl lg:text-5xl font-headline leading-relaxed text-primary font-normal italic tracking-wide pb-4">
@@ -164,57 +130,36 @@ export default function Home() {
             </CardContent>
           </Card>
         </div>
-      </motion.section>
+      </section>
 
-      {/* Benefits Grid Section */}
       <section className="py-16 lg:py-24 bg-ombre-light">
         <div className="container mx-auto px-4">
-          <motion.div 
-            {...fadeInUp}
-            className="text-center mb-12 sm:mb-16 space-y-2"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-6">The Cycle of Empowerment</h2>
+          <div className="text-center mb-12 sm:mb-16 space-y-2">
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-headline text-primary pb-6">The Cycle of Empowerment</h2>
             <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto font-headline italic leading-relaxed tracking-wide">
               Our core benefits are designed to support your journey from where you are to who you are meant to be.
             </p>
-          </motion.div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 text-center max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md h-full rounded-none">
-                  <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
-                    <motion.div 
-                      animate={{ filter: activeBenefits[index] ? 'grayscale(0%)' : 'grayscale(100%)' }}
-                      onMouseEnter={() => toggleBenefit(index)}
-                      onClick={() => toggleBenefit(index)}
-                      onTouchStart={() => toggleBenefit(index)}
-                      className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-colors hover:bg-primary/20"
-                    >
-                      <benefit.icon className="w-8 h-8" />
-                    </motion.div>
-                    <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>
-                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              <Card key={index} className="border-none shadow-sm bg-white/80 h-full rounded-none">
+                <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
+                  <div 
+                    onMouseEnter={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
+                    onClick={() => setActiveBenefits(prev => ({ ...prev, [index]: true }))}
+                    className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-all"
+                    style={{ filter: activeBenefits[index] ? 'grayscale(0%)' : 'grayscale(100%)' }}
+                  >
+                    <benefit.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
-          <motion.div 
-            {...fadeInUp}
-            className="mt-16 text-center"
-          >
-            <Button asChild size="lg" className="rounded-none px-12 h-16 sm:h-18 text-xl font-bold bg-primary hover:bg-primary/90 shadow-xl text-white font-headline tracking-wide w-full sm:w-auto">
-              <Link href="/connect">Schedule Your Discovery Call</Link>
-            </Button>
-          </motion.div>
         </div>
       </section>
     </div>

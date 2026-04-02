@@ -32,24 +32,29 @@ export default function Connect() {
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-8 sm:space-y-10 flex flex-col items-center">
-          {tandemImage && (
-            <motion.div 
-              animate={{ filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' }}
-              onMouseEnter={() => setIsActive(true)}
-              onClick={() => setIsActive(true)}
-              onTouchStart={() => setIsActive(true)}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
-            >
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ 
+              opacity: 1,
+              filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' 
+            }}
+            onMouseEnter={() => setIsActive(true)}
+            onClick={() => setIsActive(true)}
+            onTouchStart={() => setIsActive(true)}
+            transition={{ duration: 0.8 }}
+            className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none bg-muted"
+          >
+            {tandemImage && (
               <Image
                 src={tandemImage.imageUrl}
                 alt="Women on tandem bike"
                 fill
                 className="object-cover"
                 data-ai-hint="women tandem bike"
+                priority
               />
-            </motion.div>
-          )}
+            )}
+          </motion.div>
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary">Start Your Journey</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl mx-auto">
             Whether you're ready to start your journey or just have a few questions, 
@@ -93,11 +98,7 @@ export default function Connect() {
                     Open Calendly
                   </a>
                 </Button>
-                <p className="text-xs text-center text-primary-foreground/60 italic">
-                  *Link will open in a new window
-                </p>
               </div>
-              <div className="absolute -bottom-10 -right-10 w-40 sm:w-56 h-40 sm:h-56 bg-accent/20 rounded-full blur-3xl"></div>
             </Card>
           </div>
 
@@ -117,25 +118,6 @@ export default function Connect() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-primary font-bold">Phone Number (Optional)</Label>
-                    <Input id="phone" type="tel" placeholder="(555) 000-0000" className="h-12 sm:h-14 rounded-none border-primary/20 text-primary" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="source" className="text-primary font-bold">How did you hear about us?</Label>
-                    <Select>
-                      <SelectTrigger className="h-12 sm:h-14 rounded-none border-primary/20 text-primary">
-                        <SelectValue placeholder="Please select an option" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="linkedin">LinkedIn</SelectItem>
-                        <SelectItem value="instagram">Instagram</SelectItem>
-                        <SelectItem value="referral">Referral</SelectItem>
-                        <SelectItem value="search">Search Engine</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
                     <Label htmlFor="message" className="text-primary font-bold">How can I help you?*</Label>
                     <Textarea id="message" required placeholder="Tell me a bit about your journey..." className="min-h-[150px] sm:min-h-[180px] rounded-none border-primary/20 text-primary" />
                   </div>
@@ -143,17 +125,9 @@ export default function Connect() {
                 <Button type="submit" className="w-full rounded-none py-6 sm:py-8 text-lg sm:text-xl font-bold bg-primary text-white hover:bg-primary/90 font-headline shadow-md">
                   Send Message
                 </Button>
-                <p className="text-[10px] sm:text-xs text-primary/60 text-center">
-                  *Required fields. We respect your privacy and will never share your info.
-                </p>
               </form>
             ) : (
               <div className="text-center py-16 sm:py-24 space-y-6 sm:space-y-8">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-accent/20 text-accent flex items-center justify-center mx-auto mb-4 sm:mb-6">
-                  <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
                 <h3 className="text-3xl sm:text-4xl font-headline font-bold text-primary">Thank You!</h3>
                 <p className="text-lg sm:text-xl text-primary/80 leading-relaxed">
                   Your message has been received. Sybil will review your inquiry and 

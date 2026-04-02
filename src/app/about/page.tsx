@@ -34,21 +34,16 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0 }}
             animate={{ 
               opacity: 1, 
-              x: 0,
               filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)'
             }}
             onMouseEnter={() => setIsActive(true)}
             onClick={() => setIsActive(true)}
             onTouchStart={() => setIsActive(true)}
-            transition={{ 
-              opacity: { duration: 0.8 },
-              x: { duration: 0.8 },
-              filter: { duration: 0.6, ease: "easeOut" }
-            }}
-            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer"
+            transition={{ duration: 0.8 }}
+            className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer bg-muted"
           >
             {bioImage && (
               <Image
@@ -66,7 +61,7 @@ export default function About() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-none bg-primary/10 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mx-auto">
                 Meet Sybil Elise Ramsey
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent pb-2 tracking-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary pb-2 tracking-tight">
                 Empowerment Strategist
               </h1>
             </div>
@@ -86,11 +81,9 @@ export default function About() {
                 </p>
               </div>
               <div className="bg-secondary/30 p-8 sm:p-10 border-l-4 border-accent text-center space-y-4 shadow-sm rounded-none">
-                <div className="pt-2">
-                  <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest leading-relaxed">
-                    You set the direction;<br />I help you get there.
-                  </p>
-                </div>
+                <p className="font-bold text-accent text-sm sm:text-base uppercase tracking-widest leading-relaxed">
+                  You set the direction;<br />I help you get there.
+                </p>
               </div>
               <div className="text-base sm:text-lg space-y-4">
                 <p>
@@ -109,23 +102,15 @@ export default function About() {
           </div>
           <div className="flex flex-col gap-6 max-w-3xl mx-auto">
             {testimonials.map((t, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-              >
-                <Card className="bg-background/80 border-none shadow-sm hover:shadow-md transition-shadow rounded-none">
-                  <CardContent className="p-8 sm:p-10 space-y-6 flex flex-col items-center text-center">
-                    <p className="text-lg sm:text-xl lg:text-2xl italic text-primary/80 leading-relaxed max-w-2xl">{t.text}</p>
-                    <div className="pt-4 border-t border-primary/10 w-full max-w-xs">
-                      <p className="font-bold text-primary text-lg pb-1">{t.name}</p>
-                      <p className="text-[10px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-1">{t.title}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              <Card key={i} className="bg-background/80 border-none shadow-sm rounded-none">
+                <CardContent className="p-8 sm:p-10 space-y-6 flex flex-col items-center text-center">
+                  <p className="text-lg sm:text-xl lg:text-2xl italic text-primary/80 leading-relaxed max-w-2xl">{t.text}</p>
+                  <div className="pt-4 border-t border-primary/10 w-full max-w-xs">
+                    <p className="font-bold text-primary text-lg pb-1">{t.name}</p>
+                    <p className="text-[10px] sm:text-xs text-accent font-bold uppercase tracking-widest mt-1">{t.title}</p>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
