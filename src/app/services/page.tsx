@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -84,6 +85,7 @@ export default function Services() {
               initial={{ filter: 'grayscale(100%)', opacity: 0 }}
               animate={{ opacity: 1, filter: 'grayscale(100%)' }}
               whileHover={{ filter: 'grayscale(0%)', scale: 1.01 }}
+              whileTap={{ filter: 'grayscale(0%)', scale: 1.0 }}
               transition={{ duration: 0.8, filter: { duration: 0.6, ease: "easeOut" } }}
               viewport={{ once: true, amount: 0.3 }}
               className="relative aspect-square overflow-hidden shadow-2xl group rounded-none cursor-pointer"

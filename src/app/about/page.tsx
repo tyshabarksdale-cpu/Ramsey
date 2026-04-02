@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -34,6 +35,7 @@ export default function About() {
             initial={{ opacity: 0, x: -20, filter: 'grayscale(100%)' }}
             animate={{ opacity: 1, x: 0, filter: 'grayscale(100%)' }}
             whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
+            whileTap={{ filter: 'grayscale(0%)', scale: 1.01 }}
             transition={{ 
               opacity: { duration: 0.8 },
               x: { duration: 0.8 },
@@ -47,7 +49,7 @@ export default function About() {
                 alt={bioImage.description}
                 fill
                 className="object-cover"
-                data-ai-hint="professional woman smiling"
+                data-ai-hint="professional woman portrait"
                 priority
               />
             )}

@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -56,7 +57,7 @@ const fadeInLeft = {
 }
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
+  const heroImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   return (
     <div className="flex flex-col">
@@ -67,12 +68,13 @@ export default function Home() {
             initial={{ y: 20, opacity: 0, filter: 'grayscale(100%)' }}
             animate={{ y: 0, opacity: 1, filter: 'grayscale(100%)' }}
             whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
+            whileTap={{ filter: 'grayscale(0%)', scale: 1.01 }}
             transition={{ 
               y: { duration: 0.8 },
               opacity: { duration: 0.8 },
               filter: { duration: 0.6, ease: "easeOut" }
             }}
-            className="relative w-full max-w-sm aspect-[4/5] overflow-hidden shadow-2xl scale-x-[-1] mb-8 rounded-none cursor-pointer"
+            className="relative w-full max-w-2xl aspect-video overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
           >
             {heroImage && (
               <Image
@@ -80,7 +82,7 @@ export default function Home() {
                 alt={heroImage.description}
                 fill
                 className="object-cover"
-                data-ai-hint="black and white professional woman portrait"
+                data-ai-hint="women tandem bike"
                 priority
               />
             )}

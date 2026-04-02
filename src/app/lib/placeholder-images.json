@@ -8,6 +8,12 @@
       "imageHint": "professional woman"
     },
     {
+      "id": "tandem-bike",
+      "description": "Two ladies on a tandem bike",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=57820c85-fbf4-4fcc-bfe0-c4716c288801",
+      "imageHint": "women tandem bike"
+    },
+    {
       "id": "about-sybil",
       "description": "Sybil Ramsey, Empowerment Strategist",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Sybil%20Headshot%202.png?alt=media&token=25af4d76-a133-4ade-8c65-9699ca1099ab",

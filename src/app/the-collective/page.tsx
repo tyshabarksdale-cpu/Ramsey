@@ -1,3 +1,4 @@
+
 "use client"
 
 import Image from "next/image"
@@ -51,6 +52,7 @@ export default function TheCollective() {
                 initial={{ filter: 'grayscale(100%)' }}
                 animate={{ filter: 'grayscale(100%)' }}
                 whileHover={{ filter: 'grayscale(0%)' }}
+                whileTap={{ filter: 'grayscale(0%)' }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative aspect-video overflow-hidden"
               >
