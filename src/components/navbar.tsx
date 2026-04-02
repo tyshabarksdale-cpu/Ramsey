@@ -46,9 +46,9 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="flex h-24 lg:h-40 items-center justify-between w-full px-4 lg:px-0 relative">
+      <div className="flex h-24 lg:h-40 items-center justify-between w-full px-4 lg:pl-0 lg:pr-12 relative">
         {/* Logo - Centered on Mobile/Tablet (Portrait), Far Left on Desktop/Tablet (Landscape) */}
-        <Link href="/" className="flex items-center group py-2 mx-auto lg:ml-0 lg:mr-auto">
+        <Link href="/" className="flex items-center group py-2 mx-auto lg:ml-0 lg:mr-auto shrink-0">
           <div className="relative h-20 w-64 lg:h-36 lg:w-[500px]">
             <Image 
               src={headerLogoUrl}

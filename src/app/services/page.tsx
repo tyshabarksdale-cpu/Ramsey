@@ -125,7 +125,7 @@ export default function Services() {
         <section className="mb-24 py-16 bg-white/50 border-y border-primary/5">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12 space-y-4">
-              <p className="text-lg sm:text-xl text-primary/70 font-headline italic max-w-3xl mx-auto">
+              <p className="text-xl sm:text-2xl text-primary/70 font-headline italic max-w-3xl mx-auto">
                 Navigating the organizational landscape requires understanding where you are and the momentum needed to reach the next horizon.
               </p>
             </div>
