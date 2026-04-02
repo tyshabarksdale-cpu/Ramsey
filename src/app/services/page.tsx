@@ -92,7 +92,7 @@ export default function Services() {
               onClick={() => setIsActivated(true)}
               onTouchStart={() => setIsActivated(true)}
               transition={{ duration: 0.8 }}
-              className="relative aspect-square overflow-hidden shadow-2xl rounded-none cursor-pointer bg-muted"
+              className="relative aspect-[4/3] w-full overflow-hidden shadow-2xl rounded-none cursor-pointer bg-muted"
             >
               {tandemImage && (
                 <Image
