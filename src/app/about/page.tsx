@@ -39,7 +39,6 @@ export default function About() {
             onMouseEnter={() => setIsActivated(true)}
             onClick={() => setIsActivated(true)}
             onTouchStart={() => setIsActivated(true)}
-            onViewportEnter={() => setIsActivated(true)}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer"
           >

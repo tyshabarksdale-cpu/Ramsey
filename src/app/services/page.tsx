@@ -34,7 +34,6 @@ const services = [
 
 export default function Services() {
   const [isActivated, setIsActivated] = useState(false)
-  const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   return (
     <div className="py-6 lg:py-10">
@@ -89,9 +88,8 @@ export default function Services() {
               onMouseEnter={() => setIsActivated(true)}
               onClick={() => setIsActivated(true)}
               onTouchStart={() => setIsActivated(true)}
-              onViewportEnter={() => setIsActivated(true)}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="relative aspect-[4/3] w-full overflow-hidden shadow-2xl rounded-none cursor-pointer"
+              className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer"
             >
               <Image
                 src="https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Two%20ladies%20on%20a%20tandem%20bike.png?alt=media&token=81ca3b0d-0ab3-46fc-9abd-e21bc792942b"

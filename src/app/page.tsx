@@ -57,7 +57,6 @@ export default function Home() {
             onMouseEnter={() => setIsHeroActivated(true)}
             onClick={() => setIsHeroActivated(true)}
             onTouchStart={() => setIsHeroActivated(true)}
-            onViewportEnter={() => setIsHeroActivated(true)}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
           >

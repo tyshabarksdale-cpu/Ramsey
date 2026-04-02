@@ -16,7 +16,6 @@ export default function Connect() {
   const [isActivated, setIsActivated] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const { toast } = useToast()
-  const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -37,7 +36,6 @@ export default function Connect() {
             onMouseEnter={() => setIsActivated(true)}
             onClick={() => setIsActivated(true)}
             onTouchStart={() => setIsActivated(true)}
-            onViewportEnter={() => setIsActivated(true)}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
           >
