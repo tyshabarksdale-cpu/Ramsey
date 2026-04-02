@@ -4,9 +4,11 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Linkedin, Instagram, Mail } from "lucide-react"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Footer() {
-  const footerLogoUrl = "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/1.png?alt=media&token=b36209ce-0159-46ea-b215-847fa96a84f4"
+  const footerLogo = PlaceHolderImages.find(img => img.id === "brand-logo-footer")
+  const footerLogoUrl = footerLogo?.imageUrl || "https://firebasestorage.googleapis.com/v0/b/studio-5463986047-b4104.firebasestorage.app/o/Tandem%20logo%20with%20phrase.png?alt=media&token=3087b72a-4860-483d-805f-3a7e5a930fdb"
 
   return (
     <footer className="border-t bg-secondary/30">
