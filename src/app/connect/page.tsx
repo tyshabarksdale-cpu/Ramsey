@@ -39,6 +39,8 @@ export default function Connect() {
             onMouseEnter={() => setIsActivated(true)}
             onClick={() => setIsActivated(true)}
             onTouchStart={() => setIsActivated(true)}
+            onViewportEnter={() => setIsActivated(true)}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative w-48 h-64 sm:w-64 sm:h-80 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
           >

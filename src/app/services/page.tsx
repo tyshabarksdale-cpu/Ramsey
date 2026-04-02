@@ -198,6 +198,8 @@ export default function Services() {
               onMouseEnter={() => setIsActivated(true)}
               onClick={() => setIsActivated(true)}
               onTouchStart={() => setIsActivated(true)}
+              onViewportEnter={() => setIsActivated(true)}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="relative aspect-[3/4] max-w-md mx-auto w-full overflow-hidden shadow-2xl rounded-none cursor-pointer"
             >

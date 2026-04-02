@@ -64,6 +64,8 @@ export default function TheCollective() {
                 onFocus={() => toggleMember(member.id)}
                 onClick={() => toggleMember(member.id)}
                 onTouchStart={() => toggleMember(member.id)}
+                onViewportEnter={() => toggleMember(member.id)}
+                viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative aspect-video overflow-hidden cursor-pointer"
               >

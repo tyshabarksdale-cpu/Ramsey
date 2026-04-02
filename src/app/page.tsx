@@ -57,6 +57,8 @@ export default function Home() {
             onMouseEnter={() => setIsHeroActivated(true)}
             onClick={() => setIsHeroActivated(true)}
             onTouchStart={() => setIsHeroActivated(true)}
+            onViewportEnter={() => setIsHeroActivated(true)}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
           >
@@ -147,6 +149,8 @@ export default function Home() {
                       onMouseEnter={() => setIsActivated(true)}
                       onClick={() => setIsActivated(true)}
                       onTouchStart={() => setIsActivated(true)}
+                      onViewportEnter={() => setIsActivated(true)}
+                      viewport={{ once: true, amount: 0.5 }}
                       className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-all"
                     >
                       <benefit.icon className="w-8 h-8" />
