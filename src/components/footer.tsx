@@ -26,9 +26,6 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-xl font-headline italic text-primary/80 pb-0">
-              "You steer as we pedal"
-            </p>
           </div>
           
           <div className="md:col-span-2 space-y-3">
