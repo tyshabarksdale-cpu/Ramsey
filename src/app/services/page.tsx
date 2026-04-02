@@ -77,13 +77,13 @@ export default function Services() {
                   <Card className="border-none bg-secondary/20 rounded-none shadow-none">
                     <CardContent className="p-10 lg:p-16">
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                        <div className="space-y-8">
-                          <h2 className="text-4xl sm:text-5xl font-headline text-primary pb-2">{service.title}</h2>
+                        <div className="space-y-8 flex flex-col items-center text-center">
+                          <h2 className="text-4xl sm:text-5xl font-headline text-primary pb-2 text-center">{service.title}</h2>
                           <p className="text-xl sm:text-2xl text-primary/80 leading-relaxed font-headline italic">
                             {service.description}
                           </p>
                           <div className="h-px w-24 bg-accent/30" />
-                          <ul className="space-y-4">
+                          <ul className="space-y-4 text-left w-full max-w-md">
                             {service.features.map((feature, idx) => (
                               <li key={idx} className="flex items-center gap-4 text-lg font-medium text-primary">
                                 <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
