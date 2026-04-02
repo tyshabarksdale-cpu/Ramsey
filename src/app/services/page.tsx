@@ -83,11 +83,11 @@ export default function Services() {
                             {service.description}
                           </p>
                           <div className="h-px w-24 bg-accent/30" />
-                          <ul className="space-y-4 w-full max-w-md">
+                          <ul className="space-y-4 w-fit mx-auto text-left">
                             {service.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-center justify-center gap-4 text-lg font-medium text-primary text-center">
+                              <li key={idx} className="flex items-center gap-4 text-lg font-medium text-primary">
                                 <div className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
-                                {feature}
+                                <span>{feature}</span>
                               </li>
                             ))}
                           </ul>
