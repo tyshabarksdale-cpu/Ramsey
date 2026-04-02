@@ -51,7 +51,7 @@ export default function Connect() {
               priority
             />
           </motion.div>
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary">Start Your Journey</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary pb-4">Start Your Journey</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl mx-auto">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide. You steer as we pedal.
@@ -61,7 +61,7 @@ export default function Connect() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl mx-auto">
           <div className="space-y-8 sm:space-y-12 text-center">
             <div className="space-y-8 sm:space-y-10">
-              <h2 className="text-2xl sm:text-3xl font-headline font-bold text-primary">Direct Access</h2>
+              <h2 className="text-2xl sm:text-3xl font-headline font-bold text-primary pb-4">Direct Access</h2>
               <div className="space-y-8 sm:space-y-10">
                 <div className="group">
                   <p className="text-[10px] sm:text-xs text-accent uppercase font-bold tracking-[0.2em] mb-2">Email</p>
@@ -69,7 +69,7 @@ export default function Connect() {
                 </div>
                 <div className="group">
                   <p className="text-[10px] sm:text-xs text-accent uppercase font-bold tracking-[0.2em] mb-2">LinkedIn</p>
-                  <a href="https://www.linkedin.com/company/ramsey-empowerment/" target="_blank" rel="noopener noreferrer" className="text-xl sm:text-2xl font-bold text-primary hover:text-accent transition-colors">Sybil Elise, Empowerment Strategist</a>
+                  <a href="https://www.linkedin.com/in/ramsey-empowerment/" target="_blank" rel="noopener noreferrer" className="text-xl sm:text-2xl font-bold text-primary hover:text-accent transition-colors">Sybil Elise, Empowerment Strategist</a>
                 </div>
                 <div className="group">
                   <p className="text-[10px] sm:text-xs text-accent uppercase font-bold tracking-[0.2em] mb-2">Instagram</p>
@@ -84,7 +84,7 @@ export default function Connect() {
 
             <Card className="bg-primary text-primary-foreground p-8 sm:p-10 lg:p-14 overflow-hidden relative border-none shadow-2xl mx-auto rounded-none">
               <div className="relative z-10 space-y-6 sm:space-y-8">
-                <h3 className="text-3xl sm:text-4xl font-headline font-bold text-white">Book Instantly</h3>
+                <h3 className="text-3xl sm:text-4xl font-headline font-bold text-white pb-4">Book Instantly</h3>
                 <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed">
                   Ready to see if we're a fit? Schedule a complimentary 30-minute 
                   Discovery Call directly through my calendar.
@@ -101,7 +101,7 @@ export default function Connect() {
           <div className="bg-white p-6 sm:p-10 lg:p-16 shadow-2xl border border-secondary rounded-none">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
-                <h3 className="text-2xl sm:text-3xl font-headline font-bold mb-6 sm:mb-10 text-center text-primary">Send a Message</h3>
+                <h3 className="text-2xl sm:text-3xl font-headline font-bold mb-6 sm:mb-10 text-center text-primary pb-0">Send a Message</h3>
                 <div className="space-y-4 sm:space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-2">
@@ -124,7 +124,7 @@ export default function Connect() {
               </form>
             ) : (
               <div className="text-center py-16 sm:py-24 space-y-6 sm:space-y-8">
-                <h3 className="text-3xl sm:text-4xl font-headline font-bold text-primary">Thank You!</h3>
+                <h3 className="text-3xl sm:text-4xl font-headline font-bold text-primary pb-4">Thank You!</h3>
                 <p className="text-lg sm:text-xl text-primary/80 leading-relaxed">
                   Your message has been received. Sybil will review your inquiry and 
                   respond within the next 24-48 business hours.

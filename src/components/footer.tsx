@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center items-start">
           <div className="md:col-span-4 flex flex-col items-center text-center mb-4">
             <Link href="/" className="inline-block">
-              <div className="relative h-40 w-[300px] sm:w-[500px] bg-transparent">
+              <div className="relative h-48 w-[350px] sm:w-[600px] bg-transparent">
                 <Image 
                   src={footerLogoUrl}
                   alt="Ramsey Empowerment Coaching"
@@ -43,7 +43,7 @@ export function Footer() {
               <h4 className="font-headline font-bold text-lg text-primary pb-1">Connect</h4>
               <div className="flex items-center justify-center gap-6">
                 <a 
-                  href="https://www.linkedin.com/company/ramsey-empowerment/" 
+                  href="https://www.linkedin.com/in/ramsey-empowerment/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-primary hover:text-accent transition-colors"
