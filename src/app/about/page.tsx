@@ -24,7 +24,6 @@ const testimonials = [
 ]
 
 export default function About() {
-  // Updated to use the hero portrait as requested
   const bioImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
@@ -33,15 +32,13 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, x: -20, filter: 'grayscale(100%)' }}
-            animate={{ opacity: 1, x: 0 }}
-            whileInView={{ filter: 'grayscale(0%)' }}
+            animate={{ opacity: 1, x: 0, filter: 'grayscale(100%)' }}
             whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
             transition={{ 
               opacity: { duration: 0.8 },
               x: { duration: 0.8 },
-              filter: { duration: 1.5, ease: "easeOut" }
+              filter: { duration: 0.6, ease: "easeOut" }
             }}
-            viewport={{ once: true, amount: 0.3 }}
             className="relative aspect-[3/4] overflow-hidden shadow-2xl w-full rounded-none cursor-pointer"
           >
             {bioImage && (

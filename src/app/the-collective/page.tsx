@@ -49,10 +49,9 @@ export default function TheCollective() {
             <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white rounded-none">
               <motion.div 
                 initial={{ filter: 'grayscale(100%)' }}
-                whileInView={{ filter: 'grayscale(0%)' }}
+                animate={{ filter: 'grayscale(100%)' }}
                 whileHover={{ filter: 'grayscale(0%)' }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
                 className="relative aspect-video overflow-hidden"
               >
                 {member.image && (

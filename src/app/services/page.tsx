@@ -81,10 +81,10 @@ export default function Services() {
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <motion.div 
-              initial={{ filter: 'grayscale(100%)' }}
-              whileInView={{ filter: 'grayscale(0%)' }}
+              initial={{ filter: 'grayscale(100%)', opacity: 0 }}
+              animate={{ opacity: 1, filter: 'grayscale(100%)' }}
               whileHover={{ filter: 'grayscale(0%)', scale: 1.01 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
+              transition={{ duration: 0.8, filter: { duration: 0.6, ease: "easeOut" } }}
               viewport={{ once: true, amount: 0.3 }}
               className="relative aspect-square overflow-hidden shadow-2xl group rounded-none cursor-pointer"
             >
