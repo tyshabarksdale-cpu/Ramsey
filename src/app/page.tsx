@@ -59,7 +59,12 @@ const fadeInLeft = {
 
 export default function Home() {
   const [isHeroActive, setIsHeroActive] = useState(false)
+  const [activeBenefits, setActiveBenefits] = useState<Record<number, boolean>>({})
   const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
+
+  const toggleBenefit = (index: number) => {
+    setActiveBenefits(prev => ({ ...prev, [index]: true }))
+  }
 
   return (
     <div className="flex flex-col">
@@ -184,9 +189,15 @@ export default function Home() {
               >
                 <Card className="border-none shadow-sm hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md h-full rounded-none">
                   <CardContent className="p-8 sm:p-10 space-y-4 flex flex-col items-center text-center">
-                    <div className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full">
+                    <motion.div 
+                      animate={{ filter: activeBenefits[index] ? 'grayscale(0%)' : 'grayscale(100%)' }}
+                      onMouseEnter={() => toggleBenefit(index)}
+                      onClick={() => toggleBenefit(index)}
+                      onTouchStart={() => toggleBenefit(index)}
+                      className="w-16 h-16 bg-primary/10 flex items-center justify-center text-primary mb-2 rounded-full cursor-pointer transition-colors hover:bg-primary/20"
+                    >
                       <benefit.icon className="w-8 h-8" />
-                    </div>
+                    </motion.div>
                     <h3 className="text-2xl sm:text-3xl font-headline text-primary pb-4">{benefit.title}</h3>
                     <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                       {benefit.description}
