@@ -1,6 +1,7 @@
 
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Card, CardContent } from "@/components/ui/card"
@@ -25,6 +26,7 @@ const testimonials = [
 ]
 
 export default function About() {
+  const [isActive, setIsActive] = useState(false)
   const bioImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
@@ -32,10 +34,16 @@ export default function About() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-12 items-center mb-12 max-w-6xl mx-auto">
           <motion.div 
-            initial={{ opacity: 0, x: -20, filter: 'grayscale(100%)' }}
-            animate={{ opacity: 1, x: 0, filter: 'grayscale(100%)' }}
-            whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
-            whileTap={{ filter: 'grayscale(0%)', scale: 1.01 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)'
+            }}
+            onMouseEnter={() => setIsActive(true)}
+            onFocus={() => setIsActive(true)}
+            onClick={() => setIsActive(true)}
+            onTouchStart={() => setIsActive(true)}
             transition={{ 
               opacity: { duration: 0.8 },
               x: { duration: 0.8 },
@@ -49,7 +57,7 @@ export default function About() {
                 alt={bioImage.description}
                 fill
                 className="object-cover"
-                data-ai-hint="professional woman portrait"
+                data-ai-hint="professional portrait"
                 priority
               />
             )}
@@ -100,7 +108,7 @@ export default function About() {
           <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-headline font-bold text-primary pb-2">Voices of Transformation</h2>
           </div>
-          <div className="flex flex-col gap-4 max-w-3xl mx-auto">
+          <div className="flex flex-col gap-6 max-w-3xl mx-auto">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}

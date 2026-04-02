@@ -1,6 +1,7 @@
 
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
@@ -57,7 +58,8 @@ const fadeInLeft = {
 }
 
 export default function Home() {
-  const heroImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
+  const [isHeroActive, setIsHeroActive] = useState(false)
+  const heroImage = PlaceHolderImages.find(img => img.id === "sybil-hero")
 
   return (
     <div className="flex flex-col">
@@ -65,10 +67,16 @@ export default function Home() {
       <section className="relative py-6 lg:py-16 overflow-hidden">
         <div className="container mx-auto px-4 flex flex-col items-center max-w-5xl text-center">
           <motion.div 
-            initial={{ y: 20, opacity: 0, filter: 'grayscale(100%)' }}
-            animate={{ y: 0, opacity: 1, filter: 'grayscale(100%)' }}
-            whileHover={{ filter: 'grayscale(0%)', scale: 1.02 }}
-            whileTap={{ filter: 'grayscale(0%)', scale: 1.01 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ 
+              y: 0, 
+              opacity: 1,
+              filter: isHeroActive ? 'grayscale(0%)' : 'grayscale(100%)'
+            }}
+            onMouseEnter={() => setIsHeroActive(true)}
+            onFocus={() => setIsHeroActive(true)}
+            onClick={() => setIsHeroActive(true)}
+            onTouchStart={() => setIsHeroActive(true)}
             transition={{ 
               y: { duration: 0.8 },
               opacity: { duration: 0.8 },
@@ -82,7 +90,7 @@ export default function Home() {
                 alt={heroImage.description}
                 fill
                 className="object-cover"
-                data-ai-hint="women tandem bike"
+                data-ai-hint="professional portrait"
                 priority
               />
             )}

@@ -1,6 +1,7 @@
 
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
@@ -32,7 +33,8 @@ const services = [
 ]
 
 export default function Services() {
-  const sybilImage = PlaceHolderImages.find(img => img.id === "connect-sybil")
+  const [isActive, setIsActive] = useState(false)
+  const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   return (
     <div className="py-6 lg:py-10">
@@ -83,20 +85,25 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <motion.div 
               initial={{ filter: 'grayscale(100%)', opacity: 0 }}
-              animate={{ opacity: 1, filter: 'grayscale(100%)' }}
-              whileHover={{ filter: 'grayscale(0%)', scale: 1.01 }}
-              whileTap={{ filter: 'grayscale(0%)', scale: 1.0 }}
+              animate={{ 
+                opacity: 1, 
+                filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' 
+              }}
+              onMouseEnter={() => setIsActive(true)}
+              onFocus={() => setIsActive(true)}
+              onClick={() => setIsActive(true)}
+              onTouchStart={() => setIsActive(true)}
               transition={{ duration: 0.8, filter: { duration: 0.6, ease: "easeOut" } }}
               viewport={{ once: true, amount: 0.3 }}
               className="relative aspect-square overflow-hidden shadow-2xl group rounded-none cursor-pointer"
             >
-              {sybilImage && (
+              {tandemImage && (
                 <Image
-                  src={sybilImage.imageUrl}
-                  alt="Sybil Elise"
+                  src={tandemImage.imageUrl}
+                  alt="Women on tandem bike"
                   fill
                   className="object-cover"
-                  data-ai-hint="empowerment coach portrait"
+                  data-ai-hint="women tandem bike"
                 />
               )}
             </motion.div>

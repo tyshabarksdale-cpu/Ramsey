@@ -1,6 +1,7 @@
 
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
@@ -10,6 +11,7 @@ import { motion } from "framer-motion"
 
 const collectiveMembers = [
   {
+    id: "girltrek",
     name: "GirlTrek",
     tagline: "Healing & Self-Care",
     description: "A national movement that mobilizes Black women and girls to reclaim their health, find their voice, and step into their power together.",
@@ -17,6 +19,7 @@ const collectiveMembers = [
     image: PlaceHolderImages.find(img => img.id === "girltrek-image")
   },
   {
+    id: "evolve",
     name: "Evolve Women's Network",
     tagline: "Louisville-Based Community",
     description: "Creating safe, supportive spaces where women—especially women of color—feel heard, valued, and empowered to show up boldly.",
@@ -24,6 +27,7 @@ const collectiveMembers = [
     image: PlaceHolderImages.find(img => img.id === "collective-2")
   },
   {
+    id: "taylor",
     name: "Taylor Your Leadership Coaching",
     tagline: "ICF-Certified Advocacy",
     description: "Dedicated to helping leaders break free from limiting beliefs and embrace their authentic voice in a safe and supportive environment.",
@@ -33,6 +37,12 @@ const collectiveMembers = [
 ]
 
 export default function TheCollective() {
+  const [activeMembers, setActiveMembers] = useState<Record<string, boolean>>({})
+
+  const toggleMember = (id: string) => {
+    setActiveMembers(prev => ({ ...prev, [id]: true }))
+  }
+
   return (
     <div className="py-8 lg:py-12">
       <div className="container mx-auto px-4">
@@ -49,12 +59,13 @@ export default function TheCollective() {
           {collectiveMembers.map((member, i) => (
             <Card key={i} className="overflow-hidden border-none shadow-lg group text-center flex flex-col h-full bg-white rounded-none">
               <motion.div 
-                initial={{ filter: 'grayscale(100%)' }}
-                animate={{ filter: 'grayscale(100%)' }}
-                whileHover={{ filter: 'grayscale(0%)' }}
-                whileTap={{ filter: 'grayscale(0%)' }}
+                animate={{ filter: activeMembers[member.id] ? 'grayscale(0%)' : 'grayscale(100%)' }}
+                onMouseEnter={() => toggleMember(member.id)}
+                onFocus={() => toggleMember(member.id)}
+                onClick={() => toggleMember(member.id)}
+                onTouchStart={() => toggleMember(member.id)}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative aspect-video overflow-hidden"
+                className="relative aspect-video overflow-hidden cursor-pointer"
               >
                 {member.image && (
                   <Image

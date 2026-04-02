@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState } from "react"
@@ -10,11 +11,13 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useToast } from "@/hooks/use-toast"
+import { motion } from "framer-motion"
 
 export default function Connect() {
+  const [isActive, setIsActive] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const { toast } = useToast()
-  const connectImage = PlaceHolderImages.find(img => img.id === "connect-sybil")
+  const tandemImage = PlaceHolderImages.find(img => img.id === "tandem-bike")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -29,16 +32,24 @@ export default function Connect() {
     <div className="py-12 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12 sm:mb-16 space-y-8 sm:space-y-10 flex flex-col items-center">
-          {connectImage && (
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white grayscale rounded-none">
+          {tandemImage && (
+            <motion.div 
+              animate={{ filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' }}
+              onMouseEnter={() => setIsActive(true)}
+              onFocus={() => setIsActive(true)}
+              onClick={() => setIsActive(true)}
+              onTouchStart={() => setIsActive(true)}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="relative w-48 h-48 sm:w-64 sm:h-64 overflow-hidden shadow-2xl border-4 border-white cursor-pointer rounded-none"
+            >
               <Image
-                src={connectImage.imageUrl}
-                alt="Sybil Elise portrait"
+                src={tandemImage.imageUrl}
+                alt="Women on tandem bike"
                 fill
                 className="object-cover"
-                data-ai-hint="professional portrait"
+                data-ai-hint="women tandem bike"
               />
-            </div>
+            </motion.div>
           )}
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary">Start Your Journey</h1>
           <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl">
