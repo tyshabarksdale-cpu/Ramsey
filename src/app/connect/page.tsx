@@ -36,7 +36,6 @@ export default function Connect() {
             <motion.div 
               animate={{ filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' }}
               onMouseEnter={() => setIsActive(true)}
-              onFocus={() => setIsActive(true)}
               onClick={() => setIsActive(true)}
               onTouchStart={() => setIsActive(true)}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -52,7 +51,7 @@ export default function Connect() {
             </motion.div>
           )}
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-headline font-bold text-primary">Start Your Journey</h1>
-          <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl">
+          <p className="text-xl sm:text-2xl text-primary font-headline italic leading-relaxed tracking-wide max-w-3xl mx-auto">
             Whether you're ready to start your journey or just have a few questions, 
             I'm here to listen and guide. You steer as we pedal.
           </p>

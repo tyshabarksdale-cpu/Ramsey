@@ -84,13 +84,12 @@ export default function Services() {
         <section className="mb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             <motion.div 
-              initial={{ filter: 'grayscale(100%)', opacity: 0 }}
+              initial={{ opacity: 0 }}
               animate={{ 
                 opacity: 1, 
                 filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)' 
               }}
               onMouseEnter={() => setIsActive(true)}
-              onFocus={() => setIsActive(true)}
               onClick={() => setIsActive(true)}
               onTouchStart={() => setIsActive(true)}
               transition={{ duration: 0.8, filter: { duration: 0.6, ease: "easeOut" } }}

@@ -41,7 +41,6 @@ export default function About() {
               filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)'
             }}
             onMouseEnter={() => setIsActive(true)}
-            onFocus={() => setIsActive(true)}
             onClick={() => setIsActive(true)}
             onTouchStart={() => setIsActive(true)}
             transition={{ 

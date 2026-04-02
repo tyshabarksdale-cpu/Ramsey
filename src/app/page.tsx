@@ -74,7 +74,6 @@ export default function Home() {
               filter: isHeroActive ? 'grayscale(0%)' : 'grayscale(100%)'
             }}
             onMouseEnter={() => setIsHeroActive(true)}
-            onFocus={() => setIsHeroActive(true)}
             onClick={() => setIsHeroActive(true)}
             onTouchStart={() => setIsHeroActive(true)}
             transition={{ 
@@ -82,7 +81,7 @@ export default function Home() {
               opacity: { duration: 0.8 },
               filter: { duration: 0.6, ease: "easeOut" }
             }}
-            className="relative w-full max-w-2xl aspect-video overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
+            className="relative w-full max-w-md aspect-[3/4] overflow-hidden shadow-2xl mb-8 rounded-none cursor-pointer"
           >
             {heroImage && (
               <Image
