@@ -46,8 +46,8 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-24 md:h-36 items-center justify-center px-4 lg:px-8 relative">
-        {/* Centered Logo */}
+      <div className="container mx-auto flex h-24 md:h-36 items-center justify-between px-4 lg:px-8">
+        {/* Logo - Left Aligned */}
         <Link href="/" className="flex items-center group py-2">
           <div className="relative h-20 w-64 md:h-32 md:w-[450px]">
             <Image 
@@ -61,7 +61,7 @@ export function Navbar() {
         </Link>
         
         {/* Navigation Actions - Right Aligned */}
-        <div className="absolute right-4 lg:right-8 flex items-center">
+        <div className="flex items-center">
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => {
               const isActive = mounted && pathname === link.href;
